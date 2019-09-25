@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: whitesmoke;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.main_row {
+  padding: 5px;
+  background-color: white;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.main_row label{
+  margin-left: 25px;
+}

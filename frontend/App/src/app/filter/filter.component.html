@@ -1,0 +1,16 @@
+<div class="header">
+</div>
+
+<hr>
+<div class="main">
+  <div class="main_row">
+    <div *ngFor="let item of filter">
+      <input type="checkbox" (change)=check(item) />
+      <label> {{item.name}}</label>
+
+
+    </div>
+
+  </div>
+
+</div>

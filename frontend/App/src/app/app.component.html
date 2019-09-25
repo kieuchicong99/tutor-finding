@@ -1,0 +1,40 @@
+<div class="wrap">
+
+  <div class="header">
+    <h2>header</h2>
+  </div>
+
+  <div class="topnav">
+    topnav
+
+  </div>
+
+  <div class="main">
+    <div class="left">
+      <h1>left</h1>
+      <router-outlet></router-outlet>
+
+    </div>
+    <div class="right">
+      <h1>right</h1>
+      <div class="filter">
+        <h3>Tìm gia sư</h3>
+        <h6>Lọc theo môn</h6>
+        <app-filter [filter]=subject_field></app-filter>
+        <h6>Lọc theo lớp</h6>
+        <app-filter [filter]=grade_field></app-filter>
+        <h6>Lọc theo tỉnh</h6>
+        <app-filter [filter]=provin_field></app-filter>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <h1>footer</h1>
+
+  </div>
+
+</div>
