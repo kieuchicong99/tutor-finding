@@ -17,8 +17,8 @@ import { RouteModule } from './module/route/route.module';
   imports: [
     BrowserModule,
     HttpModule,
-    RouteModule,
-    
+    RouteModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

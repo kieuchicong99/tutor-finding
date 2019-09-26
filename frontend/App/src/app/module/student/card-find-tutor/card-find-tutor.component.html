@@ -1,0 +1,27 @@
+<div class="wrap">
+  <div class="header">
+    <h6>chi tiết nội dung</h6>
+    <p>{{content}}</p>
+
+  </div>
+  <div class="main">
+      <h6>lịch học dự kiến</h6>
+      <div *ngFor="let day of schedule" class="block">
+        <div class="cell">
+          <span> {{day.name}}</span>
+          <div> {{day.morning}}</div>
+          <div> {{day.afternoon}}</div>
+          <div> {{day.night}}</div>
+
+        </div>
+
+
+      </div>
+
+  </div>
+  <div class="footer">
+    <h6>thông tin cơ bản</h6>
+
+  </div>
+
+</div>

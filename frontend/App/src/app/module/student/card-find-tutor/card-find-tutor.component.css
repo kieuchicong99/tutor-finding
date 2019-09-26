@@ -1,0 +1,54 @@
+*{
+  box-sizing: border-box
+
+}
+
+.wrap{
+  background-color: #fff;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.8em;
+}
+
+.main >h6{
+  text-transform: uppercase;
+  color: #003471;
+  text-decoration: underline;
+  display: block;
+
+}
+
+.block{
+  display: inline-block;
+  padding: 5px;
+  min-width: 100px;
+}
+
+.cell{
+  display: inline-block;
+
+}
+
+.cell > div{
+  border: 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.header >h6{
+  text-transform: uppercase;
+  color: #003471;
+  text-decoration: underline;
+
+}
+
+.footer >h6{
+  text-transform: uppercase;
+  color: #003471;
+  text-decoration: underline;
+
+}
