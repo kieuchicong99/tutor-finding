@@ -10,17 +10,29 @@
 .topnav{
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   overflow-y: hidden;
   background-color: #426d9e;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top:0;
+  min-height: 40px;
+  display: inline-box;
+}
+
+.topnav >a{
+  width: 20%;
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  color: #f1f1f1;
+
+
 }
 
 .main{
   margin-top:10px;
-  /* min-height: 500px; */
   background-color: #ddd
 }
 
@@ -29,6 +41,7 @@
   width: 75%;
   background-color: rgb(146, 141, 141);
   padding-left: 10px;
+  display: inline-block;
 }
 
 .right {
@@ -48,6 +61,7 @@
   border-top-left-radius: 20px;
   text-align: center;
   background-color: #426d9e;
+  color: white;
 }
 
 .filter >h6{
@@ -56,18 +70,46 @@
 
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #ddd;
+.app_footer {
+  padding: 10px;
+  display: inline-table;
+  background-color: #426d9e;
   margin-top: 10px;
+  max-height: 100px;
+  width: 100%;
+  padding-left: 30px;
 }
+.footer_left, .footer_right{
+  display: inline-block;
+  padding: 5px;
+  float: left;
+  width: 40%;
+  color: white;
+}
+
+.footer_right{
+  float: right;
+}
+
+
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
 
   .left,
-  .right {
+  .right,
+  .footer_left,
+  .footer_right{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 182px) {
+
+  .topnav >a
+  {
     width: 100%;
     padding: 0;
   }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from '../../signin/signin.component';
-import { FindTutorComponent } from '../student/find-tutor.component';
+import { SignupComponent } from '../../signup/signup.component';
 
 const appRoutes: Routes = [
   {
@@ -23,7 +23,8 @@ const appRoutes: Routes = [
       }
     ]
   },
-  { path: 'signin', component: SigninComponent }
+  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({

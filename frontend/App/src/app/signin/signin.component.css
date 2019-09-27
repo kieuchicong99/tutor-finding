@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+.wrap{
+  background-color:white;
+  padding: 15px;
+  text-align: center;
+}
+
+
+.header {}
+
+.main{
+  display: inline-block;
+  text-align: center;
+  width: 80%;
+}
+
+
+.row_form {
+  display: block;
+  padding: 15px;
+  border: 1px #ebdfdf;
+}
+
+
+.row_form>button{
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom:5px;
+  background-color: #426d9e;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.row_form >input{
+  width: 100%;
+}
+
+.row_form >div{
+  text-align: left;
+
+}
+
+.footer {}

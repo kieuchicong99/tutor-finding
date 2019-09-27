@@ -5,7 +5,10 @@
   </div>
 
   <div class="topnav">
-    topnav
+    <a routerLink="/tim-gia-su" routerLinkActive="active">Tìm gia sư</a>
+    <a routerLink="/tim-lop-gia-su" routerLinkActive="active">Tìm lớp gia sư</a>
+    <a routerLink="/signin" routerLinkActive="active">Đăng nhập</a>
+    <a routerLink="/signup" routerLinkActive="active">Đăng ký</a>
 
   </div>
 
@@ -13,14 +16,11 @@
     <div class="left">
       <h1>left</h1>
       <router-outlet></router-outlet>
-
-
     </div>
     <div class="right">
       <h1>right</h1>
       <div class="filter">
         <h3>Tìm gia sư</h3>
-        <h6>Lọc theo môn</h6>
         <app-filter [filter]=subject_field></app-filter>
         <h6>Lọc theo lớp</h6>
         <app-filter [filter]=grade_field></app-filter>
@@ -28,13 +28,22 @@
         <app-filter [filter]=provin_field></app-filter>
 
       </div>
-
-
     </div>
   </div>
 
-  <div class="footer">
-    <h1>footer</h1>
+  <div class="app_footer">
+    <div class="footer_left">
+      Phát triển ứng dụng web nhóm 9 <br>
+      Địa chỉ: nhà E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội<br>
+      Điện thoại : 1900100có. Fax: tương tự điện thoại<br>
+      Email: @user.vnu.edu.vn.<br>
+    </div>
+    <div class="footer_right">
+      Được phát triển bởi nhóm 9<br>
+      Facebook: https://www.facebook.com/nhom9<br>
+      Github: https://www.github.com/kieuchicong99/tutor-fiding<br>
+
+    </div>
 
   </div>
 
