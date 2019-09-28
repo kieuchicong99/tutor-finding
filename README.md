@@ -34,6 +34,65 @@ Hướng dẫn làm việc cho team front end:
     ```
     - Chỉ có thể dùng các lệnh của angular sau khi đã di chuyển vào thư mục *frontend/App* hoặc các thư mục con của nó 
 
+
+## Git
+
+- 1. Clone source về
+    ```bash
+    git clone https://github.com/kieuchicong99/tutor-finding.git
+    ```
+- 2. Add Remote 
+    ```bash
+    git init
+    ```
+    ```bash
+    git remote add git://github.com/kieuchicong99/tutor-finding
+    ```
+- 3. Tạo nhánh làm việc 
+    - a, Tạo nhánh
+
+        ```bash
+        git branch <tên_nhánh_lấy_tên_của_ mọi người>
+        ```
+        ví dụ:
+        ```bash
+        git branch kieuchicong  
+        ```
+    -   b, Một số lệch làm việc với nhánh
+
+        Display tất cả các nhánh:
+        ```bash
+        git branch -a
+        ```
+        
+        Chuyển nhánh:
+        ```bash
+        git checkout <tên nhánh>
+        ```
+        Xem hiện tại mình đang ở nhánh nào:
+
+        ```bash
+        git branch 
+        ```
+        Nhánh hiện tại bạn đang làm việc sẽ có 1 dấu * đằng trước tên nhánh
+    
+        **Lưu ý: Sau khi chuyển nhánh mọi thao tác sẽ được tính trên nhánh đó, nên mọi người lưu ý xem hiện tại mình đang ở nhánh nào**
+
+    - c, Tham khaỏ thêm về các thao tác với nhánh ở đây :
+    [làm việc với nhánh](https://xuanthulab.net/lam-viec-voi-nhanh-branch-tao-nhanh-gop-nhanh-trong-git.html)
+
+- 4. Commmit
+    ```bash
+    git add .
+    git commit -m "nội_dung"
+    ```
+- 5. Push code lần đầu lên nhánh
+
+    ```bash
+    git push --set-upstream origin <tên nhánh mọi người vừa tạo>
+    ```
+    Ở những lần push sau chỉ cần push với cú pháp thông thường là đc (lưu ý kiếm tra nhánh trước khi push)
+
 ## Thư mục làm việc 
 
 ```bash
