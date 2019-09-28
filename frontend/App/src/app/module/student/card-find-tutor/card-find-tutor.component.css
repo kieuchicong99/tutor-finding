@@ -46,9 +46,37 @@
 
 }
 
+.info_box{
+  border: 1px solid;
+  padding: 25px;
+  width: 100%;
+  box-shadow: 5px 10px #888888;
+  background-color: #396453;
+  color: white;
+
+}
+
+.col{
+  width: 30%;
+  padding: 10px;
+  display: inline-block;
+}
+.col >div{
+
+}
+
 .footer >h6{
   text-transform: uppercase;
   color: #003471;
   text-decoration: underline;
 
+}
+
+@media screen and (max-width: 800px) {
+
+  .col
+  {
+    width: 100%;
+    padding: 0;
+  }
 }

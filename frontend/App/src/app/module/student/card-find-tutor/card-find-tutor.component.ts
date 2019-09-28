@@ -21,6 +21,14 @@ export class CardFindTutorComponent implements OnInit {
     {name:"Chủ nhật",morning:false, afternoon:false, night:false},
 
   ]
+  info_class = {
+    student: 5,
+    sub: "Tiếng anh",
+    count:2,
+    time:1,
+    method:"Gặp trực tiếp",
+    sex:"Không yêu cầu"
+  }
 
   ngOnInit() {
   }

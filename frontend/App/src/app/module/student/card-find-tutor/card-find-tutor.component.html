@@ -5,22 +5,40 @@
 
   </div>
   <div class="main">
-      <h6>lịch học dự kiến</h6>
-      <div *ngFor="let day of schedule" class="block">
-        <div class="cell">
-          <span> {{day.name}}</span>
-          <div> {{day.morning}}</div>
-          <div> {{day.afternoon}}</div>
-          <div> {{day.night}}</div>
+    <h6>lịch học dự kiến</h6>
 
-        </div>
-
+    <div *ngFor="let day of schedule" class="block">
+      <div class="cell">
+        <span> {{day.name}}</span>
+        <div> {{day.morning}}</div>
+        <div> {{day.afternoon}}</div>
+        <div> {{day.night}}</div>
 
       </div>
+
+
+    </div>
 
   </div>
   <div class="footer">
     <h6>thông tin cơ bản</h6>
+    <div class="info_box">
+      <div class="col">
+        <div>Số học viên: {{info_class.student}}</div>
+        <div>Môn học: {{info_class.sub}}</div>
+      </div>
+      <div class="col">
+        <div>Số buổi một tuần: {{info_class.count}}</div>
+        <div>Thời gian mỗi buổi: {{info_class.time}}</div>
+      </div>
+      <div class="col">
+        <div>Hình thức dạy: {{info_class.method}}</div>
+        <div>Yêu cầu giới tính: {{info_class.sex}}</div>
+      </div>
+
+
+
+    </div>
 
   </div>
 
