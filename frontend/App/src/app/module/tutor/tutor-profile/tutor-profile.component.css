@@ -1,0 +1,33 @@
+.title-style {
+	color: #0a2c5c;
+	font-size: 22px;
+	text-decoration: underline;
+}
+
+.subject-style{
+	text-align: center;
+	color: #00CCFF;
+	border: 1px solid;
+	border-color: #00CCFF;
+}
+
+.day-style {
+	color: #000066;
+	margin-left: 50px;
+	font-size: 1.2em;
+}
+
+.sct {
+	border: 1px solid;
+	width: 120px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.clear { clear: both }
+
+ul li {
+	list-style: none;
+}
