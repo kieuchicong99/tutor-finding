@@ -1,7 +1,7 @@
 Back-end
 -----------------------------------------------------------------------
-Ngôn ngữ: Python 3
-Framework: Django 2.2
+- Ngôn ngữ: Python 3
+- Framework: Django 2.2
 -----------------------------------------------------------------------
 Thành viên:
   1. Kiều Thanh Phong
@@ -12,7 +12,7 @@ Thành viên:
 Nhiệm vụ:
   1. Kết nối DB và query 
     - Cách kết nối và thao tác với DB<Có thể có thêm yêu cầu sau>
-    - Thống nhất với frontend về dữ liệu đầu ra của API.
+    - Thống nhất với frontend về dữ liệu đầu ra của API
   2. Viết API
     - Mỗi phần làm API cho cả gia sư và học sinh(mọi người có thể gắn tag để dễ quản lý):
       + Đăng ký tài khoản
