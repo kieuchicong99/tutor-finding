@@ -10,10 +10,10 @@ Thành viên:
   4. Mai Thành Đạt
 -----------------------------------------------------------------------
 Nhiệm vụ:
-  1. Kết nối DB và query 
+  1. Kết nối DB và query:
     - Cách kết nối và thao tác với DB<Có thể có thêm yêu cầu sau>
     - Thống nhất với frontend về dữ liệu đầu ra của API
-  2. Viết API
+  2. Viết API:
     - Mỗi phần làm API cho cả gia sư và học sinh(mọi người có thể gắn tag để dễ quản lý):
       + Đăng ký tài khoản
       + Chỉnh sửa hồ sơ
