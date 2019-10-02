@@ -2,6 +2,20 @@
 .shadowh {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.52);
   background-color: white;
+  width : 200px;
+  height: 300px;
+  text-align:center;
+  border-radius: 10px
+}
+
+.image{
+  text-align: center;
+  padding: 10px;
+  height: 120px;
+  margin-bottom: 5px;
+}
+.content{
+  height: 130px;
 }
 
 a {
@@ -11,8 +25,6 @@ a {
 }
 
 img {
-  /* vertical-align: middle; */
-  /* border-style: none; */
   max-width: 100px;
   max-height: 100px;
 }
@@ -28,10 +40,10 @@ img {
   color: #1e1b1bf5;
   line-height: 16px;
   display: block;
-  /* text-overflow: ellipsis; */
-  word-wrap: break-word;
-  /* overflow: hidden; */
-  /* position: relative; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
 }
 
 .cardct>a {
@@ -39,50 +51,9 @@ img {
   font-weight: 700;
 }
 
-.text-smview {
-  color: #6c757d;
-  line-height: 18px;
-  /* display: -webkit-box; */
-  /* -webkit-line-clamp: 2; */
-  /* -webkit-box-orient: vertical; */
-  /* text-overflow: ellipsis; */
-  /* word-wrap: break-word; */
-  /* overflow: hidden; */
-  /* position: relative; */
-  height: 48px;
-}
-
-.text-sm {
-  color: #6c757d;
-  line-height: 18px;
-  /* display: -webkit-box; */
-  /* -webkit-line-clamp: 2; */
-  /* -webkit-box-orient: vertical; */
-  /* text-overflow: ellipsis; */
-  /* word-wrap: break-word; */
-  /* overflow: hidden; */
-  /* position: relative; */
-  height: 40px;
-}
-
 .cart-detail {
   color: #6c757d;
-  line-height: 18px;
-  /* display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden; */
-  /* position: relative; */
-  height: 40px;
-}
-
-.btns {
-  background-color: #003471;
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 700;
-  color: #fff!important;
+  white-space: nowrap;
+  overflow: hidden;
 }

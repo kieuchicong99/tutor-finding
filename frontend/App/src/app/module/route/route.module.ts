@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'tim-lop-gia-su',
+        redirectTo: '/',
         pathMatch: 'full',
       },
       {

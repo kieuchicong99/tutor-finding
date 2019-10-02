@@ -20,7 +20,7 @@ export class TutorComponent implements OnInit {
   name = 'Cuong Tong';
   address = 'Ha Noi';
   class = 'Toan, Ly';
-  description = 'Vui ve, hoa dong';
+  description = 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ';
   renter = 120000;
   link = 'https://google.com';
   img = 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg';
@@ -30,6 +30,9 @@ export class TutorComponent implements OnInit {
   movetoDetail(){
     this.router.navigateByUrl('tim-gia-su/chitiet');
   }
+
+
+  listTutor = []
 
   ngOnInit() {
   }
