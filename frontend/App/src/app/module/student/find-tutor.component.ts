@@ -18,7 +18,8 @@ export class FindTutorComponent implements OnInit {
   wage = 10000
   subject = "Chuyện khó nói  "
   address = "Hà Nội  "
-   
+  require ="Gặp mặt"
+
   constructor(public router:Router ) { }
 
   movetoDetail(){

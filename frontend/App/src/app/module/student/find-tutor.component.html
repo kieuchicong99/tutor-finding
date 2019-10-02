@@ -1,24 +1,29 @@
-<div class = "box">
-    <div class = "content">
-        <a href="">
-            <p class = "title"> {{title}}</p>
-            <p class = "showdetail">
-                <span>XEm CHi TIết</span>
-            </p>
-        </a>
-        <p class = "detail">{{detail}}</p>
-        <div class="left">
-            <span>
-                {{address}}
-            </span>
-            <span>
-                {{subject}}
-            </span>
-        </div>
-        <div>
-            <p style="font-style: oblique; color: red">$: {{wage}} USD</p>
-        </div>
+<div class="box">
+  <div class="content">
+    <div><a style="display:inline-block" href="tim-lop-gia-su/chitiet">
+        <p class="title"> {{title}}</p>
+      </a>
+      <button style="display:inline-block; float:right;" class="btn btn-primary btn-sm" (click)=movetoDetail()>Chi
+        tiết</button>
     </div>
-    
+    <p class="detail">{{detail}}</p>
+    <div class="left">
+      <div>
+        {{address}}
+      </div>
+      <div>
+          {{require}}
+        </div>
+      <div>
+        {{subject}}
+      </div>
+      <div style="color: red">
+        $: {{wage}} USD
+      </div>
+    </div>
+
+  </div>
+
+
+
 </div>
-<app-detail-find-tutor></app-detail-find-tutor>
