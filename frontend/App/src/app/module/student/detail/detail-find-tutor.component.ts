@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DaySchedule } from '../../../model/day.model';
 
 @Component({
-  selector: 'app-card-find-tutor',
-  templateUrl: './card-find-tutor.component.html',
-  styleUrls: ['./card-find-tutor.component.css']
+  selector: 'app-detail-find-tutor',
+  templateUrl: './detail-find-tutor.component.html',
+  styleUrls: ['./detail-find-tutor.component.css']
 })
-export class CardFindTutorComponent implements OnInit {
+export class DetailFindTutorComponent implements OnInit {
 
   constructor() { }
 

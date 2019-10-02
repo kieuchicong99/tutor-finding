@@ -1,3 +1,21 @@
-<div>
-    <app-tutor-profile></app-tutor-profile>
+<div class=" wrap shadowh border-0">
+  <div style="text-align: center">
+    <img src="{{ img }}" alt="{{ name }}">
+    <div style ="background-color: #3d3c39; opacity: 0.7;bottom: 0;">{{ address }}</div>
+  </div>
+  <div class="cardct card-body">
+    <a href="{{ link }}">{{ name }} </a>
+    <span class="text-smview d-block"><i class="fa fa-book mr-2"></i> Gia sư {{ class }} </span>
+    <span class="text-sm d-block">
+      <i class="fa fa-dolar mr-2"></i>
+      <span style="color: #ff8401; font-weight: bold;">
+        Từ: {{ renter }} đ/buổi
+      </span>
+    </span>
+    <span cart-detail>{{ description }}</span>
+    <div>
+        <button class="btns" (click)=movetoDetail()> Xem chi tiết</button>
+    </div>
+
+  </div>
 </div>

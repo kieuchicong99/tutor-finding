@@ -33,15 +33,17 @@
 
 .main{
   margin-top:10px;
-  background-color: #ddd
+  background-color: #ddd;
+  position: static;
 }
 
 .left {
   float: left;
+  /* position: static; */
   width: 75%;
-  background-color: rgb(146, 141, 141);
-  padding-left: 10px;
-  display: inline-block;
+  background-color: rgb(223, 222, 222);
+  /* display: inline-block; */
+  padding: 20px;
 }
 
 .right {
