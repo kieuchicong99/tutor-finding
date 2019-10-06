@@ -1,24 +1,37 @@
-<div class="box">
-  <div class="content">
-    <div><a style="display:inline-block" href="tim-lop-gia-su/chitiet">
-        <p class="title"> {{title}}</p>
-      </a>
-      <button style="display:inline-block; float:right;" class="btn btn-primary btn-sm" (click)=movetoDetail()>Chi
-        tiết</button>
+<div class="main">
+  <div *ngFor="let kind of tutor_kind">
+    <div style ="padding-bottom: 10px">
+        <div class="field" style="display: inline-block">{{kind}}</div>
+        <div style="display: inline-block;">  ----------------------------------------------  </div>
     </div>
-    <p class="detail">{{detail}}</p>
-    <div class="left">
-      <div>
-        {{address}}
-      </div>
-      <div>
-          {{require}}
+    <div class="row" *ngFor="let tutor of tutors">
+      <div class="col-9">
+        <div class="box">
+          <div class="content">
+            <div><a style="display:inline-block" href="tim-lop-gia-su/chitiet">
+                <p class="title"> {{tutor.title}}</p>
+              </a>
+              <button style="display:inline-block; float:right;" class="btn btn-primary btn-sm"
+                (click)=movetoDetail()>Chi
+                tiết</button>
+            </div>
+            <p class="detail">{{tutor.detail}}</p>
+            <div class="left">
+              <div>
+                {{tutor.address}}
+              </div>
+              <div>
+                {{tutor.require}}
+              </div>
+              <div>
+                {{tutor.subject}}
+              </div>
+              <div style="color: red">
+                $: {{tutor.wage}} USD
+              </div>
+            </div>
+          </div>
         </div>
-      <div>
-        {{subject}}
-      </div>
-      <div style="color: red">
-        $: {{wage}} USD
       </div>
     </div>
 

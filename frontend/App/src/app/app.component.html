@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="wrap" >
 
   <div class="header"id ="baner">
     <div>
@@ -22,16 +22,18 @@
       <router-outlet></router-outlet>
     </div>
     <div class="right">
-      <h1>right</h1>
       <div class="filter">
-        <h3>Tìm gia sư</h3>
+        <div style="text-transform: uppercase">Tìm gia sư</div>
         <app-filter [filter]=subject_field></app-filter>
         <h6>Lọc theo lớp</h6>
         <app-filter [filter]=grade_field></app-filter>
         <h6>Lọc theo tỉnh</h6>
         <app-filter [filter]=provin_field></app-filter>
-
+        <span style="text-align:center;display: block;">
+          <button style = "width: 50%;" type="button" class="btn  btn-primary btn-sm"> Tìm kiếm</button>
+        </span>
       </div>
+
     </div>
   </div>
 
