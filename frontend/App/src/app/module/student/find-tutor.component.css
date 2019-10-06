@@ -1,4 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+.row{
+  margin-left: 50px;
+}
+.field{
+  background-color: #003471;
+  color: white;
+  padding: 5px;
+  overflow: hidden;
+  width: 30%;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  margin-bottom:5px;
+
+}
+
 .box{
+    position: relative;
+    /* z-index: -1 ; */
     background-color: #fff;
     border: 1px solid #b3b3b3;
     padding:10px;

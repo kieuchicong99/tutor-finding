@@ -26,6 +26,7 @@
   top:0;
   min-height: 40px;
   display: inline-box;
+  z-index: 5;
 }
 
 .topnav >a{
@@ -41,16 +42,16 @@
 
 .main{
   margin-top:10px;
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  background-color: rgb(223, 222, 222);
+  height: 100%;
   position: static;
 }
 
 .left {
   float: left;
-  /* position: static; */
   width: 75%;
   background-color: rgb(223, 222, 222);
-  /* display: inline-block; */
   padding: 20px;
 }
 
@@ -66,7 +67,7 @@
   float: left;
   background-color: white;
 }
-.filter >h3{
+.filter >div{
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   text-align: center;
