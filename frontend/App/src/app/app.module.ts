@@ -6,6 +6,9 @@ import { FilterComponent } from './filter/filter.component';
 import { RouteModule } from './module/route/route.module';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import { SignInService } from './service/signin.service';
+import { SignUpService } from './service/signup.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,16 @@ import { SignupComponent } from './signup/signup.component';
     SignupComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
+    FormsModule,
     HttpModule,
     RouteModule
 
   ],
-  providers: [],
+  providers: [
+    SignInService,
+    SignUpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

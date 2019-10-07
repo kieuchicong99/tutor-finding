@@ -8,16 +8,16 @@
     <form>
       <div class="row_form">
         <div>Số điện thoại</div>
-        <input type="text" placeholder="Số điện thoại đăng ký của bạn">
+        <input type="text" [(ngModel)]="user.phone" [ngModelOptions]="{standalone: true}" placeholder="Số điện thoại đăng ký của bạn" >
       </div>
 
       <div class="row_form">
         <div>Mật khẩu</div>
-        <input type="text" placeholder="Mật khẩu cho tài khoản này">
+        <input type="text" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Mật khẩu cho tài khoản này">
       </div>
 
       <div class="row_form">
-        <button type="button">Đăng nhập</button>
+        <button type="button" (click)=signIn()>Đăng nhập</button>
       </div>
     </form>
   </div>
