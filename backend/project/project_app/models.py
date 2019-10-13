@@ -91,3 +91,22 @@ class Tutor(PolymorphicModel):
     def __str__(self):
         return self.user.name
 
+# Student
+class Student(models.Model):
+    user = models.OneToOneField(User)
+
+    def Accept(self, date, time_start, duration, tutor):
+        end = (datetime.strptime(str(time_start), '%H:%M:%S') + timedelta(hours=duration)).time()
+        accept = BookedSlot(date=date, time_start=time_start, time_end=end, tutor=tutor, student=self, status="ACCEPTED")
+        accept.save()
+        transaction = None
+        if isinstance(tutor, PrivateTutor):
+            chargesWithCommission = round(tutor.rate * 1.05, 2)
+            self.user.wallet.subtract_funds(chargesWithCommission)
+            TempWallet = SpecialWallet.objects.get(name='Temporary')
+            TempWallet.add_funds(chargesWithCommission)
+            transaction = accept.create_transaction_record("SESSIONBOOKED", True, True)
+        return accept, transaction
+
+    def __str__(self):
+        return self.user.name
