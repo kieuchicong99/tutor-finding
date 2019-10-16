@@ -1,0 +1,66 @@
+.teacher-info {
+    /* margin-top: 210px; */
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    /* background-color: #f2f2f2; */
+    padding-bottom: 40px;
+  }
+  
+  .teacher-info h4 {
+    text-decoration: underline;
+    text-decoration-color: #fd8d58;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .teacher-info h4 {
+    background-color: #fff;
+    color: #264a7d;
+    padding-top: 20px;
+    margin: auto;
+  }
+  
+  .pad {
+    padding: 0 100px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+  }
+  
+  .textview {
+    /* font-size: 14px; */
+    font-weight: 600;
+  }
+  .only-show{
+    /* padding-left: 35px; */
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    /* background-color: #495057;; */
+    /* background-clip: padding-box; */
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+  }
+  
+  .form-info {
+    width: 100%;
+    padding: 5px 20px;
+  }
+  
+  .form-inline {
+    margin-left: 50px;
+  }
+  
+  .lblcheckgt {
+    width: auto!important;
+  }
