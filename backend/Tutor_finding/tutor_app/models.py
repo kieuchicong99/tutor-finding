@@ -14,6 +14,7 @@ class Level(models.Model):
 class Mon_hoc(models.Model):
     id_mon = models.AutoField(primary_key=True,auto_created=True)
     ten_mon = models.CharField(max_length=100)
+    ten_mon_khong_dau = models.CharField(max_length=100)
     def __str__(self):
         return self.ten_mon
 class Gia_su(models.Model):
@@ -56,6 +57,7 @@ class Phu_huynh(models.Model):
 class Danh_sach_lop(models.Model):
     id_lop = models.AutoField(primary_key=True,auto_created=True)
     ten_lop = models.CharField(max_length=50)
+    ten_lop_khong_dau = models.CharField(max_length=50)
     gia = models.FloatField()
     mo_ta = models.TextField()
     dia_chi = models.TextField()
