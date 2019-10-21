@@ -1,0 +1,16 @@
+.left{
+  float: left;
+  /* background-color: azure; */
+  width:20%;
+  padding-right:20px;
+}
+
+.left >div{
+  padding:10px;
+  border: solid 1px;
+
+}
+.right{
+  float: left;
+  width:80%
+}

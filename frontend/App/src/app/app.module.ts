@@ -18,7 +18,7 @@ import { SignUpService } from './service/signup.service';
     SignupComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     FormsModule,
     HttpModule,
     RouteModule

@@ -1,8 +1,8 @@
-<div class="wrap" >
+<div class="wrap">
 
-  <div class="header"id ="baner">
+  <div class="header" id="baner">
     <div>
-        <a routerLink="/" ><img src="http://localhost:4200/assets/Picture1.png" alt=""></a>
+      <a routerLink="/"><img src="http://localhost:4200/assets/Picture1.png" alt=""></a>
     </div>
 
     <h2 style="color: white;">Kết nối giữa gia sư và học sinh</h2>
@@ -13,6 +13,29 @@
     <a routerLink="/tim-lop-gia-su" routerLinkActive="active">Tìm lớp gia sư</a>
     <a routerLink="/signin" routerLinkActive="active">Đăng nhập</a>
     <a routerLink="/signup" routerLinkActive="active">Đăng ký</a>
+    <div style="position: relative; display: inline-block; width: 25%">
+      <div *ngIf="nonlogin; else logined"></div>
+      <ng-template #logined>
+        <button style="background-color: #426d9e;border: hidden;color:white"
+          (click)="showUserDetail()">{{name}}</button>
+
+
+        <div *ngIf="user_detail; else close"
+          style="position: absolute;display: block;z-index: 6; padding:1px;background-color: #426d9e">
+          <div style=" margin: 0;padding-left: 10px;padding-right: 10px">
+            <button style="display: block" (click)="chooseManage()">
+              <li routerLink="/manage-acc" routerLinkActive="active">Quản lý tài khoản</li>
+            </button>
+            <button style="display: block">
+              <li href="">Đắng xuất</li>
+            </button>
+
+          </div>
+        </div>
+        <ng-template #close></ng-template>
+      </ng-template>
+    </div>
+
 
   </div>
 
@@ -21,20 +44,26 @@
       <!-- <h1>left</h1> -->
       <router-outlet></router-outlet>
     </div>
-    <div class="right">
-      <div class="filter">
-        <div style="text-transform: uppercase">Tìm gia sư</div>
-        <app-filter [filter]=subject_field></app-filter>
-        <h6>Lọc theo lớp</h6>
-        <app-filter [filter]=grade_field></app-filter>
-        <h6>Lọc theo tỉnh</h6>
-        <app-filter [filter]=provin_field></app-filter>
-        <span style="text-align:center;display: block;">
-          <button style = "width: 50%;" type="button" class="btn  btn-primary btn-sm"> Tìm kiếm</button>
-        </span>
+
+    <div *ngIf="default; else choose"></div>
+    <ng-template #choose>
+      <div class="right">
+        <div class="filter">
+          <div style="text-transform: uppercase">Tìm gia sư</div>
+          <app-filter [filter]=subject_field></app-filter>
+          <h6>Lọc theo lớp</h6>
+          <app-filter [filter]=grade_field></app-filter>
+          <h6>Lọc theo tỉnh</h6>
+          <app-filter [filter]=provin_field></app-filter>
+          <span style="text-align:center;display: block;">
+            <button style="width: 50%;" type="button" class="btn  btn-primary btn-sm"> Tìm kiếm</button>
+          </span>
+        </div>
+
       </div>
 
-    </div>
+    </ng-template>
+
   </div>
 
   <div class="app_footer">

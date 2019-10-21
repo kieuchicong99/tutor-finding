@@ -20,11 +20,15 @@ const appRoutes: Routes = [
       {
         path: 'tim-gia-su',
         loadChildren:'app/module/tutor/tutor.module#TutorModule'
+      },
+      { path: 'manage-acc',
+      loadChildren:'app/module/manage-acc/manage-acc.module#ManageAccModule'
       }
     ]
   },
   { path: 'signin', component: SigninComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+
 ];
 
 @NgModule({

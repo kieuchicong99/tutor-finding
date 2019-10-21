@@ -56,6 +56,20 @@ export class AppComponent implements OnInit {
       {name:"Điện Biên",value:false},
       ]
 
+  public user_detail = false
+  public name = "Kiều Chí Công";
+  showUserDetail(){
+    if(this.user_detail ==false)
+      this.user_detail = true;
+    else this.user_detail = false;
+  }
+  public listUserDetial =["Chi tiet tai khoan"]
+  public default = false;
+  chooseManage(){
+    // this.name = "Quản lý tài khoản"
+    this.user_detail = false;
+    this.default = true;
+  }
   ngOnInit(){
 
 
