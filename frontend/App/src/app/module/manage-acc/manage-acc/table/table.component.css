@@ -1,0 +1,6 @@
+tr >th,
+tr > td
+{
+  border: solid 1px;
+  padding: 5px;
+}

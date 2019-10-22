@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageAccComponent implements OnInit {
 
+
+
   constructor() { }
+
 
   ngOnInit() {
   }
-
+  public default = true;
+  manageTutor(){
+    if (this.default== true){
+      this.default= false;
+    }
+    else{
+      this.default = true;
+    }
+  }
 }
