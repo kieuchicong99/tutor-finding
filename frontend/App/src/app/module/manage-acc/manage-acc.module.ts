@@ -4,6 +4,9 @@ import { ManageAccComponent } from './manage-acc/manage-acc.component';
 import { ManageAccRoutingModule } from './manage-acc-routing';
 import { StudentProfileComponent } from './manage-acc/student-profile/student-profile.component';
 import { TeacherInfoComponent } from './manage-acc/tutor-info/tutor-info.component';
+import { TableComponent } from './manage-acc/table/table.component';
+import { TutorRequestComponent } from './manage-acc/student-profile/tutor-request/tutor-request.component';
+import { TutorIsRequestedComponent } from './manage-acc/student-profile/tutor-is-requested/tutor-is-requested.component';
 
 @NgModule({
   imports: [
@@ -15,7 +18,10 @@ import { TeacherInfoComponent } from './manage-acc/tutor-info/tutor-info.compone
   declarations: [
     ManageAccComponent,
     StudentProfileComponent,
-    TeacherInfoComponent
+    TeacherInfoComponent,
+    TableComponent,
+    TutorRequestComponent,
+    TutorIsRequestedComponent
   ]
 })
 export class ManageAccModule { }
