@@ -23,11 +23,11 @@
         <div *ngIf="user_detail; else close"
           style="position: absolute;display: block;z-index: 6; padding:1px;background-color: #426d9e">
           <div style=" margin: 0;padding-left: 10px;padding-right: 10px">
-            <button style="display: block" (click)="chooseManage()">
+            <button class="btn btn-primary"  style="display: block;background-color:#426d9e;width:100%" (click)="chooseManage()">
               <li routerLink="/manage-acc" routerLinkActive="active">Quản lý tài khoản</li>
             </button>
-            <button style="display: block">
-              <li href="">Đắng xuất</li>
+            <button class="btn btn-primary"  style="display: block ;background-color:#426d9e ;width:100%">
+              <li href="">Đăng xuất</li>
             </button>
 
           </div>

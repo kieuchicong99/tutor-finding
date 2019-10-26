@@ -1,0 +1,40 @@
+<div *ngFor="let content of listClass">
+    <div class="wrap">
+        <div class="title" style="color: cornflowerblue;font-weight:bold;text-transform: uppercase">
+          {{content.title}}
+        </div>
+        <div>
+          {{content.discription}}
+        </div>
+        <div style="width:100%">
+          <span class="item">
+            {{ content.subject}}
+          </span>
+          <span class="item">
+            {{ content.method}}
+          </span>
+          <span class="item">
+            {{ content.address}}
+          </span>
+          <span style="color: red"> <img style="margin-top:-4px" src="https://img.icons8.com/dotty/20/000000/money-bag.png">
+            {{ content.salary}}
+          </span>
+          <span style="color: rgb(29, 223, 230)">  <img style="margin-top:-4px" src="https://img.icons8.com/dotty/20/000000/calendar.png">
+            {{ content.time}}
+          </span>
+        </div>
+
+        <hr style=" display: block; height: 1px;
+        border: 0; border-top: 2px solid rgb(11, 72, 143);
+        margin: 0.5em 0; padding: 0;">
+
+        <div>
+          <button class="btn btn-primary btn-sm">Ẩn tin</button>
+          <button class="btn btn-primary btn-sm">Cập nhật</button>
+          <button class="btn btn-primary btn-sm">Xem</button>
+        </div>
+
+
+      </div>
+
+</div>

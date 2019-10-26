@@ -1,9 +1,10 @@
 
 .route:hover{
-  background-color: gainsboro;
+  background-color: rgb(104, 100, 100);
 }
 nav > div{
   padding:10px;
+  display: inline-block;
 
 }
 
@@ -14,8 +15,9 @@ nav > div{
   padding-right:20px;
   padding-bottom:20px;
   padding-top:20px;
-  padding-left:10px;
-  background-color: white;
+  padding-left:0;
+  background-color:#2A3F54;
+  color: white;
 }
 
 .left >div{
@@ -30,4 +32,6 @@ nav > div{
   overflow-y: scroll;
   height: 700px;
   background-color: white;
+  padding:10px;
+
 }

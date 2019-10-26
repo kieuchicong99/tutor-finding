@@ -7,6 +7,8 @@ import { TeacherInfoComponent } from './manage-acc/tutor-info/tutor-info.compone
 import { TableComponent } from './manage-acc/table/table.component';
 import { TutorRequestComponent } from './manage-acc/student-profile/tutor-request/tutor-request.component';
 import { TutorIsRequestedComponent } from './manage-acc/student-profile/tutor-is-requested/tutor-is-requested.component';
+import { ClassComponent } from './manage-acc/class/class.component';
+import { CardComponent } from './manage-acc/class/card/card.component';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import { TutorIsRequestedComponent } from './manage-acc/student-profile/tutor-is
     TeacherInfoComponent,
     TableComponent,
     TutorRequestComponent,
-    TutorIsRequestedComponent
+    TutorIsRequestedComponent,
+    ClassComponent,
+    CardComponent
   ]
 })
 export class ManageAccModule { }
