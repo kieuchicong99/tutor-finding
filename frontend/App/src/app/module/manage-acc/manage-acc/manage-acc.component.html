@@ -1,28 +1,30 @@
 <div style="margin-left: -20px">
   <div class="left">
-    <nav >
-      <div style="width:100%" class="route"  (click)="manageTutor()">Quản lý gia sư
-          <span *ngIf="!default"><img src="https://img.icons8.com/ios-filled/20/ffffff/chevron-down.png"></span>
+    <nav>
+      <div style="width:100%" class="route" (click)="manageTutor()">Quản lý gia sư
+        <span *ngIf="!default"><img src="https://img.icons8.com/ios-filled/20/ffffff/chevron-down.png"></span>
       </div>
       <div *ngIf="default; else show" style="display: none"></div>
       <ng-template #show>
         <div style="margin-left:10px">
-          <div style="padding:5px;width:100%" class="route" routerLink="/manage-acc/tutor-request" routerLinkActive="active">Gia sư đã mời
+          <div style="padding:5px;width:100%" class="route" routerLink="/manage-acc/tutor-request"
+            routerLinkActive="active">Gia sư đã mời
           </div>
-          <div style="padding:5px;width:100%" class="route" routerLink="/manage-acc/tutor-is-requested" routerLinkActive="active">Gia sư đề
+          <div style="padding:5px;width:100%" class="route" routerLink="/manage-acc/tutor-is-requested"
+            routerLinkActive="active">Gia sư đề
             nghị </div>
         </div>
 
       </ng-template>
-      <div style="width:100%" class="route" routerLink="/manage-acc/quan-ly-lop-hoc" routerLinkActive="active">Quản lý lớp học </div>
-      <div style="width:100%" class="route" routerLink="/manage-acc/profile" routerLinkActive="active">Quản lý tài khoản </div>
+      <div style="width:100%" class="route" routerLink="/manage-acc/quan-ly-lop-hoc" routerLinkActive="active">Quản lý
+        lớp học </div>
+      <div style="width:100%" class="route" routerLink="/manage-acc/profile" routerLinkActive="active">Quản lý tài khoản
+      </div>
     </nav>
 
 
   </div>
   <div class="right">
-    <!-- <app-student-profile></app-student-profile> -->
-    <!-- <app-tutor-info></app-tutor-info> -->
     <router-outlet></router-outlet>
   </div>
 </div>

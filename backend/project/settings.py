@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'qke)#vg5@5**s$x1m-pt^!&(#@uyuw)0ad#n0q_9foxhnrd1*y'
+SECRET_KEY = '8&hn(z8@wvfd7!k$3eccl!o9wmkd!em6fz#h7y3w0rrajeiml8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'project_app'
+    'app',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
-    'whitenoise.django.GzipManifestStaticFilesStorage'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,24 +115,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Update database configuration with $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
- 
+
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
- 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
+
 STATIC_URL = '/static/'
- 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
- 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
- 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
