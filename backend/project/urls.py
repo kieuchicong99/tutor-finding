@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import polls_list, polls_detail
+from rest_framework.documentation import include_docs_urls
 
 from django.urls import path
-from app.api_view import PollList, PollDetail
+from app.api_view import TutorList, TutorDetail
 
-urlpatterns = [
-path("polls/", PollList.as_view(), name="polls_list"),
-path("polls/<int:pk>/", PollDetail.as_view(), name="polls_detail")
+urlpatterns = [ 
+    path('tutors/', TutorList.as_view(), name="tutors"),
+    path('tutors/<int:id>/', TutorDetail.as_view(), name='tutor'),
+    path('docs/', include_docs_urls(title='Tutor Finding API')),
 ]
-
