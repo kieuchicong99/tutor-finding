@@ -81,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE':   'django.db.backends.mysql',
         'NAME':     'tutorfinding',
-        'USER':     'admin',
-        'PASSWORD': 'phong1098',
-        'HOST':     'tutorfinding.czz5pdkrxvz7.ap-southeast-1.rds.amazonaws.com',
+        'USER':     'user',
+        'PASSWORD': 'password',
+        'HOST':     '127.0.0.1',
         'PORT':     '3306',
     }
 }

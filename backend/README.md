@@ -32,8 +32,15 @@
       + Phê duyệt, quản lý  tài khoản (Admin)
 
 ## Cách thực hiện:
-   ### Cài đặt gói
-    
+   ### Các lệnh cần thiết 
+   - Chú ý: cài docker-compose trước tiên
+    ```shell
+    cd backend # di chuyển vào thư mục làm việc của backend 
+    docker-compose build # build image
+    docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate"
+    docker-compose up # start server and wait fews minutes 
+    ```
+    - Mở trình duyệt và vào cổng http://localhost:8000/docs để xem kết quả 
 
    ### Phần 1: Kết nối DB và query: 1 thành viên
       Nguyễn Anh Tuấn
