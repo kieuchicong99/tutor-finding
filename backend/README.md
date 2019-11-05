@@ -3,6 +3,7 @@
 - Ngôn ngữ: Python 3
 - Framework: Django 2.2
 
+
 ## Thành viên:
   1. Kiều Thanh Phong
   2. Kiều Chí Công
@@ -31,6 +32,9 @@
       + Phê duyệt, quản lý  tài khoản (Admin)
 
 ## Cách thực hiện:
+   ### Cài đặt gói
+    
+
    ### Phần 1: Kết nối DB và query: 1 thành viên
       Nguyễn Anh Tuấn
    ### Phần 2: Viêt API: 3 thành viên
