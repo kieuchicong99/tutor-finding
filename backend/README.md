@@ -36,15 +36,15 @@
    - Chú ý: cài docker-compose trước tiên
 
     ```bash
-      cd backend # di chuyển vào thư mục làm việc của backend 
+    cd backend # di chuyển vào thư mục làm việc của backend 
 
-      docker-compose build # build image
+    docker-compose build # build image
 
-      docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate"
+    docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate"
 
-      docker-compose up # start container (server) and wait fews minutes 
+    docker-compose up # start container (server) and wait fews minutes 
 
-      docker-compose down # stop container (server) 
+    docker-compose down # stop container (server) 
     ```
 
     - Mở trình duyệt và vào cổng http://localhost:8000/docs để xem kết quả 
