@@ -10,11 +10,13 @@ import { TutorIsRequestedComponent } from './manage-acc/student-profile/tutor-is
 import { ClassComponent } from './manage-acc/class/class.component';
 import { CardComponent } from './manage-acc/class/card/card.component';
 import { NewClassComponent } from './manage-acc/class/new-class/new-class.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     ManageAccRoutingModule,
+    FormsModule,
 
 
   ],

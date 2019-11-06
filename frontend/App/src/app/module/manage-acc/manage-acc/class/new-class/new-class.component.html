@@ -10,7 +10,7 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Ví dụ: Tìm gia sư toán lớp 1 quận Hoàn Kiếm" class="form-info">
+        <input type="text" name="demand_content" [(ngModel)] ="new_class.demand_content" placeholder="Ví dụ: Tìm gia sư toán lớp 1 quận Hoàn Kiếm" class="form-info">
       </div>
     </div>
     <div class="row py-3">
@@ -20,15 +20,9 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <select class="form-info">
+        <select class="form-info" name="type_tutor" [(ngModel)] ="new_class.type_tutor">
           <option value="" disabled selected>Lựa chọn gia sư</option>
-          <option value="none">--Không yêu cầu-- </option>
-          <option value="sinh_vien">Sinh viên</option>
-          <option value="hoc_sinh">Học sinh</option>
-          <option value="giao_vien_c1">Giáo viên cấp 1</option>
-          <option value="giao_vien_c2">Giáo viên cấp 2</option>
-          <option value="giao_vien_c3">Giáo viên cấp 3</option>
-          <option value="giang_vien">Giảng viên đại học</option>
+          <option *ngFor="let item of type_tutors" [ngValue]="item.key">{{item.value}}</option>
         </select>
       </div>
     </div>
@@ -340,7 +334,7 @@
       </div>
     </div>
     <div class="col-md-12" style="text-align: center;">
-      <button type="submit" class="btn btn-primary">Hoàn tất</button>
+      <button type="submit" class="btn btn-primary" (click) =createClass()>Hoàn tất</button>
     </div>
   </form>
 </div>

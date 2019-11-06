@@ -1,3 +1,4 @@
+import { ClassService } from './service/class.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -26,7 +27,8 @@ import { SignUpService } from './service/signup.service';
   ],
   providers: [
     SignInService,
-    SignUpService
+    SignUpService,
+    ClassService
   ],
   bootstrap: [AppComponent]
 })
