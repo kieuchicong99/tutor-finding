@@ -3,12 +3,26 @@
 - Ngôn ngữ: Python 3
 - Framework: Django 2.2
 
-
 ## Thành viên:
   1. Kiều Thanh Phong
   2. Kiều Chí Công
   3. Nguyễn Anh Tuấn
   4. Mai Thành Đạt
+
+## Các lệnh cần thiết 
+  - **Chú ý**: 
+    - Cài docker và docker-compose
+
+  ```python
+  dockerd #start docker
+  cd backend # move to folder to work 
+  docker-compose build # build image(only build 1 time if no change in docker-compose))
+  docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate" #migrate database
+  docker-compose up # start container (server) and wait fews minutes 
+  docker-compose down # stop container (server) 
+  ```
+
+  - Mở trình duyệt và vào *http://localhost:8000/docs* để xem api doc
 
 ## Nhiệm vụ:
   ### 1. Kết nối DB và query:
@@ -32,18 +46,7 @@
       + Phê duyệt, quản lý  tài khoản (Admin)
 
 ## Cách thực hiện
-   ### Các lệnh cần thiết 
-  - **Chú ý**: cài docker-compose trước tiên
-
-  ```python
-  cd backend # di chuyển vào thư mục làm việc của backend 
-  docker-compose build # build image
-  docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate"
-  docker-compose up # start container (server) and wait fews minutes 
-  docker-compose down # stop container (server) 
-  ```
-
-  - Mở trình duyệt và vào *http://localhost:8000/docs* để xem api doc
+   
 
    ### Phần 1: Kết nối DB và query: 1 thành viên
       Nguyễn Anh Tuấn

@@ -1,0 +1,5 @@
+volumes
+app/__pycache__
+app/migrations
+
+project/__pycache__

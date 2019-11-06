@@ -1,7 +1,9 @@
 version : '3'
 services:
   db:
-    image: mysql
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: db
     restart: always
     environment:
       MYSQL_DATABASE: 'tutorfinding'
@@ -13,7 +15,8 @@ services:
     expose:
       - '3306'
     volumes:
-      - .:/data
+      - ./volumes/mysql:/var/lib/mysql
+
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
