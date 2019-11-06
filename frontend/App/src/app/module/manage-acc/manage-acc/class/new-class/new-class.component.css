@@ -1,0 +1,65 @@
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.class-info {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    padding-bottom: 40px;
+}
+
+.class-info h4 {
+    text-decoration: underline;
+    text-decoration-color: #fd8d58;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.class-info h4 {
+    background-color: #fff;
+    color: #264a7d;
+    padding-top: 20px;
+    margin: auto;
+}
+
+.viewtopnewclass {
+    padding: 0 70px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.textview {
+    /* font-size: 14px; */
+    font-weight: 600;
+}
+
+.form-info {
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.lblcheckgt {
+    width: auto!important;
+}
+
+.detaijob-body2 {
+    float: left;
+    width: 100%;
+}
+
+.lichday {
+    text-align: center;
+    /* float: right; */
+}
+
+.canle {
+    float: left;
+    width: 13.33333333%;
+    padding: 10px; 
+}
