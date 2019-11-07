@@ -10,7 +10,8 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" name="demand_content" [(ngModel)] ="new_class.demand_content" placeholder="Ví dụ: Tìm gia sư toán lớp 1 quận Hoàn Kiếm" class="form-info">
+        <input type="text" name="demand_content" [(ngModel)]="new_class.demand_content"
+          placeholder="Ví dụ: Tìm gia sư toán lớp 1 quận Hoàn Kiếm" class="form-info">
       </div>
     </div>
     <div class="row py-3">
@@ -20,7 +21,7 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <select class="form-info" name="type_tutor" [(ngModel)] ="new_class.type_tutor">
+        <select class="form-info" name="type_tutor" [(ngModel)]="new_class.type_tutor">
           <option value="" disabled selected>Lựa chọn gia sư</option>
           <option *ngFor="let item of type_tutors" [ngValue]="item.key">{{item.value}}</option>
         </select>
@@ -33,16 +34,9 @@
         </label>
       </div>
       <div class="col-md-3 col-sm-8">
-        <select class="form-info">
+        <select class="form-info" name="subject" [(ngModel)]="new_class.subject">
           <option value="" disabled selected>Chọn môn học</option>
-          <option value="toan">Toán</option>
-          <option value="ly">Lý</option>
-          <option value="hoa">Hóa</option>
-          <option value="van">Văn</option>
-          <option value="sinh">Sinh</option>
-          <option value="su">Sử</option>
-          <option value="dia">Địa</option>
-          <option value="tieng_anh">Tiếng anh</option>
+          <option *ngFor="let item of subjects" [ngValue]="item.key">{{item.value}}</option>
         </select>
       </div>
       <div class="col-md-6 col-sm-12 row">
@@ -78,7 +72,8 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Nhập số lượng học sinh" class="form-info">
+        <input type="text" name="num_student" [(ngModel)]="new_class.num_student" placeholder="Nhập số lượng học sinh"
+          class="form-info">
       </div>
     </div>
     <div class="row py-3 ">
@@ -278,7 +273,7 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Nhập học phí dự kiến" class="form-info">
+        <input type="text" name="cost" [(ngModel)]="new_class.cost" placeholder="Nhập học phí dự kiến" class="form-info">
       </div>
     </div>
     <div class="row py-3">
@@ -286,10 +281,9 @@
         <label class="textview">Khu vực dạy<i style="color:red">*</i></label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <select id="area" class="form-info">
-          <option value="" disabled>Khu vực</option>
-          <option value="ha_noi">Hà Nội</option>
-          <option value="ho_chi_minh">Hồ Chí Minh</option>
+        <select class="form-info" name="address" [(ngModel)]="new_class.address">
+          <option value="" disabled selected>Khu vực</option>
+          <option *ngFor="let item of addresses" [ngValue]="item.key">{{item.value}}</option>
         </select>
       </div>
     </div>
@@ -300,7 +294,7 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Nhập địa chỉ diễn ra lớp học" class="form-info">
+        <input type="text" name="address_detail" [(ngModel)]="new_class.address_detail" placeholder="Nhập địa chỉ diễn ra lớp học" class="form-info">
       </div>
     </div>
     <div class="row py-3" style="padding-left: 15px">
@@ -308,7 +302,7 @@
         Thông tin chi tiết
       </label>
       <div class="col-md-12">
-        <textarea class="form-info" id="description" name="description" placeholder="Chi tiết" rows="3" cols="30"
+        <textarea class="form-info" name="description" [(ngModel)]="new_class.description" placeholder="Chi tiết" rows="3" cols="30"
           style="width:100%;"></textarea>
       </div>
     </div>
@@ -320,7 +314,7 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Nhập số điện thoại" class="form-info">
+        <input type="text" name="phone" [(ngModel)]="new_class.phone" placeholder="Nhập số điện thoại" class="form-info">
       </div>
     </div>
     <div class="row py-3">
@@ -330,11 +324,11 @@
         </label>
       </div>
       <div class="col-md-9 col-sm-8">
-        <input type="text" placeholder="Nhập địa chỉ email" class="form-info">
+        <input type="text" name="email" [(ngModel)]="new_class.email" placeholder="Nhập địa chỉ email" class="form-info">
       </div>
     </div>
     <div class="col-md-12" style="text-align: center;">
-      <button type="submit" class="btn btn-primary" (click) =createClass()>Hoàn tất</button>
+      <button type="submit" class="btn btn-primary" (click)=createClass()>Hoàn tất</button>
     </div>
   </form>
 </div>
