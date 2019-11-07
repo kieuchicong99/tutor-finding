@@ -10,7 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { SignInService } from './service/signin.service';
 import { SignUpService } from './service/signup.service';
-
+import { SlickModule } from 'ngx-slick';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +22,8 @@ import { SignUpService } from './service/signup.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouteModule
-
+    RouteModule,
+    SlickModule.forRoot()
   ],
   providers: [
     SignInService,
