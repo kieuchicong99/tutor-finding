@@ -21,10 +21,10 @@ export class NewClassComponent implements OnInit {
     schedule: '',
     cost: '',
     address: '',
-    note: '',
+    address_detail: '',
+    description: '',
     phone: '',
-    email: ''
-
+    email: '',
   }
 
   public type_tutors = [
@@ -35,6 +35,22 @@ export class NewClassComponent implements OnInit {
     { key: "giao_vien_c2", value: "Giáo viên cấp 2" },
     { key: "giao_vien_c3", value: "Giáo viên cấp 3" },
     { key: "giang_vien", value: "Giảng viên đại học" },
+  ]
+
+  public subjects = [
+    { key : "toan", value : "Toán"},
+    { key : "ly", value : "Lý"},
+    { key : "hoa", value : "Hóa"},
+    { key : "van", value : "Văn"},
+    { key : "sinh", value : "Sinh"},
+    { key : "su", value : "Sử"},
+    { key : "dia", value : "Địa"},
+    { key : "tieng_anh", value : "Tiếng anh"},
+  ]
+
+  public addresses = [
+    { key : "ha_noi", value : "Hà Nội"},
+    { key : "ho_chi_minh", value : "Hồ Chí Minh"},
   ]
 
   createClass() {
