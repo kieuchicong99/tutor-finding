@@ -1,49 +1,36 @@
-<table>
-  <thead>
-    <tr>
-      <th>
-        Tên gia sư
-      </th>
-      <th>
-        Môn học
-      </th>
-      <th>
-        Hình thức dạy
-      </th>
-      <th>
-        Mức học phí
-      </th>
-      <th>
-        Ngày yêu cầu
-      </th>
-      <th>
-        Trạng thái
-      </th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of content">
-      <td>
-        {{item.name}}
-
-      </td>
-      <td>
-        {{item.subject}}
-
-      </td>
-      <td>
-        {{item.method}}
-      </td>
-      <td>
-        {{item.cost}}
-      </td>
-      <td>
-        {{item.create_at}}
-      </td>
-      <td>
-        {{item.status}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <table class="table table-bordered" id="tempTable">
+    <thead>
+      <tr>
+        <th>Tên gia sư</th>
+        <th>Môn học</th>
+        <th>Hình thức dạy</th>
+        <th>Mức học phí</th>
+        <th>Ngày yêu cầu</th>
+        <th>Trạng thái</th>
+        <th>Bỏ qua</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of dataTable">
+	      <td>{{i.name}}</td>
+	      <td>{{i.subject}}</td>
+	      <td>{{i.method}}</td>
+	      <td>{{i.cost}}</td>
+	      <td>{{i.date}}</td>
+	      <td>{{i.status}}</td>
+              <td><i value="Delete" type="button" alt="Delete4" class="deleteIcon fa fa-trash"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+<script type="text/javascript" src="./assets/table.js" ></script>
+</html>
