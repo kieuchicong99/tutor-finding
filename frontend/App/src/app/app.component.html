@@ -1,11 +1,14 @@
 <div class="wrap">
 
   <div class="header" id="baner">
-    <div>
-      <a routerLink="/"><img src="http://localhost:4200/assets/Picture1.png" alt=""></a>
+    <div style="position:absolute; z-index:10; text-align: center;width:100%">
+      <a routerLink="/"><img src="/assets/Picture1.png" alt=""></a>
+      <h2 style="color: white;">Kết nối giữa gia sư và học sinh</h2>
     </div>
+    <slideshow [height]="'210px'" [autoPlay]="true" [showArrows]="true" [imageUrls]="imageSources">
+    </slideshow>
 
-    <h2 style="color: white;">Kết nối giữa gia sư và học sinh</h2>
+
   </div>
 
   <div class="topnav">
@@ -23,10 +26,11 @@
         <div *ngIf="user_detail; else close"
           style="position: absolute;display: block;z-index: 6; padding:1px;background-color: #426d9e">
           <div style=" margin: 0;padding-left: 10px;padding-right: 10px">
-            <button class="btn btn-primary"  style="display: block;background-color:#426d9e;width:100%" (click)="chooseManage()">
+            <button class="btn btn-primary" style="display: block;background-color:#426d9e;width:100%"
+              (click)="chooseManage()">
               <li routerLink="/manage-acc" routerLinkActive="active">Quản lý tài khoản</li>
             </button>
-            <button class="btn btn-primary"  style="display: block ;background-color:#426d9e ;width:100%">
+            <button class="btn btn-primary" style="display: block ;background-color:#426d9e ;width:100%">
               <li href="">Đăng xuất</li>
             </button>
 
