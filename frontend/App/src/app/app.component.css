@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .wrap{
-  
+
 }
 #baner {
   background-image: url(https://vieclam123.vn/pictures/home/home1.jpg);
@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 }
 .header {
   text-align: center;

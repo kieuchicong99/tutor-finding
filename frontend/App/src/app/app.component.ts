@@ -11,12 +11,17 @@ import { Field } from './model/field.model';
   styleUrls: ['./app.component.css']
 })
 
+
+
 export class AppComponent implements OnInit {
   // @ViewChild('slideshow') slideshow: any;
+  etc = "hello world"
   imageSources=[
     "assets/dog1.jpg",
     "assets/dog2.jpg",
-    "assets/dog3.jpg"
+    "assets/dog3.jpg",
+    this.etc
+
   ]
 
   subject_field:Array<Field>= [
