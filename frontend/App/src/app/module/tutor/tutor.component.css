@@ -15,9 +15,11 @@
 }
 
 .arrow-right:hover{
+  cursor: pointer;
   border-left: 10px solid rgb(209, 22, 22);
 }
 
 .arrow-left:hover{
   border-right: 10px solid rgb(209, 22, 22);
+  cursor: pointer;
 }
