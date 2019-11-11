@@ -1,0 +1,27 @@
+<div style="display: inline-block">
+  <div class="shadowh">
+    <div class="image">
+      <div style="text-align: center">
+        <img src="{{ img }}" alt="{{ name }}">
+        <div style="background-color: hsl(45, 3%, 23%); color: white">{{ address }}</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="cardct card-body">
+        <a href="{{ link }}">{{ name }} </a>
+        <div>Gia sư {{ class }} </div>
+        <div>
+          <div style="color: #ff8401; font-weight: bold;">
+            Từ: {{ renter }} đ/buổi
+          </div>
+        </div>
+        <div class=cart-detail>{{ description }}</div>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-primary btn-sm" (click)=movetoDetail()> Xem chi tiết</button>
+    </div>
+  </div>
+</div>
+

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TutorComponent } from './tutor.component';
 import { TutorRoutingModule } from './tutor-routing.module';
 import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
+import { TutorCardComponent } from './tutor-card/tutor-card.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { TutorProfileComponent } from './tutor-profile/tutor-profile.component';
   ],
   declarations: [
     TutorComponent,
-    TutorProfileComponent
+    TutorProfileComponent,
+    TutorCardComponent
   ]
 })
 export class TutorModule { }

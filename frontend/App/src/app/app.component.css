@@ -10,12 +10,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+
 }
 .header {
   text-align: center;
   background-color: #ddd;
-  height: 200px;
+  height: 400px;
 }
 
 .topnav{

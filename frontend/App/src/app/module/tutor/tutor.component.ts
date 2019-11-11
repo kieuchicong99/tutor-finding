@@ -7,32 +7,36 @@ import { Router } from '@angular/router';
   styleUrls: ['./tutor.component.css']
 })
 export class TutorComponent implements OnInit {
-   // @Input() id: number;
-  // @Input() name: string;
-  // @Input() address: string;
-  // @Input() class: string;
-  // @Input() renter: number;
-  // @Input() description: string;
-  // @Input() link: string;
-  // @Input() img: string;
+  @Input() tutors =[] ;
 
-  id = 1;
-  name = 'Cuong Tong';
-  address = 'Ha Noi';
-  class = 'Toan, Ly';
-  description = 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ';
-  renter = 120000;
-  link = 'https://google.com';
-  img = 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg';
+  tutor_show =[this.tutors[1],this.tutors[2],this.tutors[3]]
 
-  constructor(public router:Router ) { }
+  tutor ;
 
-  movetoDetail(){
-    this.router.navigateByUrl('tim-gia-su/chitiet');
+  index =0;
+  slide_left(){
+    console.log(1);
+    if(this.index >0)
+    this.tutor = this.tutor[this.index-1]
+    this.tutor_show.shift()
+    this.tutor_show.unshift(this.tutor)
+    this.index --;
+
   }
 
 
-  listTutor = []
+  slide_right(){
+    console.log(2);
+    if(this.index===this.tutors.length){
+      this.tutor = this.tutor[this.index%3]
+    }
+  }
+
+
+
+  constructor(public router:Router ) { }
+
+
 
   ngOnInit() {
   }

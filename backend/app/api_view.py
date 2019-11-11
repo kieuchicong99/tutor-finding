@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from app.models import Gia_su
-from app.serializers.ser_tutor import Tutors, Tutor
+from app.serializers.ser_tutor import SerTutors, SerTutor
 from rest_framework import generics
 
 
@@ -14,7 +14,7 @@ class TutorList(APIView):
     """
     def get(self, request):
         tutors = Gia_su.objects.all()
-        tutorSerializer = Tutors(tutors,many = True)
+        tutorSerializer = SerTutors(tutors,many = True)
         return  Response(
             {
                 "success":True,
@@ -29,7 +29,7 @@ class TutorDetail(APIView):
     """
     def get (self, request,id):
         tutor = Gia_su.objects.get(id_gia_su=id)
-        tutorDetailSerializer = Tutor(tutor)
+        tutorDetailSerializer = SerTutor(tutor)
         return  Response(
             {
                 "success":True,
