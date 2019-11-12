@@ -17,9 +17,17 @@ dataTable  = [
 
   constructor() { }
 
+  remove(i){
+    // call api delete request of tutor
+    //if response is true then datatable change
+    this.dataTable.splice(i,1)
+
+  }
+  
+
   ngOnInit() {
   }
   @Input() content:{}
-  
+
 
 }

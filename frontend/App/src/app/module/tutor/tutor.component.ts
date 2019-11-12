@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import {DefaultService} from '../../service/default.service';
 
 @Component({
   selector: 'app-tutor',
@@ -10,9 +11,9 @@ export class TutorComponent implements OnInit {
    /**
    * input cần truyền cho component này là mảng các gia sư lấy được từ server
    * nếu chưa filter thì server sẽ trả về mặc định, nếu có filter thì sẽ trả ra
-   * danh sách theo filter 
+   * danh sách theo filter
    */
-  @Input() tutors =[
+  public tutors =[
     {
       id : 1,
       name : 'Cuong Tong',
@@ -79,7 +80,6 @@ export class TutorComponent implements OnInit {
    * mảng hiển thị ra 3 tutor mặc định
    */
   tutor_show =[this.tutors[0],this.tutors[1],this.tutors[2]]
-
   /**
    * nhấn vào slide bên trái
    */
@@ -127,11 +127,14 @@ export class TutorComponent implements OnInit {
 
 
 
-  constructor(public router:Router ) { }
+  constructor(public router:Router, public service : DefaultService ) { }
 
 
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.tutors = await   this.service.getDefaultListTutor()
+    // this.service.getProfileTutor(id)
+
   }
 
 }

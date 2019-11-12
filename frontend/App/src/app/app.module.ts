@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { SignInService } from './service/signin.service';
 import { SignUpService } from './service/signup.service';
 import {SlideshowModule} from 'ng-simple-slideshow';
+import { DefaultService } from './service/default.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import {SlideshowModule} from 'ng-simple-slideshow';
   providers: [
     SignInService,
     SignUpService,
-    ClassService
+    ClassService,
+    DefaultService
   ],
   bootstrap: [AppComponent]
 })

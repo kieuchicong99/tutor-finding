@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class TutorCardComponent implements OnInit {
   @Input() tutor ;
+  @Input() color :string;
 
 
   constructor(public router:Router ) { }
