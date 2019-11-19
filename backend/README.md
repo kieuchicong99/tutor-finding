@@ -9,6 +9,18 @@
   3. Nguyễn Anh Tuấn
   4. Mai Thành Đạt
 
+## Tiến độ api
+
+- [x] Đăng ký tài khoản gia sư
+- [x] Đăng nhập tài khoản gia sư
+- [x] Lấy danh sách gia sư
+- [x] Lấy thông tin gia sư theo id
+- [ ] Chấp nhận gia sư
+- [ ] Chấp nhận lời mời dạy
+- [ ] Tạo, sửa, xóa thông tin cho lớp cần tìm gia sư
+- [ ] Lấy danh sách lớp
+- [ ] Tạo yêu cầu nhận lớp (Gia sư)
+
 ## Các lệnh cần thiết 
   - **Chú ý**: 
     - Cài docker và docker-compose
