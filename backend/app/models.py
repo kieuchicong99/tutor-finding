@@ -47,7 +47,8 @@ class Gia_su(models.Model):
     id_level = models.ForeignKey(Level, on_delete=models.CASCADE,blank=True, null=True)
     id_mon = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE,blank=True, null=True)
     ngay_tao = models.DateTimeField(auto_now_add=True)
-    ngay_chinh_sua = models.DateTimeField(auto_now=True)    
+    ngay_chinh_sua = models.DateTimeField(auto_now=True)   
+    role = models.IntegerField(blank=True,null=True) 
     def __str__(self):
         return self.ho_ten
            
@@ -67,6 +68,7 @@ class Phu_huynh(models.Model):
     id_mon = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE) # cai nay la khoa ngoai
     ngay_tao = models.DateTimeField(auto_now_add=True)
     ngay_chinh_sua = models.DateTimeField(auto_now=True)
+    role = models.IntegerField(blank=True,null=True)
 
     def __str__(self):
         return self.ho_ten

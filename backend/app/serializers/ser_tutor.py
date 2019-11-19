@@ -28,6 +28,7 @@ class SerTutor(serializers.ModelSerializer):
             mat_khau = hashers.SHA1PasswordHasher().encode(self.validated_data['mat_khau'],salt='123'),
             phone=self.validated_data['phone'],  
             hinh_dai_dien_url=self.validated_data['hinh_dai_dien_url'],
+            role=self.validated_data['role']
            
             )
               
