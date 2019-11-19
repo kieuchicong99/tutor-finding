@@ -18,9 +18,10 @@ from django.urls import path
 from rest_framework.documentation import include_docs_urls
 
 from django.urls import path
-from app.api_view import TutorList, TutorDetail
+from app.api.api_view import *
 
 urlpatterns = [ 
+    path('tutor/', Tutor.as_view(), name="tutor"),
     path('tutors/', TutorList.as_view(), name="tutors"),
     path('tutors/<int:id>/', TutorDetail.as_view(), name='tutor'),
     path('docs/', include_docs_urls(title='Tutor Finding API')),

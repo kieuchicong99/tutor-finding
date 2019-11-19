@@ -21,6 +21,7 @@
         docker-compose run web bash -c "python manage.py makemigrations app && python manage.py migrate" #migrate database
         docker-compose up # start container (server) and wait fews minutes 
         docker-compose down # stop container (server) 
+        mysql -P $8000 --protocol=tcp -u root -p #access to database if want(password is password)
   ```
     - Mở trình duyệt và vào *http://localhost:8000/docs* để xem api doc
 
