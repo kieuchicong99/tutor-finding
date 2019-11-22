@@ -8,8 +8,11 @@ SEX = (
     )
 
 STATUS = (
-    ('0','Chua xac thuc'),
-    ('1','Da xac thuc')
+    ('1','chưa mời gia sư'),
+    ('2','đã mời gia sư'),
+    ('3','ẩn lớp'),
+    ('4','hoàn thành'),
+
 )
 
 class Level(models.Model):
@@ -42,7 +45,6 @@ class Gia_su(models.Model):
     hoc_phi_gs = models.TextField(blank=True)
     hinh_thuc_day = models.CharField(max_length=150,blank=True)
     kinh_nghiem = models.TextField(blank=True)
-    so_hoc_vien = models.IntegerField(null=True)
     buoi_day = models.CharField(max_length=50,null=True)
     id_level = models.ForeignKey(Level, on_delete=models.CASCADE,blank=True, null=True)
     id_mon = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE,blank=True, null=True)
@@ -60,12 +62,6 @@ class Phu_huynh(models.Model):
     email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=20,unique=True)
     dia_chi = models.TextField(blank=True)
-    gioi_tinh_yc = models.CharField(max_length=50,choices=SEX,blank=True)
-    hinh_thuc_day = models.TextField(blank=True)
-    so_buoi_hoc = models.IntegerField(blank=True)
-    luong_tra = models.IntegerField(blank=True)
-    buoi_hoc = models.TextField(blank=True)
-    id_mon = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE) # cai nay la khoa ngoai
     ngay_tao = models.DateTimeField(auto_now_add=True)
     ngay_chinh_sua = models.DateTimeField(auto_now=True)
     role = models.IntegerField(blank=True,null=True)
@@ -121,12 +117,14 @@ class Lop_yeu_cau(models.Model):
     id_lop = models.AutoField(primary_key=True,auto_created=True)
     id_phu_huynh  = models.ForeignKey(Phu_huynh, on_delete=models.CASCADE) 
     trang_thai = models.CharField(max_length=20, choices = STATUS)## trang thai da nhan hay chua 
-    mo_ta = models.TextField(null=True)
-    hinh_thuc_day = models.CharField(max_length=150,null=True)
-    id_gia_su = models.ForeignKey(Gia_su, on_delete=models.CASCADE)
-    id_mon_hoc = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE)
+    mo_ta = models.TextField(blank=True)
+    hinh_thuc_day = models.CharField(max_length=150,blank=True)
+    id_gia_su = models.ForeignKey(Gia_su, on_delete=models.CASCADE,blank=True,null=True)
+    id_mon_hoc = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE,blank=True,null=True)
     yeu_cau_gioi_tinh = models.CharField(max_length=50,choices=SEX,null=True)
-    ghi_chu = models.TextField(null=True)
-    so_buoi_hoc = models.IntegerField(null=True)
+    so_buoi_hoc_moi_tuan = models.IntegerField(null=True)
+    so_gio_moi_buoi = models.IntegerField(null=True)
+    gia_thue_moi_buoi =  models.IntegerField(null=True)
+    dia_chi =  models.TextField(blank=True)
     ngay_tao = models.DateTimeField(auto_now_add=True)
     ngay_chinh_sua = models.DateTimeField(auto_now=True)

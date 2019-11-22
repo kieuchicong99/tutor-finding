@@ -21,6 +21,8 @@ from django.urls import path
 from app.api.api_view import *
 
 urlpatterns = [ 
+    path('student/', Student.as_view(), name="student"),
+    path('class/', CreateClass.as_view(), name="crete class"),
     path('signin/', AuthTutor.as_view(), name="signin"),
     path('tutor/', Tutor.as_view(), name="tutor"),
     path('tutors/', TutorList.as_view(), name="tutors"),

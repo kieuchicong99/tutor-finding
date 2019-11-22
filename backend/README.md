@@ -20,6 +20,8 @@
 - [ ] Tạo, sửa, xóa thông tin cho lớp cần tìm gia sư
 - [ ] Lấy danh sách lớp
 - [ ] Tạo yêu cầu nhận lớp (Gia sư)
+- [x] Đăng ký tài khoản phụ huynh
+- [x] Mở lớp học
 
 ## Các lệnh cần thiết 
   - **Chú ý**: 
