@@ -1,8 +1,8 @@
 export class SignUp
 {
   phone: number  ;
-  password:string;
-  name:string;
+  mat_khau:string;
+  ho_ten:string;
   email:string;
   constructor(){}
 

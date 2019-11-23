@@ -10,66 +10,66 @@ import coreschema
 from rest_framework import status
 
 class CreateClass(APIView):
-
+    
     schema = ManualSchema(fields=[
-         coreapi.Field(
-            "id_phu_huynh",
-            required=True,
-            location="form",
-            schema=coreschema.Integer()
-        ),
-        coreapi.Field(
-            "trang_thai",
-            required=True,
-            location="form",
-            schema=coreschema.String()
-        ),
-        coreapi.Field(
-            "mo_ta",
-            required=True,
-            location="form",
-            schema=coreschema.String()
-        ),
-        coreapi.Field(
-            "hinh_thuc_day",
-            required=True,
-            location="form",
-            schema=coreschema.String()
-        ),
-        coreapi.Field(
-            "yeu_cau_gioi_tinh",
-            required=True,
-            location="form",
-            schema=coreschema.String()
-        ),
-        coreapi.Field(
-            "so_buoi_hoc_moi_tuan",
-            required=True,
-            location="form",
-            schema=coreschema.Integer()
-        ),
-        coreapi.Field(
-            "so_gio_moi_buoi",
-            required=True,
-            location="form",
-            schema=coreschema.Integer()
-        ),
-        coreapi.Field(
-            "gia_thue_moi_buoi",
-            required=True,
-            location="form",
-            schema=coreschema.Integer()
-        ),
-        coreapi.Field(
-            "dia_chi",
-            required=True,
-            location="form",
-            schema=coreschema.String()
-        )
-        ])
+    coreapi.Field(
+        "id_phu_huynh",
+        required=True,
+        location="form",
+        schema=coreschema.Integer()
+    ),
+    coreapi.Field(
+        "trang_thai",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "mo_ta",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "hinh_thuc_day",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "yeu_cau_gioi_tinh",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "so_buoi_hoc_moi_tuan",
+        required=True,
+        location="form",
+        schema=coreschema.Integer()
+    ),
+    coreapi.Field(
+        "so_gio_moi_buoi",
+        required=True,
+        location="form",
+        schema=coreschema.Integer()
+    ),
+    coreapi.Field(
+        "gia_thue_moi_buoi",
+        required=True,
+        location="form",
+        schema=coreschema.Integer()
+    ),
+    coreapi.Field(
+        "dia_chi",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    )
+    ]) 
 
     def post(self, request):
-        """Tạo mới một lớp cần tìm gia sư"""
+        
         id_phu_huynh=request.data['id_phu_huynh']
         trang_thai = request.data['trang_thai']
         mo_ta = request.data['mo_ta']
@@ -107,3 +107,22 @@ class CreateClass(APIView):
         except Exception as e:
             print("Error:", e)
             return Response({"success": False, "message": "Lỗi hệ thống"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class ClassDetail(APIView):
+    def get(self, request, id):
+        """
+        get:
+        Trả về thông tin của một lớp học
+        """
+        _class = Lop_yeu_cau.objects.get(id_lop=id)
+        class_serializer = SerClass(_class)
+        return Response(
+            {
+                "success":True,
+                "data":class_serializer.data
+            }
+        )
+        
+
+class ClassList(APIView):
+    pass

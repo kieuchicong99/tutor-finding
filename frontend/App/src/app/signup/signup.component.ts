@@ -12,27 +12,24 @@ export class SignupComponent implements OnInit {
   constructor(public service: SignUpService) { }
   public user: SignUp = new SignUp();
   public repass : string;
+  public role;
 
   checkNull():boolean{
-    return(this.user.email!= null && this.user.name!= null && this.repass!= null && this.user.password!= null && this.user.phone!= null )
+    return(this.role!=null && this.user.email!= null && this.user.ho_ten!= null && this.repass!= null && this.user.mat_khau!= null && this.user.phone!= null )
   }
 
   checkRepassword():boolean{
-    return (this.user.password === this.repass )
+    return (this.user.mat_khau === this.repass )
   }
 
-  signUp():void{
-    if(this.checkRepassword() && this.checkNull()){
-      this.service.signUp(this.user).then(res => {
-        console.log("res:", res);
-
-      });
-    }
-    else{
-      console.error("du lieu nhap chua du")
-    }
-
-
+  signUp(){
+    // if(this.checkRepassword() && this.checkNull()){
+      this.role = parseInt(this.role)
+      this.service.signUp(this.role,this.user)
+    // }
+    // else{
+    //   console.error("du lieu nhap chua du")
+    // }
   }
   ngOnInit() {
   }

@@ -21,10 +21,12 @@ from django.urls import path
 from app.api.api_view import *
 
 urlpatterns = [ 
+    path('class/<int:id>/', ClassDetail.as_view(), name="class-detail"),
     path('student/', Student.as_view(), name="student"),
-    path('class/', CreateClass.as_view(), name="crete class"),
+    path('class/', CreateClass.as_view(), name="class"),
     path('signin/', AuthTutor.as_view(), name="signin"),
     path('tutor/', Tutor.as_view(), name="tutor"),
+    
     path('tutors/', TutorList.as_view(), name="tutors"),
     path('tutors/<int:id>/', TutorDetail.as_view(), name='tutor'),
     path('docs/', include_docs_urls(title='Tutor Finding API')),

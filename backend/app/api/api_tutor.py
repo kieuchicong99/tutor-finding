@@ -144,6 +144,6 @@ class TutorDetail(APIView):
         return Response(
             {
                 "success": True,
-                "detail": tutorDetailSerializer.data
+                "data": tutorDetailSerializer.data
             }
         )
