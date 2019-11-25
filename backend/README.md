@@ -15,6 +15,8 @@
 - [x] Đăng nhập tài khoản gia sư
 - [x] Lấy danh sách gia sư
 - [x] Lấy thông tin gia sư theo id
+- [x] Tạo danh sách môn học
+- [x] Lấy danh sách môn học
 - [ ] Chấp nhận gia sư
 - [ ] Chấp nhận lời mời dạy
 - [ ] Tạo, sửa, xóa thông tin cho lớp cần tìm gia sư
