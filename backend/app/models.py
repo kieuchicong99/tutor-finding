@@ -26,7 +26,6 @@ class Level(models.Model):
 class Mon_hoc(models.Model):
     id_mon = models.AutoField(primary_key=True,auto_created=True)
     ten_mon = models.CharField(max_length=100)
-    ten_mon_khong_dau = models.CharField(max_length=100)
     ngay_tao = models.DateTimeField(auto_now_add=True)
     ngay_chinh_sua = models.DateTimeField(auto_now=True)
     def __str__(self):

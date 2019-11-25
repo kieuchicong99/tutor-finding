@@ -6,6 +6,7 @@ from rest_framework import generics
 from .api_tutor import TutorList ,TutorDetail, Tutor, AuthTutor
 from .api_class import CreateClass, ClassDetail, ClassList
 from .api_student import Student
+from .api_subject import SubjectList, CreateSubject
 
 
 

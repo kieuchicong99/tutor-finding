@@ -122,7 +122,12 @@ class ClassDetail(APIView):
                 "data":class_serializer.data
             }
         )
-        
 
 class ClassList(APIView):
+    pass
+
+
+class ClassListDefault(APIView):
+    """Lấy danh sách các lớp học theo mặc định"""
+
     pass

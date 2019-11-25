@@ -21,6 +21,8 @@ from django.urls import path
 from app.api.api_view import *
 
 urlpatterns = [ 
+     path('subjects/',SubjectList.as_view(), name="list-subject" ),
+    path('subject/',CreateSubject.as_view(), name="create-subject" ),
     path('class/<int:id>/', ClassDetail.as_view(), name="class-detail"),
     path('student/', Student.as_view(), name="student"),
     path('class/', CreateClass.as_view(), name="class"),
