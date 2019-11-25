@@ -16,14 +16,23 @@
 - [x] Lấy danh sách gia sư
 - [x] Lấy thông tin gia sư theo id
 - [x] Tạo danh sách môn học
-- [x] Lấy danh sách môn học
-- [ ] Chấp nhận gia sư
-- [ ] Chấp nhận lời mời dạy
-- [ ] Tạo, sửa, xóa thông tin cho lớp cần tìm gia sư
-- [ ] Lấy danh sách lớp
-- [ ] Tạo yêu cầu nhận lớp (Gia sư)
-- [x] Đăng ký tài khoản phụ huynh
-- [x] Mở lớp học
+- [x] Lấy danh sách tất cả môn học
+- [x] Đăng ký tài khoản học sinh
+- [x] Mở lớp cần tìm gia sư
+- [ ] Đăng nhập tài khoản học sinh
+- [ ] Lấy danh sách gia sư theo địa điểm, theo môn, theo lớp
+- [ ] Chấp nhận yêu cầu nhận lớp của gia sư cho một lớp cần tìm gia sư
+- [ ] Chấp nhận lời mời dạy của học học sinh
+- [ ] Tạo, sửa, ẩn, hiện thông tin cho lớp cần tìm gia sư
+- [ ] Lấy danh sách lớp cần tìm gia sư(lấy theo page, lấy tất cả)
+- [ ] Lấy danh sách gia sư(lấy theo page, lấy tất cả)
+- [ ] Tạo yêu cầu nhận lớp (Gia sư tạo yêu cầu đến cho học sinh)
+- [ ] Tạo yêu cầu nhận mời gia sư (học sinh tạo yêu cầu mời gia sư dạy đối với các lớp mà học sinh đã tạo)
+- [ ] Cập nhật tài khoản gia sư (update các thông tin cá nhân của gia sư)
+- [ ] Cập nhật tài khoản học sinh (update các thông tin cá nhân học sinh)
+
+
+
 
 ## Các lệnh cần thiết 
   - **Chú ý**: 
