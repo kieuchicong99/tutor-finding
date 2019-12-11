@@ -10,7 +10,7 @@ from rest_framework import status
 from rest_framework import generics
 from rest_framework.schemas import ManualSchema
 from rest_framework_jwt.settings import api_settings
-
+from app.models import Phu_huynh
 from app.models import Gia_su
 from app.serializers.ser_student import SerStudent
 
@@ -74,6 +74,41 @@ class Student(APIView):
             return Response({"success": False, "message": "Lỗi hệ thống"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+class AuthStudent(APIView):
+    # view cho xác thực tài khoản
+
+    schema=ManualSchema(fields=[
+        coreapi.Field(
+            "phone",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
+            "mat_khau",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+
+    ])
+    def post(seft, request):
+        phone = request.data['phone']
+        mat_khau = request.data['mat_khau']
+
+       
+        try:
+           phu_huynh = Phu_huynh.objects.get(phone=phone)
+        except Exception as e:
+            print("Error:",e)
+            return Response({"success": False, "message": "Tài khoản không tồn tại"})
+
+        if hashers.SHA1PasswordHasher().verify(mat_khau,phu_huynh.mat_khau):
+            tutorSerializer = SerTutors(phu_huynh)
+            jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER(tutorSerializer.data)
+            return Response({"success": True,"token": jwt_encode_handler,"role":phu_huynh.role,"ho_ten":phu_huynh.ho_ten} )
+        else:
+            return Response({"success": False,"message": "Tài khoản hoặc mật khẩu không đúng"})
 class StudentDetail(APIView):
     """
     get:

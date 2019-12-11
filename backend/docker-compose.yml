@@ -1,4 +1,10 @@
 version : '3'
+
+volumes:
+  dbdata:
+    external:
+      name: 'dbdata'
+
 services:
   db:
     image: mysql:8
@@ -15,15 +21,15 @@ services:
     expose:
       - '3306'
     volumes:
-      - ./volumes/mysql:/var/lib/mysql
+      - dbdata:/var/lib/mysql
 
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
-    volumes:
-    - .:/code
     ports:
     - "8000:8000"
     depends_on:
     - db
     restart: always
+    volumes:
+      - .:/usr/src/api
