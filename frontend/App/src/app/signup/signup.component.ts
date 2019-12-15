@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
 
   checkRepassword():boolean{
     return (this.user.mat_khau === this.repass )
+
   }
 
   signUp(){

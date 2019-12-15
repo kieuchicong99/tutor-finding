@@ -127,3 +127,9 @@ class Lop_yeu_cau(models.Model):
     dia_chi =  models.TextField(blank=True)
     ngay_tao = models.DateTimeField(auto_now_add=True)
     ngay_chinh_sua = models.DateTimeField(auto_now=True)
+
+
+class Lop_yeu_cau_Gia_su(models.Model):
+     id = models.AutoField(primary_key=True,auto_created=True)
+     id_lop_yeu_cau = models.ForeignKey(Lop_yeu_cau, on_delete=models.CASCADE,blank=True,null=True)
+     id_gia_su = models.ForeignKey(Gia_su, on_delete=models.CASCADE,blank=True,null=True)

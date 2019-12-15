@@ -30,3 +30,6 @@ class SerStudent(serializers.ModelSerializer):
             student.save()
         else :
             raise Exception('Tài khoản đã tồn tại')
+
+class AcceptTutor():
+    pass
