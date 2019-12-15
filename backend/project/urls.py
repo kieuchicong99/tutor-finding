@@ -28,8 +28,12 @@ urlpatterns = [
     path('class/', CreateClass.as_view(), name="class"),
     path('signin/', AuthTutor.as_view(), name="signin"),
     path('tutor/', Tutor.as_view(), name="tutor"),
-    
+    path('signinstudent/',AuthStudent.as_view(),name="signinstudent"),
+    path('listclasspage/<int:page>',ClassListPage.as_view(),name="listclasspage"),
     path('tutors/', TutorList.as_view(), name="tutors"),
     path('tutors/<int:id>/', TutorDetail.as_view(), name='tutor'),
+    path('tutorlistpage/<int:page>',TutorListPage.as_view(),name="listtutorpage"),
     path('docs/', include_docs_urls(title='Tutor Finding API')),
+    path('updatetutor/', UpdateTutor.as_view(), name="tutor"),
+    path('updatestudent/', UpdateStudent.as_view(), name="student"),
 ]
