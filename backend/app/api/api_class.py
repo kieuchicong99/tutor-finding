@@ -7,6 +7,7 @@ from rest_framework import generics
 from rest_framework.schemas import ManualSchema
 import coreapi
 import coreschema
+from django.core.paginator import Paginator
 from rest_framework import status
 
 class CreateClass(APIView):
@@ -123,11 +124,42 @@ class ClassDetail(APIView):
             }
         )
 
-class ClassList(APIView):
-    pass
+class ClassListPage(APIView):
+    
+    "Lấy danh sách các lớp theo page"
+    def get(self, request, page):
+        """
+        get:
+        Trả về danh sách theo page
+        """
+        _classes = Lop_yeu_cau.objects.all()
+        paginator = Paginator(_classes,10)
+        listClass= paginator.get_page(page)
+        listClassSerializer = SerClass(listClass, many=True)
 
+        return Response(
+            {
+                "success":True,
+                "data":listClassSerializer.data
+            }
+        )
 
 class ClassListDefault(APIView):
-    """Lấy danh sách các lớp học theo mặc định"""
+    """
+    get:
+     Trả về danh sách các lớp học
+    """
 
-    pass
+    def get(self, request):
+        _class = Lop_yeu_cau.objects.all()
+        class_serializer = SerClass(_class, many=True)
+        return Response(
+            {
+                "success": True,
+                "class": class_serializer.data
+            }
+        )
+
+
+# class TutorFind(APIView):
+#  pass
