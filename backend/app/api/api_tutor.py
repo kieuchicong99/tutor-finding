@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
 from rest_framework.schemas import ManualSchema
+from django.core.paginator import Paginator
 from rest_framework_jwt.settings import api_settings
 
 from app.models import Gia_su
@@ -132,6 +133,60 @@ class Tutor(APIView):
             print("Error:", e)
             return Response({"success": False, "message": "Lỗi hệ thống"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+class UpdateTutor(APIView):
+    # view for TuTor
+    schema=ManualSchema(fields=[
+        coreapi.Field(
+            "ho_ten",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
+            "email",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "mat_khau",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "hinh_dai_dien_url",
+            required=True,
+            location="form",
+            schema=coreschema.String()
+        )])
+    def post(self, request):
+        ho_ten=request.data['ho_ten']
+        email=request.data['email']
+        mat_khau=request.data['mat_khau']
+        hinh_dai_dien_url=request.data['hinh_dai_dien_url']
+
+        
+        tutor=Gia_su.objects.get(id_gia_su=1)
+        old_tutor =  Gia_su.objects.get(id_gia_su=1)
+        tutor.ho_ten= ho_ten
+        tutor.email = email
+        tutor.mat_khau = mat_khau
+        tutor.hinh_dai_dien_url = hinh_dai_dien_url
+
+        
+        try:
+            try:
+                tutor.save()
+                return Response({"success": True, "message": "Cập nhập thành công ", "old_value":SerTutor(old_tutor).data, "new_value":SerTutor(tutor).data}, status.HTTP_200_OK)
+            except Exception as e:
+                print("Error:", e)
+                return Response({"success": False, "message": "Số điện thoại đã tồn tại"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception as e:
+            print("Error:", e)
+            return Response({"success": False, "message": "Lỗi hệ thống"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 
 class TutorDetail(APIView):
     """
@@ -147,3 +202,23 @@ class TutorDetail(APIView):
                 "data": tutorDetailSerializer.data
             }
         )
+
+class TutorListPage(APIView):
+    
+    "Lấy danh sách các lớp theo page"
+    def get(self, request, page):
+        """
+        get:
+        Trả về danh sách theo page
+        """
+        tutor = Gia_su.objects.all()
+        paginator = Paginator(tutor,10)
+        listTutor= paginator.get_page(page)
+        listTutorSerializer = SerTutor(listTutor, many=True)
+
+        return Response(
+            {
+                "success":True,
+                "data":listTutorSerializer.data
+            }
+        )        
