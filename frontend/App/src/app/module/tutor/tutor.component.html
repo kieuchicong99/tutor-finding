@@ -1,17 +1,17 @@
-<div>
-  Gia sư môn
-</div>
-<div >
-  <div class="arrow-left" style="display: inline-block" (click)=slide_left()>
-
+<div *ngFor="let i of type; let id = index">
+  <div>
+    Gia sư {{i.title}}
+  </div>
+  <div style="background: white">
+    <div style="padding-top:10px">
+      <div style="margin: 15px">
+        <span *ngFor="let item of i.tutors | paginate: { id: id, itemsPerPage: 3, currentPage: p[id] }">
+          <app-tutor-card [tutor]="item" style="padding-right:20px"></app-tutor-card>
+        </span>
+      </div>
+      <pagination-controls id={{id}} (pageChange)="p[id] = $event"></pagination-controls>
+    </div>
   </div>
 
-  <app-tutor-card [tutor]="tutor_show[0]" style="padding:10px;"></app-tutor-card>
-  <app-tutor-card [tutor]="tutor_show[1]" style="padding:10px"></app-tutor-card>
-  <app-tutor-card [tutor]="tutor_show[2]" style="padding:10px"></app-tutor-card>
-  <div class= "arrow-right" style="display: inline-block"  (click)=slide_right()>
 
-  </div>
 </div>
-
-

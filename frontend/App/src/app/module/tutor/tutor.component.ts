@@ -13,7 +13,107 @@ export class TutorComponent implements OnInit {
    * nếu chưa filter thì server sẽ trả về mặc định, nếu có filter thì sẽ trả ra
    * danh sách theo filter
    */
-  public tutors =[
+  public toan_tutor =[
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
+    {
+      id : 1,
+      name : 'Cuong Tong',
+      address : 'Ha Noi',
+      class : 'Toan, Ly',
+      description : 'Vui ve, hoa dong, thich mau hong, ghet su gia doi, sơ trường ăn uống ',
+      renter : 120000,
+      link : 'https://google.com',
+      img : 'https://img.etimg.com/thumb/msid-68333505,width-643,imgsize-204154,resizemode-4/googlechrome.jpg',
+    },
     {
       id : 1,
       name : 'Cuong Tong',
@@ -76,64 +176,35 @@ export class TutorComponent implements OnInit {
     }
 ] ;
 
-  /**
-   * mảng hiển thị ra 3 tutor mặc định
-   */
-  tutor_show =[this.tutors[0],this.tutors[1],this.tutors[2]]
-  /**
-   * nhấn vào slide bên trái
-   */
-  slide_left(){
-    let first_index = this.tutors.indexOf(this.tutor_show[0])
-    let last_index = this.tutors.indexOf(this.tutor_show[2])
+public van_tutor = JSON.parse(JSON.stringify(this.toan_tutor))
+public anh_tutor = JSON.parse(JSON.stringify(this.toan_tutor))
 
-    if(first_index >=0 && last_index<this.tutors.length-1){
-      // xoa phan tu dau tien
-      this.tutor_show.shift()
-      //chen vao cuoi
-      this.tutor_show.push(this.tutors[last_index+1])
-    }
+  type=[
+    {
+      title:"Toán",
+      tutors:this.toan_tutor
+    },
+    {
+      title:"Văn",
+      tutors:this.van_tutor
+    },
+    {
+      title: "Anh",
+      tutors:this.anh_tutor
+    },
+  ]
 
-    if(last_index>=this.tutors.length-1){
-      // xoa phan tu dau tien
-      this.tutor_show.shift()
-      //chen vao cuoi
-      this.tutor_show.push(this.tutors[(last_index+1)%3])
-      }
-  }
+  constructor(public router:Router, public service : DefaultService ) {
 
 
-  /**
-   * nhấn vào slide bên phải
-   */
-  slide_right(){
-    let first_index = this.tutors.indexOf(this.tutor_show[0])
-    let last_index = this.tutors.indexOf(this.tutor_show[2])
+   }
 
-    if(first_index >0 && last_index<this.tutors.length){
-      // xoa phan tu cuoi
-      this.tutor_show.pop()
-      //chen vao dau
-      this.tutor_show.unshift(this.tutors[first_index-1])
-    }
-    if(first_index==0){
-      // xoa phan tu cuoi
-      this.tutor_show.pop()
-      //chen vao dau
-      this.tutor_show.unshift(this.tutors[this.tutors.length-1])
-
-      }
-  }
-
-
-
-  constructor(public router:Router, public service : DefaultService ) { }
-
-
+   p = [];
 
   async ngOnInit() {
-    this.tutors = await   this.service.getDefaultListTutor()
+    // this.tutors = await   this.service.getDefaultListTutor()
     // this.service.getProfileTutor(id)
+
 
   }
 
