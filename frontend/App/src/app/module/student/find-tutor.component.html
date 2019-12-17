@@ -1,8 +1,16 @@
 <div class="main">
   <div *ngFor="let kind of tutor_kind">
-    <div style ="padding-bottom: 10px">
-        <div class="field" style="display: inline-block">{{kind}}</div>
-        <div style="display: inline-block;">  ----------------------------------------------  </div>
+    <div style="padding-bottom: 10px">
+      <div style="  display: inline-block;
+                    background-image: url('assets/find2.png');
+                    background-repeat: no-repeat;
+                    color: white;
+                    padding: 5px;
+                    overflow: hidden;
+                    width: 30%;
+                    text-overflow: ellipsis;
+                    text-transform: uppercase;
+                    margin-bottom:5px;">{{kind}}</div>
     </div>
     <div class="row" *ngFor="let tutor of tutors">
       <div class="col-9">

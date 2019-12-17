@@ -4,17 +4,7 @@
 .row{
   margin-left: 50px;
 }
-.field{
-  background-color: #003471;
-  color: white;
-  padding: 5px;
-  overflow: hidden;
-  width: 30%;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  margin-bottom:5px;
 
-}
 
 .box{
     position: relative;
