@@ -15,7 +15,9 @@ export class SignUpService{
         .post("/tutor/", JSON.stringify(user), { headers: this.headers })
         .toPromise()
         .then(res => {
+          localStorage.setItem("user",JSON.stringify(res.json().data))
           return res.json().data;
+
         })
         .catch();
     }
@@ -24,6 +26,7 @@ export class SignUpService{
         .post("/student/", JSON.stringify(user), { headers: this.headers })
         .toPromise()
         .then(res => {
+          localStorage.setItem("user",JSON.stringify(res.json().data))
           return res.json().data;
         })
         .catch();

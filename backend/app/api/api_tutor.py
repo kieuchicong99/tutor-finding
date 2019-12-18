@@ -68,7 +68,7 @@ class AuthTutor(APIView):
         if hashers.SHA1PasswordHasher().verify(mat_khau,gia_su.mat_khau):
             tutorSerializer = SerTutors(gia_su)
             jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER(tutorSerializer.data)
-            return Response({"success": True,"token": jwt_encode_handler,"role":gia_su.role,"ho_ten":gia_su.ho_ten} )
+            return Response({"success": True,"token": jwt_encode_handler,"role":gia_su.role, "data":tutorSerializer.data} )
         else:
             return Response({"success": False,"message": "Tài khoản hoặc mật khẩu không đúng"})
 
@@ -105,7 +105,7 @@ class Tutor(APIView):
         email=request.data['email']
         mat_khau=request.data['mat_khau']
         phone=request.data['phone']
-        hinh_dai_dien_url='https://google.com'
+        hinh_dai_dien_url='https://api.adorable.io/avatar/200/account'
         role=1
 
         tutor_serializer=SerTutor(
@@ -122,7 +122,7 @@ class Tutor(APIView):
             if tutor_serializer.is_valid():
                 try:
                     tutor_serializer.save()
-                    return Response({"success": True, "message": "Đăng kí thành công "}, status.HTTP_200_OK)
+                    return Response({"success": True, "message": "Đăng kí thành công ", "data":tutor_serializer.data}, status.HTTP_200_OK)
                 except Exception as e:
                     print("Error:", e)
                     return Response({"success": False, "message": "Số điện thoại đã tồn tại"}, status.HTTP_500_INTERNAL_SERVER_ERROR)

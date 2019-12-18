@@ -13,7 +13,16 @@
 
       <div class="row_form">
         <div>Mật khẩu</div>
-        <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Mật khẩu cho tài khoản này">
+        <input type="password" [(ngModel)]="user.mat_khau" [ngModelOptions]="{standalone: true}" placeholder="Mật khẩu cho tài khoản này">
+      </div>
+
+      <div class="row_form">
+        <div class="form-check">
+          <input type="radio"  [(ngModel)]="role"  value="1" name ="choose" class="form-check-input" id="tutor" />
+          <label class="form-check-label" for="tutor">Gia sư</label>
+          <input type="radio" [(ngModel)]="role" value ="2"  name ="choose" class="form-check-input" id="student" />
+          <label class="form-check-label" for="student">Phụ huynh</label>
+        </div>
       </div>
 
       <div class="row_form">

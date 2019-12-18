@@ -19,8 +19,8 @@
     <div style="position: relative; display: inline-block; width: 25%">
       <div *ngIf="nonlogin; else logined"></div>
       <ng-template #logined>
-        <button style="background-color: #426d9e;border: hidden;color:white"
-          (click)="showUserDetail()">{{name}}</button>
+        <input type="button" style="background-color: #426d9e;border: hidden;color:white"
+          (click)="showUserDetail()" [(ngModel)]="name"[ngModelOptions]="{ standalone: true }"/>
 
 
         <div *ngIf="user_detail; else close"
@@ -31,7 +31,7 @@
               <li routerLink="/manage-acc" routerLinkActive="active">Quản lý tài khoản</li>
             </button>
             <button class="btn btn-primary" style="display: block ;background-color:#426d9e ;width:100%">
-              <li href="">Đăng xuất</li>
+              <li href="" (click)="Logout()">Đăng xuất</li>
             </button>
 
           </div>

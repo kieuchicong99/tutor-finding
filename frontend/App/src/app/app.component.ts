@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
       ]
 
   public user_detail = false
-  public name = "Kiều Chí Công";
+  public name ;
   showUserDetail(){
     if(this.user_detail ==false)
       this.user_detail = true;
@@ -83,7 +83,14 @@ export class AppComponent implements OnInit {
     this.user_detail = false;
     this.default = true;
   }
+  Logout(){
+    localStorage.removeItem("user")
+  }
+  public user
   ngOnInit(){
+    this.user = JSON.parse(localStorage.getItem("user"))
+
+    this.name = this.user.ho_ten
 
 
   }

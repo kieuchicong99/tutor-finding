@@ -62,7 +62,7 @@ class Student(APIView):
             if student_serializer.is_valid():
                 try:
                     student_serializer.save()
-                    return Response({"success": True, "message": "Đăng kí thành công "}, status.HTTP_200_OK)
+                    return Response({"success": True, "message": "Đăng kí thành công ",  "data":student_serializer.data}, status.HTTP_200_OK)
                 except Exception as e:
                     print("Error:", e)
                     return Response({"success": False, "message": "Số điện thoại đã tồn tại"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -106,7 +106,7 @@ class AuthStudent(APIView):
         if hashers.SHA1PasswordHasher().verify(mat_khau,phu_huynh.mat_khau):
             studentSerializer = SerStudent(phu_huynh)
             jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER(studentSerializer.data)
-            return Response({"success": True,"token": jwt_encode_handler,"role":phu_huynh.role,"ho_ten":phu_huynh.ho_ten} )
+            return Response({"success": True,"token": jwt_encode_handler,"role":phu_huynh.role, "data":studentSerializer.data} )
         else:
             return Response({"success": False,"message": "Tài khoản hoặc mật khẩu không đúng"})
 class StudentDetail(APIView):

@@ -11,9 +11,11 @@ export class SigninComponent implements OnInit {
 
   constructor(public service: SignInService) { }
   public user: SignIn = new SignIn();
+  public role;
 
   signIn() {
-    this.service.signIn(this.user).then(res => {
+    this.role = parseInt(this.role)
+    this.service.signIn(this.role,this.user).then(res => {
       console.log("res:", res);
       // if (res.access_token == null)
       //   this.returnSignUp();
