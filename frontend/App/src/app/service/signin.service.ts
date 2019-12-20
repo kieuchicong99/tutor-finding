@@ -8,7 +8,7 @@ export class SignInService extends CommonService {
   signIn(role,user: SignIn ) {
     if(role===1){
       return this.http
-      .post('/signin/', JSON.stringify(user), { headers: this.headers })
+      .post('/api/signin/', JSON.stringify(user), { headers: this.headers })
       .toPromise()
       .then(res => {
         localStorage.setItem("user",JSON.stringify(res.json().data))
@@ -19,7 +19,7 @@ export class SignInService extends CommonService {
 
     if(role===2){
       return this.http
-      .post('/signinstudent/', JSON.stringify(user), { headers: this.headers })
+      .post('/api/signinstudent/', JSON.stringify(user), { headers: this.headers })
       .toPromise()
       .then(res => {
         localStorage.setItem("user",JSON.stringify(res.json().data))

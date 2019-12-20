@@ -20,7 +20,28 @@
       </div>
     </div>
     <div>
-      <button class="btn btn-primary btn-sm" (click)=movetoDetail()> Xem chi tiết</button>
+      <!-- <button class="btn btn-primary btn-sm" (click)=movetoDetail()> Xem chi tiết</button> -->
+      <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Xem chi tiết</button>
+
+      <!-- Modal add  -->
+      <div class="modal fade " id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content " >
+          <div class="modal-header " style="max-height: 600px;overflow-y: scroll;">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <app-tutor-profile></app-tutor-profile>
+            <button type="button" class="close btn-sm" data-dismiss="modal" aria-label="Close" #closeBtnAdd>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 </div>

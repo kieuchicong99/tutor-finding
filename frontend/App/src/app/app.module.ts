@@ -12,6 +12,8 @@ import { SignInService } from './service/signin.service';
 import { SignUpService } from './service/signup.service';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { DefaultService } from './service/default.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { DefaultService } from './service/default.service';
     FormsModule,
     HttpModule,
     RouteModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     SignInService,

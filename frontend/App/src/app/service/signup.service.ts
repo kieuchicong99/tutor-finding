@@ -12,7 +12,7 @@ export class SignUpService{
   signUp(role,user: SignUp):Promise<SignUp>{
     if (role === 1) {
       return this.http
-        .post("/tutor/", JSON.stringify(user), { headers: this.headers })
+        .post("/api/tutor/", JSON.stringify(user), { headers: this.headers })
         .toPromise()
         .then(res => {
           localStorage.setItem("user",JSON.stringify(res.json().data))
@@ -23,7 +23,7 @@ export class SignUpService{
     }
     if (role === 2) {
       return this.http
-        .post("/student/", JSON.stringify(user), { headers: this.headers })
+        .post("/api/student/", JSON.stringify(user), { headers: this.headers })
         .toPromise()
         .then(res => {
           localStorage.setItem("user",JSON.stringify(res.json().data))
