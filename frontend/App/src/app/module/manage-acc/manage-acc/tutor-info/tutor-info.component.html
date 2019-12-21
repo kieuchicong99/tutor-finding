@@ -2,7 +2,7 @@
 <div class="col-md-12 col-sm-12 pr-5 pl-5">
     <div class="row" style="background-color: aquamarine;">
       <div class="col-lg-3 col-md-3 col-sm-4 col-4">
-        <img id="previewImage" class="img-thumbnail border-0 circle" src="https://i.pinimg.com/564x/65/08/b1/6508b1c4af949ef600c42480d8753e91.jpg"
+        <img id="previewImage" class="img-thumbnail border-0 circle" src={{profile.hinh_dai_dien_url}}
             alt="avatar">
       </div>
     </div>
@@ -13,37 +13,37 @@
     </div>
     <form class="pad " enctype="multipart/form-data">
       <div class="row py-3">
-        <div class="col-md-2 col-sm-3">
+        <div class="col-3">
           <label class="textview">
             Họ tên: <i style="color:red">*</i>
           </label>
         </div>
-        <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Nhập họ và tên của bạn" class="form-info" id="name">
+        <div class="col-9">
+          <input type="text" name= "ho_ten" placeholder="Nhập họ và tên của bạn" class="form-info" [(ngModel)]="profile.ho_ten" id="name">
         </div>
       </div>
-      <div class="row py-3">
-        <div class="col-md-2 col-sm-3">
+      <div class="row">
+        <div class="col-3">
           <label class="textview">
             Ngày sinh: <i style="color:red">*</i>
           </label>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <input type="text" placeholder="Nhập ngày sinh" class="form-info" id="dateOfBirth">
+        <div class="col-9">
+          <input type="text" name="ngay_sinh" placeholder="Nhập ngày sinh" class="form-info" [(ngModel)]="profile.ngay_sinh" id="dateOfBirth">
         </div>
-        <div class="col-md-5 form-inline">
-          <label class="textview" style="margin-right: 20px;">
+        <div class="form-group col-12 ">
+          <span class="textview" style="margin-right: 20px;">
             Giới tính: <i style="color:red">*</i>
-          </label>
-          <div class="form-group lblcheckgt">
-            <input value="male" class="mr-2" name="sex" id="male" type="radio">
-            <label for="male" class="viewgt" style="margin-right:20px">
+          </span>
+          <div class="form-group col-3" style="display:inline-block">
+            <input value="nam"   [(ngModel)]="profile.gioi_tinh" name="nam" id="nam" type="radio">
+            <label for="nam" class="viewgt" style="margin-right:20px">
               Nam
             </label>
           </div>
-          <div class="form-group lblcheckgt">
-            <input value="female" class="mr-2" name="sex" id="female" type="radio">
-            <label for="female" class="viewgt" style="margin-right:20px">
+          <div class="form-group col-3" style="display:inline-block">
+            <input value="nu"  name="nu" id="nu" type="radio">
+            <label for="nu" class="viewgt" style="margin-right:20px">
               Nữ
             </label>
           </div>
@@ -56,7 +56,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại" class="form-info" id="address">
+          <input type="text" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại" [(ngModel)]="profile.dia_chi" class="form-info" id="address">
         </div>
       </div>
       <div class="row py-3" style="padding-left: 15px">
@@ -64,8 +64,7 @@
           Giới thiệu về bản thân <i style="color:red">*</i>
         </label>
         <div class="col-md-12">
-          <textarea id="description" name="description" placeholder="Giới thiệu đôi nét về bản thân" rows="3" cols="30"
-            style="width:100%;"></textarea>
+          <textarea id="gioi_thieu" name="gioi_thieu" placeholder="Giới thiệu đôi nét về bản thân" [(ngModel)]="profile.gioi_thieu" style="width:100%;"></textarea>
         </div>
       </div>
       <h4>Học vấn</h4>
@@ -76,7 +75,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Nhập tên trường của bạn" class="form-info" id="school">
+          <input type="text" name="hoc_truong" placeholder="Nhập tên trường của bạn" [(ngModel)]="profile.hoc_truong" class="form-info" id="school">
         </div>
       </div>
       <div class="row py-3">
@@ -86,7 +85,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Chuyên ngành học" class="form-info" id="major">
+          <input type="text" name="chuyen_nganh" placeholder="Chuyên ngành học" [(ngModel)]="profile.chuyen_nganh" class="form-info" id="major">
         </div>
       </div>
       <div class="row py-3">
@@ -96,7 +95,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Năm tốt nghiệp" class="form-info" id="graduation_year">
+          <input type="text" name = "nam_tot_nghiep" placeholder="Năm tốt nghiệp" [(ngModel)]="profile.nam_tot_nghiep" class="form-info" id="graduation_year">
         </div>
       </div>
       <div class="row py-3">
@@ -106,14 +105,14 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9" id="job">
-          <select id="job" name="job" class="form-info">
+          <select id="job" name="job" class="form-info" [(ngModel)]="profile.cv_hien_tai">
             <option value="" disabled selected>Nghề nghiệp hiện tại</option>
-            <option value="sinh_vien">Sinh viên</option>
-            <option value="hoc_sinh">Học sinh</option>
-            <option value="giao_vien_c1">Giáo viên cấp 1</option>
-            <option value="giao_vien_c2">Giáo viên cấp 2</option>
-            <option value="giao_vien_c3">Giáo viên cấp 3</option>
-            <option value="giang_vien">Giảng viên đại học</option>
+            <option value="Sinh Viên">Sinh viên</option>
+            <option value="Học sinh">Học sinh</option>
+            <option value="Giáo viên cấp 1">Giáo viên cấp 1</option>
+            <option value="Giáo viên cấp 2">Giáo viên cấp 2</option>
+            <option value="Giáo viên cấp 3">Giáo viên cấp 3</option>
+            <option value="Giảng viên đại học">Giảng viên đại học</option>
           </select>
         </div>
       </div>
@@ -122,7 +121,7 @@
           Kinh nghiệm giảng dạy
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="description" name="description" placeholder="Chi tiết" rows="3" cols="30"
+          <textarea class="form-info" id="kinh_nghiem" name="kinh_nghiem" placeholder="Chi tiết"  [(ngModel)]="profile.kinh_nghiem" rows="3" cols="30"
             style="width:100%;"></textarea>
         </div>
       </div>
@@ -131,7 +130,7 @@
           Thành tích
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="description" name="description" placeholder="Chi tiết" rows="3" cols="30"
+          <textarea class="form-info" id="thanh_tich" name="thanh_tich" placeholder="Chi tiết"  [(ngModel)]="profile.thanh_tich"
             style="width:100%;"></textarea>
         </div>
       </div>
@@ -178,7 +177,7 @@
           <label class="textview">Khu vực dạy<i style="color:red">*</i></label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <select id="area" class="form-info">
+          <select id="area" class="form-info"  [(ngModel)]="profile.khu_vuc_day">
             <option value="" disabled>Khu vực</option>
             <option value="ha_noi">Hà Nội</option>
             <option value="ho_chi_minh">Hồ Chí Minh</option>
@@ -193,14 +192,14 @@
         </div>
         <div class="col-md-10 col-sm-9 row">
           <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-            <input value="home" name="teachtype" id="teachtype_home" type="radio">
-            <label for="teachtype_home" class="viewgt">
+            <input value="dạy tại nhà" name="hinh_thuc_day_1" [(ngModel)]="profile.hinh_thuc_day" id="hinh_thuc_day_1" type="radio"/>
+            <label for="hinh_thuc_day_1" class="viewgt">
               Gia sư tại nhà
             </label>
           </div>
           <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-            <input value="class" name="teachtype" id="teachtype_class" type="radio">
-            <label for="teachtype_class" class="viewgt">
+            <input value="dạy online" name="hinh_thuc_day_2" [(ngModel)]="profile.hinh_thuc_day" id="hinh_thuc_day_2" type="radio"/>
+            <label for="hinh_thuc_day_2" class="viewgt">
               Online trực tuyến
             </label>
           </div>
@@ -213,7 +212,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Nhập học phí dự kiến" class="form-info" id="tuition">
+          <input type="text" placeholder="Nhập học phí dự kiến" [(ngModel)]="profile.hoc_phi_gs"  class="form-info" id="tuition">
         </div>
       </div>
       <label class="textview" style="float: left;">
@@ -355,7 +354,7 @@
           Thông tin thêm
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="description" name="description" placeholder="Chi tiết" rows="3" cols="30"
+          <textarea class="form-info" id="thong_tin_them" name="thong_tin_them"  [(ngModel)]="profile.thong_tin_them"  placeholder="Chi tiết" rows="3" cols="30"
             style="width:100%;"></textarea>
         </div>
       </div>
@@ -365,8 +364,8 @@
           <label class="textview">Email</label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <span class="form-control placeholder_italic form-control_padding"
-            style="text-align:left;background:#363636;color:#fff;">email@gmail.com</span>
+          <input type ="text" name="email"  [(ngModel)]="profile.email"  class="form-control placeholder_italic form-control_padding"
+            style="text-align:left;background:#363636;color:#fff;">
         </div>
       </div>
       <div class="row py-3">
@@ -374,12 +373,12 @@
           <label class="textview">Số điện thoại</label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <span class="form-control placeholder_italic form-control_padding"
-            style="text-align:left;background:#363636;color:#fff;">00000000</span>
+          <input type ="text" name='phone' [(ngModel)]="profile.phone"  class="form-control placeholder_italic form-control_padding"
+            style="text-align:left;background:#363636;color:#fff;">
         </div>
       </div>
       <div class="col-md-12" style="text-align: center;">
-        <button type="submit" class="btn btn-primary">Hoàn tất</button>
+        <button type="submit" class="btn btn-primary"(click)="submit()">Cập nhật thông tin</button>
       </div>
     </form>
   </div>

@@ -16,6 +16,14 @@ from app.models import Gia_su
 from app.serializers.ser_tutor import SerTutors, SerTutor
 import jwt
 
+import random
+import string
+
+def randomString(stringLength=10):
+    """Generate a random string of fixed length """
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
 
 
 class TutorList(APIView):
@@ -105,7 +113,7 @@ class Tutor(APIView):
         email=request.data['email']
         mat_khau=request.data['mat_khau']
         phone=request.data['phone']
-        hinh_dai_dien_url='https://api.adorable.io/avatar/200/account'
+        hinh_dai_dien_url='https://api.adorable.io/avatar/200/' + randomString()
         role=1
 
         tutor_serializer=SerTutor(
@@ -155,7 +163,13 @@ class UpdateTutor(APIView):
             location="form",
             schema=coreschema.String()
         ),
-         coreapi.Field(
+        coreapi.Field(
+            "ngay_sinh",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
             "mat_khau",
             # required=True,
             location="form",
@@ -271,6 +285,10 @@ class UpdateTutor(APIView):
         if ("email" in request.data and(request.data['email']!='')):
             email=request.data['email']
             tutor.email = email
+        
+        if ("ngay_sinh" in request.data and(request.data['ngay_sinh']!='')):
+            ngay_sinh=request.data['ngay_sinh']
+            tutor.ngay_sinh = ngay_sinh
 
         if ("mat_khau" in request.data and(request.data['mat_khau']!='')):
             mat_khau=hashers.SHA1PasswordHasher().encode(request.data['mat_khau'],salt='123')
@@ -318,7 +336,7 @@ class UpdateTutor(APIView):
         if ("nam_tot_nghiep" in request.data and(request.data['nam_tot_nghiep']!='')):
             nam_tot_nghiep = request.data['nam_tot_nghiep']
             tutor.nam_tot_nghiep = nam_tot_nghiep 
-            
+
         if ("cv_hien_tai" in request.data and(request.data['cv_hien_tai']!='')):
             cv_hien_tai = request.data['cv_hien_tai']
             tutor.cv_hien_tai = cv_hien_tai 
@@ -330,10 +348,6 @@ class UpdateTutor(APIView):
         if ("mon_hoc" in request.data and(request.data['mon_hoc']!='')):
             mon_hoc = request.data['mon_hoc']
             tutor.mon_hoc = mon_hoc 
-
-        if ("hoc_truong" in request.data and(request.data['hoc_truong']!='')):
-            hoc_truong = request.data['hoc_truong']
-            tutor.hoc_truong = hoc_truong  
 
         if ("thong_tin_them" in request.data and(request.data['thong_tin_them']!='')):
             thong_tin_them = request.data['thong_tin_them']

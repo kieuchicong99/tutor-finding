@@ -14,6 +14,7 @@ import {SlideshowModule} from 'ng-simple-slideshow';
 import { DefaultService } from './service/default.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { TutorService } from './service/user.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     SignInService,
     SignUpService,
     ClassService,
-    DefaultService
+    DefaultService,
+    TutorService
   ],
   bootstrap: [AppComponent]
 })
