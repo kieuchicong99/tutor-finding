@@ -20,10 +20,11 @@ export class SigninComponent implements OnInit {
     this.service.signIn(this.role,this.user).then(res => {
       console.log("res:", res);
       if(res.success===true){
+        // localStorage.setItem("status","logined")
         this.toastr.success('Đăng nhập thành công!', 'Xin chào '+ res.data.ho_ten ,{
           timeOut: 3000
         });
-        this.router.navigate(['/tim-gia-su'])
+        this.router.navigate([''])
 
       }
       if(res.success===false){

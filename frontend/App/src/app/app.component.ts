@@ -85,17 +85,28 @@ export class AppComponent implements OnInit {
   }
   Logout(){
     localStorage.removeItem("user")
+    this.nonlogin = "nonlogin"
+    this.ava()
+
   }
+
+
+  ava(){
+    this.name= JSON.parse(localStorage.getItem("user")).ho_ten
+    return (JSON.parse(localStorage.getItem("user")).hinh_dai_dien_url)
+  }
+  public nonlogin= "nonlogin";
   public user
   public avatar
   ngOnInit(){
+    this.nonlogin =  localStorage.getItem("status")
     this.user = JSON.parse(localStorage.getItem("user"))
-
     this.name = this.user.ho_ten
     this.avatar= this.user.hinh_dai_dien_url
 
   }
-  
+
+
 
 }
 

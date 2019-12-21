@@ -1,14 +1,11 @@
 <div class="wrap">
-
   <div class="header" id="baner">
     <div style="position:absolute; z-index:10; text-align: center;width:100%">
-      <a routerLink="/"><img src="/assets/Picture1.png" alt=""></a>
+      <a routerLink="/"><img src="/assets/Picture1.png" alt="" /></a>
       <h2 style="color: white;">Kết nối giữa gia sư và học sinh</h2>
     </div>
     <slideshow [height]="'400px'" [autoPlay]="true" [showArrows]="true" [imageUrls]="imageSources">
     </slideshow>
-
-
   </div>
 
   <div class="topnav">
@@ -17,31 +14,29 @@
     <a routerLink="/signin" routerLinkActive="active">Đăng nhập</a>
     <a routerLink="/signup" routerLinkActive="active">Đăng ký</a>
     <div style="position: relative; display: inline-block; width: 25%">
-      <div *ngIf="nonlogin; else logined"></div>
+      <div *ngIf="nonlogin==='nonlogin'; else logined"></div>
       <ng-template #logined>
-        <img src={{avatar}} alt="" style="width: 30px;height:30px">
-        <input type="button" style="background-color: #426d9e;border: hidden;color:white"
-          (click)="showUserDetail()" [(ngModel)]="name"[ngModelOptions]="{ standalone: true }"/>
-
+        <img src= {{ava()}} alt="" style="width: 30px;height:30px; border: none" />
+        <input type="button" style="background-color: #426d9e;border: hidden;color:white" (click)="showUserDetail()"
+          [(ngModel)]="name" [ngModelOptions]="{ standalone: true }" />
 
         <div *ngIf="user_detail; else close"
           style="position: absolute;display: block;z-index: 6; padding:1px;background-color: #426d9e">
           <div style=" margin: 0;padding-left: 10px;padding-right: 10px">
             <button class="btn btn-primary" style="display: block;background-color:#426d9e;width:100%"
               (click)="chooseManage()">
-              <li routerLink="/manage-acc" routerLinkActive="active">Quản lý tài khoản</li>
+              <li routerLink="/manage-acc" routerLinkActive="active">
+                Quản lý tài khoản
+              </li>
             </button>
             <button class="btn btn-primary" style="display: block ;background-color:#426d9e ;width:100%">
               <li href="" (click)="Logout()">Đăng xuất</li>
             </button>
-
           </div>
         </div>
         <ng-template #close></ng-template>
       </ng-template>
     </div>
-
-
   </div>
 
   <div class="main">
@@ -55,36 +50,32 @@
       <div class="right">
         <div class="filter">
           <div style="text-transform: uppercase">Tìm gia sư</div>
-          <app-filter [filter]=subject_field></app-filter>
+          <app-filter [filter]="subject_field"></app-filter>
           <h6>Lọc theo lớp</h6>
-          <app-filter [filter]=grade_field></app-filter>
+          <app-filter [filter]="grade_field"></app-filter>
           <h6>Lọc theo tỉnh</h6>
-          <app-filter [filter]=provin_field></app-filter>
+          <app-filter [filter]="provin_field"></app-filter>
           <span style="text-align:center;display: block;">
-            <button style="width: 50%;" type="button" class="btn  btn-primary btn-sm"> Tìm kiếm</button>
+            <button style="width: 50%;" type="button" class="btn  btn-primary btn-sm">
+              Tìm kiếm
+            </button>
           </span>
         </div>
-
       </div>
-
     </ng-template>
-
   </div>
 
   <div class="app_footer">
     <div class="footer_left">
-      Phát triển ứng dụng web nhóm 9 <br>
-      Địa chỉ: nhà E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội<br>
-      Điện thoại : 1900100có. Fax: tương tự điện thoại<br>
-      Email: @user.vnu.edu.vn.<br>
+      Phát triển ứng dụng web nhóm 9 <br />
+      Địa chỉ: nhà E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội<br />
+      Điện thoại : 1900100có. Fax: tương tự điện thoại<br />
+      Email: @user.vnu.edu.vn.<br />
     </div>
     <div class="footer_right">
-      Được phát triển bởi nhóm 9<br>
-      Facebook: https://www.facebook.com/nhom9<br>
-      Github: https://www.github.com/kieuchicong99/tutor-finding<br>
-
+      Được phát triển bởi nhóm 9<br />
+      Facebook: https://www.facebook.com/nhom9<br />
+      Github: https://www.github.com/kieuchicong99/tutor-finding<br />
     </div>
-
   </div>
-
 </div>

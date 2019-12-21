@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
 }
-.wrap{
 
+a:hover{
+  cursor: pointer;
+  background-color: #66a5ee
 }
+
+
 #baner {
   background-image: url(https://vieclam123.vn/pictures/home/home1.jpg);
   background-position: center top;
