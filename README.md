@@ -19,3 +19,5 @@
   ### 2. [Tài liệu hướng dẫn làm việc cho nhóm](https://github.com/kieuchicong99/tutor-finding/tree/master/doc)
 
   ### 3. [Demo web](https://kieuchicong.bitbucket.io)
+  
+  ### 4. [Slide] (https://docs.google.com/presentation/d/19Xiffd7PCcVGzdwke6NoOX05zV3_ry7zB9buSlwOKpk/edit#slide=id.g7bcabc8149_0_0)
