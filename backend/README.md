@@ -76,6 +76,7 @@
 
    ### Phần 1: Kết nối DB và query: 1 thành viên
       Nguyễn Anh Tuấn
+      Link hương dan ket noi django to myyql : https://www.youtube.com/watch?v=jo9jZ1GKFmw
    ### Phần 2: Viêt API: 3 thành viên
       Các API được liệt kê trong danh sách, thành viên chọn 1 API bất kỳ, gạch tên API đó đi 
       (để thành viên khác biết) và hoàn thành nó. Tiếp tục làm thế với các API còn lại.
