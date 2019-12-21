@@ -209,6 +209,54 @@ class UpdateTutor(APIView):
             location="form",
             schema=coreschema.String()
         ),
+         coreapi.Field(
+            "hoc_truong",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "chuyen_nganh",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "nam_tot_nghiep",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "cv_hien_tai",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "thanh_tich",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "mon_hoc",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "hoc_truong",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "thong_tin_them",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
         ])
     def post(self, request):
         id_gia_su= request.data['id_gia_su']
@@ -259,7 +307,37 @@ class UpdateTutor(APIView):
         if ("buoi_day" in request.data and(request.data['buoi_day']!='')):
             buoi_day = request.data['buoi_day']
             tutor.buoi_day = buoi_day    
-                    
+        if ("hoc_truong" in request.data and(request.data['hoc_truong']!='')):
+            hoc_truong = request.data['hoc_truong']
+            tutor.hoc_truong = hoc_truong 
+
+        if ("chuyen_nganh" in request.data and(request.data['chuyen_nganh']!='')):
+            chuyen_nganh = request.data['chuyen_nganh']
+            tutor.chuyen_nganh = chuyen_nganh 
+
+        if ("nam_tot_nghiep" in request.data and(request.data['nam_tot_nghiep']!='')):
+            nam_tot_nghiep = request.data['nam_tot_nghiep']
+            tutor.nam_tot_nghiep = nam_tot_nghiep 
+            
+        if ("cv_hien_tai" in request.data and(request.data['cv_hien_tai']!='')):
+            cv_hien_tai = request.data['cv_hien_tai']
+            tutor.cv_hien_tai = cv_hien_tai 
+
+        if ("thanh_tich" in request.data and(request.data['thanh_tich']!='')):
+            thanh_tich = request.data['thanh_tich']
+            tutor.thanh_tich = thanh_tich 
+
+        if ("mon_hoc" in request.data and(request.data['mon_hoc']!='')):
+            mon_hoc = request.data['mon_hoc']
+            tutor.mon_hoc = mon_hoc 
+
+        if ("hoc_truong" in request.data and(request.data['hoc_truong']!='')):
+            hoc_truong = request.data['hoc_truong']
+            tutor.hoc_truong = hoc_truong  
+
+        if ("thong_tin_them" in request.data and(request.data['thong_tin_them']!='')):
+            thong_tin_them = request.data['thong_tin_them']
+            tutor.thong_tin_them = thong_tin_them          
             
         try:
             try:
