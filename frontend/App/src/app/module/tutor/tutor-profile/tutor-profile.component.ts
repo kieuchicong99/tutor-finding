@@ -15,7 +15,7 @@ export class TutorProfileComponent implements OnInit {
   public profile_tutor={
     name:"Tran Hoang Phuong",
     subject:"Gia su tieng Anh",
-
+    dob:"07/02/1997",
 
 
   }
