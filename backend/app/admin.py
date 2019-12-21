@@ -7,5 +7,6 @@ admin.site.register(Danh_sach_lop)
 admin.site.register(Gia_su)
 admin.site.register(Level)
 admin.site.register(Lop_yeu_cau)
+admin.site.register(Lop_yeu_cau_Gia_su)
 
 
