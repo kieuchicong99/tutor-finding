@@ -1,0 +1,140 @@
+<!-- <div style="display: inline-block;" >
+    <div class="shadowh"[ngStyle]="{background: color}">
+      <div class="image">
+        <div style="text-align: center">
+          <img src="{{ tutor.img }}" alt="{{ tutor.name }}">
+          <div style="background-color: hsl(45, 3%, 23%); color: white">{{ tutor.address }}</div>
+        </div>
+      </div>
+  
+      <div class="content">
+        <div class="cardct card-body">
+          <a href="{{ tutor.link }}">{{ tutor.name }} </a>
+          <div>Gia sư {{ tutor.class }} </div>
+          <div>
+            <div style="color: #ff8401; font-weight: bold;">
+              Từ: {{ tutor.renter }} đ/buổi
+            </div>
+          </div>
+          <div class=cart-detail>{{ tutor.description }}</div>
+        </div>
+      </div>
+      <div>
+        <!-- <button class="btn btn-primary btn-sm" (click)=movetoDetail()> Xem chi tiết</button> -->
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Xem chi tiết</button>
+  
+        <!-- Modal add  -->
+        <div class="modal fade " id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+          <div class="modal-content " >
+            <div class="modal-header " style="max-height: 600px;overflow-y: scroll;">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <app-tutor-profile></app-tutor-profile>
+              <button type="button" class="close btn-sm" data-dismiss="modal" aria-label="Close" #closeBtnAdd>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+  
+            </div>
+  
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+  <body>
+    <div class="container" style="background-color: #006666">
+      <div>
+        <h1>{{profile_tutor.name}}</h1>
+        <p>{{profile_tutor.subject}}</p>
+      </div>
+      <div>
+        <img style="width:150px; height:150px; float: left;" src="images/Xu.jpg" alt="no image"
+          onerror='this.onerror=null;this.src="images/";' />
+      </div>
+      <div>
+        <div class="row1"><span> <i aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp; Ngày sinh: {{profile_tutor.dob}}</span><span> <i aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp;Lượt xem: {{profile_tutor.view}}</span><span> <i aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp;Ngày cập nhật: {{profile_tutor.update}}</span></div>
+        <div class="row2"><span> <i aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp;Giới tính: {{profile_tutor.gender}}</span><span> <i aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp; Hôn nhân: {{profile_tutor.marital}}</span><span>  <i aria-hidden="true"></i>
+          &nbsp;&nbsp;Kiểu gia sư: {{profile_tutor.type}}</span>
+        </div>
+        <div class="row3">&nbsp;&nbsp;&nbsp;&nbsp;Chia sẻ trên mạng xã hội:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="container">
+      <div class="title"><div class="title-style">Giới thiệu chung</div></div>
+      <p>{{content}}</p>
+      <div class="title"><div class="title-style">Chủ đề dạy</div></div>
+      <div class="row">
+        <div class="col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-2">
+          <div class="subject-style">Tiếng anh ngữ pháp cơ bản </div>
+        </div>
+        <div class="col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-2">
+          <div class="subject-style">Tiếng Anh cho trẻ em </div>
+        </div>
+      </div>
+      
+      <div class="title"><div class="title-style">Kinh nghiệm dạy</div></div>
+      <p>{{content}}</p>
+      
+      <div class="title"><div class="title-style">Thành tích</div></div>
+      <p>{{content1}}</p>
+      
+      <div class="title"><div class="title-style">Buổi có thể dạy</div></div>
+      
+      <div *ngFor="let day of schedule" class="block">
+        <div class="cell">
+          <span> {{day.name}}</span>
+          <div> {{day.morning}}</div>
+          <div> {{day.afternoon}}</div>
+          <div> {{day.night}}</div>
+        </div>
+      
+      <div class="title-style">Thông tin cơ bản</div>
+      <div class="container">
+        <div style=" border: 1px solid #ff9000; " class="p-3">
+          <div class="shadow px-4 py-2">
+            <div class="row py-2">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span style=" font-size: 16px; color: #000; font-weight: 700; "> Mức học phí:</span>
+                <span style=" color: #ff9c00; font-weight: 700; ">{{profile_tutor.cost}}</span>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span style=" font-size: 16px; color: #000; font-weight: 700; ">Hình thức dạy:</span> {{profile_tutor.method}}</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Khu vực nhận dạy:</span>{{profile_tutor.area}}</div>
+                <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Địa chỉ: {{profile_tutor.add}}</span> </div>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                <span style=" font-size: 16px; color: #000; font-weight: 700; "><i aria-hidden="true"></i>&nbsp;Số điện thoại: {{profile_tutor.phone}}</span>
+                <button
+                  style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem liên hệ</button>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                <span style="font-size: 16px; color: #000; font-weight: 700; "><i
+                    aria-hidden="true"></i>&nbsp;Email:</span>
+                <button
+                  style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem liên hệ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </body>
+  
+  
