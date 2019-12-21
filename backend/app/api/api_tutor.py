@@ -1,4 +1,3 @@
-
 from django.shortcuts import get_object_or_404
 from  django.contrib.auth import hashers
 import coreapi
@@ -23,26 +22,6 @@ def randomString(stringLength=10):
     """Generate a random string of fixed length """
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
-
-
-
-class TutorList(APIView):
-
-    """
-    get:
-     Trả về danh sách các gia sư mặc định
-    """
-
-    def get(self, request):
-        tutors = Gia_su.objects.all()
-        tutorSerializer = SerTutors(tutors, many=True)
-        return Response(
-            {
-                "success": True,
-                "tutors": tutorSerializer.data
-            }
-        )
-
 
 class AuthTutor(APIView):
     # view cho xác thực tài khoản
@@ -80,6 +59,22 @@ class AuthTutor(APIView):
         else:
             return Response({"success": False,"message": "Tài khoản hoặc mật khẩu không đúng"})
 
+class TutorList(APIView):
+
+    """
+    get:
+     Trả về danh sách các gia sư mặc định
+    """
+
+    def get(self, request):
+        tutors = Gia_su.objects.all()
+        tutorSerializer = SerTutors(tutors, many=True)
+        return Response(
+            {
+                "success": True,
+                "tutors": tutorSerializer.data
+            }
+        )
 
 class Tutor(APIView):
     # view for TuTor
@@ -108,6 +103,7 @@ class Tutor(APIView):
             location="form",
             schema=coreschema.String()
         )])
+    
     def post(self, request):
         ho_ten=request.data['ho_ten']
         email=request.data['email']
@@ -272,6 +268,7 @@ class UpdateTutor(APIView):
             schema=coreschema.String()
         ),
         ])
+    
     def post(self, request):
         id_gia_su= request.data['id_gia_su']
         tutor=Gia_su.objects.get(id_gia_su=id_gia_su)
@@ -381,6 +378,7 @@ class TutorDetail(APIView):
             }
         )
 
+    
 class TutorListPage(APIView):
     
     "Lấy danh sách các lớp theo page"
