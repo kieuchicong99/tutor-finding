@@ -20,4 +20,4 @@
 
   ### 3. [Demo web](https://kieuchicong.bitbucket.io)
   
-  ### 4. [Slide] (https://docs.google.com/presentation/d/19Xiffd7PCcVGzdwke6NoOX05zV3_ry7zB9buSlwOKpk/edit#slide=id.g7bcabc8149_0_0)
+  ### 4. [Slide](https://docs.google.com/presentation/d/19Xiffd7PCcVGzdwke6NoOX05zV3_ry7zB9buSlwOKpk/edit#slide=id.g7bcabc8149_0_0)
