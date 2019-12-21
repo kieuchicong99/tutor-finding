@@ -8,5 +8,6 @@ admin.site.register(Gia_su)
 admin.site.register(Level)
 admin.site.register(Lop_yeu_cau)
 admin.site.register(Lop_yeu_cau_Gia_su)
+admin.site.register(Mon_hoc)
 
 
