@@ -1,3 +1,5 @@
+
+
 <body>
   <div class="container" style="background-color: #006666">
     <div>
@@ -9,23 +11,28 @@
         onerror='this.onerror=null;this.src="images/";' />
     </div>
     <div>
-      <div class="row1"><span> <i aria-hidden="true"></i>
-        &nbsp;&nbsp;&nbsp;&nbsp; Ngày sinh: {{profile_tutor.dob}}</span><span> <i aria-hidden="true"></i>
-        &nbsp;&nbsp;&nbsp;&nbsp;Lượt xem: {{profile_tutor.view}}</span><span> <i aria-hidden="true"></i>
-        &nbsp;&nbsp;&nbsp;&nbsp;Ngày cập nhật: {{profile_tutor.update}}</span></div>
-      <div class="row2"><span> <i aria-hidden="true"></i>
-        &nbsp;&nbsp;&nbsp;&nbsp;Giới tính: {{profile_tutor.gender}}</span><span> <i aria-hidden="true"></i>
-        &nbsp;&nbsp;&nbsp;&nbsp; Hôn nhân: {{profile_tutor.marital}}</span><span>  <i aria-hidden="true"></i>
-        &nbsp;&nbsp;Kiểu gia sư: {{profile_tutor.type}}</span>
+      <div class="row1"><span><i aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Ngày sinh: 07/02/1997</span><span><i
+            aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp;Lượt xem: 4</span><span><i aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Ngày cập
+          nhật:{{profile_tutor.dob}}</span></div>
+      <div class="row2"><span><i aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Giới tính: Nam</span><span><i
+            aria-hidden="true"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp; Hôn nhân: </span>
+        <span><i aria-hidden="true"></i>
+          &nbsp;&nbsp;Kiểu gia sư: Sinh viên</span>
       </div>
       <div class="row3">&nbsp;&nbsp;&nbsp;&nbsp;Chia sẻ trên mạng xã hội:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
     </div>
     <div class="clear"></div>
   </div>
   <div class="container">
-    <div class="title"><div class="title-style">Giới thiệu chung</div></div>
+    <div class="title">
+      <div class="title-style">Giới thiệu chung</div>
+    </div>
     <p>{{content}}</p>
-    <div class="title"><div class="title-style">Chủ đề dạy</div></div>
+    <div class="title">
+      <div class="title-style">Chủ đề dạy</div>
+    </div>
     <div class="row">
       <div class="col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-2">
         <div class="subject-style">Tiếng anh ngữ pháp cơ bản </div>
@@ -34,52 +41,168 @@
         <div class="subject-style">Tiếng Anh cho trẻ em </div>
       </div>
     </div>
-    
-    <div class="title"><div class="title-style">Kinh nghiệm dạy</div></div>
-    <p>{{content}}</p>
-    
-    <div class="title"><div class="title-style">Thành tích</div></div>
-    <p>{{content1}}</p>
-    
-    <div class="title"><div class="title-style">Buổi có thể dạy</div></div>
-    
-    <div *ngFor="let day of schedule" class="block">
-      <div class="cell">
-        <span> {{day.name}}</span>
-        <div> {{day.morning}}</div>
-        <div> {{day.afternoon}}</div>
-        <div> {{day.night}}</div>
+    <div class="title">
+      <div class="title-style">Kinh nghiệm dạy</div>
+    </div>
+    <p>Chưa cập nhật</p>
+    <div class="title">
+      <div class="title-style">Thành tích</div>
+    </div>
+    <p>Chưa cập nhật</p>
+    <div class="title">
+      <div class="title-style">Buổi có thể dạy</div>
+    </div>
+    <div class="detaijob-body2 row">
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 2</div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+            <label class="sct">Chiều</label>
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
       </div>
-    
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 3</div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 4</div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 5
+        </div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 6
+        </div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Thứ 7
+        </div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-3 col-sm-3 padd-l-5 padd-r-5 date">
+        <div class="day-style">Chủ nhật
+        </div>
+        <ul>
+          <li>
+            <label class="sct">Sáng</label>
+          </li>
+          <li>
+
+            <label class="sct">Chiều</label>
+
+          </li>
+          <li>
+            <label class="sct">Tối</label>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="title-style">Thông tin cơ bản</div>
     <div class="container">
       <div style=" border: 1px solid #ff9000; " class="p-3">
         <div class="shadow px-4 py-2">
           <div class="row py-2">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <span style=" font-size: 16px; color: #000; font-weight: 700; "> Mức học phí:</span>
-              <span style=" color: #ff9c00; font-weight: 700; ">{{profile_tutor.cost}}</span>
+              <span style=" font-size: 16px; color: #000; font-weight: 700; ">Mức học phí:</span>
+              <span style=" color: #ff9c00; font-weight: 700; ">
+                Từ 100,000 vnđ/buổi </span>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <span style=" font-size: 16px; color: #000; font-weight: 700; ">Hình thức dạy:</span> {{profile_tutor.method}}</div>
+              <span style=" font-size: 16px; color: #000; font-weight: 700; ">Hình thức dạy:</span> Gia sư tại nhà
+            </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Khu vực nhận dạy:</span>{{profile_tutor.area}}</div>
-              <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Địa chỉ: {{profile_tutor.add}}</span> </div>
+              <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Khu vực nhận
+                  dạy:</span>Hồ Chí Minh</div>
+              <div class="py-2"><span style=" font-size: 16px; color: #000; font-weight: 700; ">Địa chỉ:</span> </div>
             </div>
           </div>
           <div class="row py-2">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-2">
-              <span style=" font-size: 16px; color: #000; font-weight: 700; "><i aria-hidden="true"></i>&nbsp;Số điện thoại: {{profile_tutor.phone}}</span>
+              <span style=" font-size: 16px; color: #000; font-weight: 700; "><i aria-hidden="true"></i>&nbsp;Số điện
+                thoại:</span>
               <button
-                style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem liên hệ</button>
+                style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem
+                liên hệ</button>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-2">
               <span style="font-size: 16px; color: #000; font-weight: 700; "><i
                   aria-hidden="true"></i>&nbsp;Email:</span>
               <button
-                style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem liên hệ</button>
+                style="background-color: #003471; border-radius: 5px; color: #fff; border-width: 0; margin-left: 2rem;">Xem
+                liên hệ</button>
             </div>
           </div>
         </div>
