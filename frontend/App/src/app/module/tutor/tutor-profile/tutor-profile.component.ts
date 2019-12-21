@@ -20,7 +20,7 @@ export class TutorProfileComponent implements OnInit {
     gender: "Nu",
     view: "4",
     update: "29/07/2019",
-    type: "Sinh vien"
+    type: "Sinh vien",
     marital: "Doc than",
     cost:"Từ 100,000 vnđ/buổi",
     area:"Ho Chi Minh",
