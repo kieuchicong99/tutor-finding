@@ -5,5 +5,6 @@ admin.site.register(Binh_luan)
 admin.site.register(Danh_gia)
 admin.site.register(Danh_sach_lop)
 admin.site.register(Gia_su)
+admin.site.register(Level)
 
 
