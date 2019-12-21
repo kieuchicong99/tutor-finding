@@ -10,5 +10,6 @@ admin.site.register(Lop_yeu_cau)
 admin.site.register(Lop_yeu_cau_Gia_su)
 admin.site.register(Mon_hoc)
 admin.site.register(Phu_huynh)
+admin.site.register(So_lien_lac)
 
 
