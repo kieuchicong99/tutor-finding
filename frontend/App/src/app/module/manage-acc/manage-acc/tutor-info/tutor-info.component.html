@@ -1,4 +1,3 @@
-<!-- <img class="img-fluid" src="https://i.pinimg.com/564x/65/08/b1/6508b1c4af949ef600c42480d8753e91.jpg" alt="avatar" width="300" height="205"> -->
 <div class="col-md-12 col-sm-12 pr-5 pl-5">
     <div class="row" style="background-color: aquamarine;">
       <div class="col-lg-3 col-md-3 col-sm-4 col-4">
@@ -19,7 +18,7 @@
           </label>
         </div>
         <div class="col-9">
-          <input type="text" name= "ho_ten" placeholder="Nhập họ và tên của bạn" class="form-info" [(ngModel)]="profile.ho_ten" id="name">
+          <input type="text" name= "ho_ten" placeholder="Nhập họ và tên của bạn" class="form-info" [(ngModel)]="profile.ho_ten">
         </div>
       </div>
       <div class="row">
@@ -29,7 +28,7 @@
           </label>
         </div>
         <div class="col-9">
-          <input type="text" name="ngay_sinh" placeholder="Nhập ngày sinh" class="form-info" [(ngModel)]="profile.ngay_sinh" id="dateOfBirth">
+          <input type="text" name="ngay_sinh" placeholder="Nhập ngày sinh" class="form-info" [(ngModel)]="profile.ngay_sinh">
         </div>
         <div class="form-group col-12 ">
           <span class="textview" style="margin-right: 20px;">
@@ -56,7 +55,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại" [(ngModel)]="profile.dia_chi" class="form-info" id="address">
+          <input type="text" name ="dia_chi" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại" [(ngModel)]="profile.dia_chi" class="form-info">
         </div>
       </div>
       <div class="row py-3" style="padding-left: 15px">
@@ -64,7 +63,7 @@
           Giới thiệu về bản thân <i style="color:red">*</i>
         </label>
         <div class="col-md-12">
-          <textarea id="gioi_thieu" name="gioi_thieu" placeholder="Giới thiệu đôi nét về bản thân" [(ngModel)]="profile.gioi_thieu" style="width:100%;"></textarea>
+          <textarea  name="gioi_thieu" placeholder="Giới thiệu đôi nét về bản thân" [(ngModel)]="profile.gioi_thieu" style="width:100%;"></textarea>
         </div>
       </div>
       <h4>Học vấn</h4>
@@ -75,7 +74,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" name="hoc_truong" placeholder="Nhập tên trường của bạn" [(ngModel)]="profile.hoc_truong" class="form-info" id="school">
+          <input type="text" name="hoc_truong" placeholder="Nhập tên trường của bạn" [(ngModel)]="profile.hoc_truong" class="form-info" >
         </div>
       </div>
       <div class="row py-3">
@@ -85,7 +84,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" name="chuyen_nganh" placeholder="Chuyên ngành học" [(ngModel)]="profile.chuyen_nganh" class="form-info" id="major">
+          <input type="text" name="chuyen_nganh" placeholder="Chuyên ngành học" [(ngModel)]="profile.chuyen_nganh" class="form-info" >
         </div>
       </div>
       <div class="row py-3">
@@ -95,7 +94,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" name = "nam_tot_nghiep" placeholder="Năm tốt nghiệp" [(ngModel)]="profile.nam_tot_nghiep" class="form-info" id="graduation_year">
+          <input type="text" name = "nam_tot_nghiep" placeholder="Năm tốt nghiệp" [(ngModel)]="profile.nam_tot_nghiep" class="form-info">
         </div>
       </div>
       <div class="row py-3">
@@ -104,8 +103,8 @@
             Hiện tại là: <i style="color:red">*</i>
           </label>
         </div>
-        <div class="col-md-10 col-sm-9" id="job">
-          <select id="job" name="job" class="form-info" [(ngModel)]="profile.cv_hien_tai">
+        <div class="col-md-10 col-sm-9" >
+          <select  name="job" class="form-info" [(ngModel)]="profile.cv_hien_tai">
             <option value="" disabled selected>Nghề nghiệp hiện tại</option>
             <option value="Sinh Viên">Sinh viên</option>
             <option value="Học sinh">Học sinh</option>
@@ -121,7 +120,7 @@
           Kinh nghiệm giảng dạy
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="kinh_nghiem" name="kinh_nghiem" placeholder="Chi tiết"  [(ngModel)]="profile.kinh_nghiem" rows="3" cols="30"
+          <textarea class="form-info"  name="kinh_nghiem" placeholder="Chi tiết"  [(ngModel)]="profile.kinh_nghiem" rows="3" cols="30"
             style="width:100%;"></textarea>
         </div>
       </div>
@@ -130,7 +129,7 @@
           Thành tích
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="thanh_tich" name="thanh_tich" placeholder="Chi tiết"  [(ngModel)]="profile.thanh_tich"
+          <textarea class="form-info"  name="thanh_tich" placeholder="Chi tiết"  [(ngModel)]="profile.thanh_tich"
             style="width:100%;"></textarea>
         </div>
       </div>
@@ -138,51 +137,54 @@
         <h4>THÔNG TIN GIA SƯ</h4>
       </div>
       <div class="row py-3" style="padding-left: 15px">
-        <label class="textview">
-          Môn học sẽ dạy: <i style="color:red">*</i>
+        <label class="textview">Môn học sẽ dạy: <i style="color:red">*</i>
         </label>
+        
         <div class="col-md-12 row">
           <div class="pr-4 pl-4">
-            <input id="math" type="checkbox" name="math" value="1">
+            <input  type="checkbox" name="math" value="Toán" [(ngModel)]="profile.mon_hoc">
             <label for="math">Toán</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="physical" type="checkbox" name="physical" value="1">
+            <input  type="checkbox" name="physical" value="Vật lý"  [(ngModel)]="profile.mon_hoc">
             <label for="physical">Vật lý</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="chemistry" type="checkbox" name="chemistry" value="1">
+            <input  type="checkbox" name="chemistry" value="Hóa học"  [(ngModel)]="profile.mon_hoc">
             <label for="chemistry">Hóa học</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="biology" type="checkbox" name="biology" value="1">
+            <input  type="checkbox" name="biology" value="Sinh học"  [(ngModel)]="profile.mon_hoc">
             <label for="biology">Sinh học</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="history" type="checkbox" name="history" value="1">
+            <input type="checkbox" name="history" value="Lịch sử"  [(ngModel)]="profile.mon_hoc">
             <label for="history">Lịch sử</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="geography" type="checkbox" name="geography" value="1">
+            <input  type="checkbox" name="geography" value="Địa lý"  [(ngModel)]="profile.mon_hoc">
             <label for="geography">Địa lý</label>
           </div>
           <div class="pr-4 pl-4">
-            <input id="english" type="checkbox" name="english" value="1">
+            <input id="english" type="checkbox" name="english" value="Tiếng anh"  [(ngModel)]="profile.mon_hoc">
             <label for="english">Tiếng anh</label>
           </div>
         </div>
+
+        
       </div>
       <div class="row py-3">
         <div class="col-md-2 col-sm-3">
           <label class="textview">Khu vực dạy<i style="color:red">*</i></label>
         </div>
-        <div class="col-md-10 col-sm-9">
-          <select id="area" class="form-info"  [(ngModel)]="profile.khu_vuc_day">
-            <option value="" disabled>Khu vực</option>
-            <option value="ha_noi">Hà Nội</option>
-            <option value="ho_chi_minh">Hồ Chí Minh</option>
+        <div class="col-md-10 col-sm-9"  >
+          <select  class="form-info" name ="khu_vuc_day"  [(ngModel)]="profile.khu_vuc_day">
+            <option value="" disabled selected >Khu vực</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
           </select>
         </div>
+
       </div>
       <div class="row py-3 ">
         <div class="col-md-2 col-sm-3">
@@ -192,13 +194,13 @@
         </div>
         <div class="col-md-10 col-sm-9 row">
           <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-            <input value="dạy tại nhà" name="hinh_thuc_day_1" [(ngModel)]="profile.hinh_thuc_day" id="hinh_thuc_day_1" type="radio"/>
+            <input value="dạy tại nhà" name="hinh_thuc_day_1" [(ngModel)]="profile.hinh_thuc_day"   type="radio"/>
             <label for="hinh_thuc_day_1" class="viewgt">
               Gia sư tại nhà
             </label>
           </div>
           <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-            <input value="dạy online" name="hinh_thuc_day_2" [(ngModel)]="profile.hinh_thuc_day" id="hinh_thuc_day_2" type="radio"/>
+            <input value="dạy online" name="hinh_thuc_day_2" [(ngModel)]="profile.hinh_thuc_day"  type="radio"/>
             <label for="hinh_thuc_day_2" class="viewgt">
               Online trực tuyến
             </label>
@@ -212,7 +214,7 @@
           </label>
         </div>
         <div class="col-md-10 col-sm-9">
-          <input type="text" placeholder="Nhập học phí dự kiến" [(ngModel)]="profile.hoc_phi_gs"  class="form-info" id="tuition">
+          <input type="text" placeholder="Nhập học phí dự kiến" name = "hoc_phi_gs" [(ngModel)]="profile.hoc_phi_gs"  class="form-info" >
         </div>
       </div>
       <label class="textview" style="float: left;">
@@ -354,7 +356,7 @@
           Thông tin thêm
         </label>
         <div class="col-md-12">
-          <textarea class="form-info" id="thong_tin_them" name="thong_tin_them"  [(ngModel)]="profile.thong_tin_them"  placeholder="Chi tiết" rows="3" cols="30"
+          <textarea class="form-info" id="thong_tin_them" name="thong_tin_them"  [(ngModel)]="profile.thong_tin_them"  placeholder="Chi tiết" 
             style="width:100%;"></textarea>
         </div>
       </div>

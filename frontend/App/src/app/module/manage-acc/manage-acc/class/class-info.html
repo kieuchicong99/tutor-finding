@@ -1,0 +1,32 @@
+<div style="text-transform: uppercase;">
+    Danh sách lớp học
+    <span style="float: right">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Tạo lớp mới</button>
+    </span>
+    <hr style=" display: block; height: 1px;
+    border: 0; border-top: 2px solid rgb(11, 72, 143);
+    margin: 1em 0; padding: 0;">
+  </div>
+  
+  <!-- Modal add  -->
+  <div class="modal fade " id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content " >
+        <div class="modal-header " style="max-height: 600px;overflow-y: scroll;">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <app-new-class></app-new-class>
+  
+          <button type="button" class="close btn-sm" data-dismiss="modal" aria-label="Close" #closeBtnAdd>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <app-card-class [listClass]="listClass"></app-card-class>
+  
