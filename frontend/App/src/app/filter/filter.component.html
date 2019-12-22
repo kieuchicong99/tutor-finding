@@ -3,14 +3,14 @@
 
 <hr>
 <div class="main">
-  <div class="main_row">
-    <div *ngFor="let item of filter">
-      <input type="checkbox" (change)=check(item) />
-      <label> {{item.name}}</label>
+    <div class="main_row">
+        <div *ngFor="let item of filter">
+            <input type="checkbox" style="cursor: pointer;" (change)=check(item) />
+            <label> {{item.name}}</label>
 
+
+        </div>
 
     </div>
-
-  </div>
 
 </div>
