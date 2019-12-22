@@ -21,13 +21,13 @@ export class TutorService{
       .catch();
 
   }
-  updateProfile(frofile: Tutor):Promise<TutorProfile>{
+  updateProfile(frofile: Tutor):Promise<boolean>{
     return this.http
       .post("/api/updatetutor/", JSON.stringify(frofile), { headers: this.headers })
       .toPromise()
       .then(res => {
-        localStorage.setItem("profile",JSON.stringify(res.json().data))
-        return res.json().data;
+    
+        return res.json().success;
 
       })
       .catch();
