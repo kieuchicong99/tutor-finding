@@ -1,133 +1,138 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-a:hover{
-  cursor: pointer;
-  background-color: #66a5ee
+a:hover {
+    cursor: pointer;
+    background-color: #66a5ee
 }
-
 
 #baner {
-  background-image: url(https://vieclam123.vn/pictures/home/home1.jpg);
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+    background-image: url(https://vieclam123.vn/pictures/home/home1.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 .header {
-  text-align: center;
-  background-color: #ddd;
-  height: 400px;
+    text-align: center;
+    background-color: #ddd;
+    height: 400px;
 }
 
-.topnav{
-  list-style-type: none;
-  margin: 0;
-  padding: 5px;
-  background-color: #426d9e;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top:0;
-  min-height: 40px;
-  display: inline-box;
-  z-index: 5;
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    background-color: #426d9e;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    min-height: 40px;
+    display: inline-box;
+    z-index: 5;
 }
 
-.topnav >a{
-  width: 15%;
-  display: inline-block;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  color: #f1f1f1;
-
-
+.topnav>a {
+    width: 15%;
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #f1f1f1;
 }
 
-.main{
-  margin-top:10px;
-  background-color: rgb(223, 222, 222);
-  height: 100%;
-  position: static;
+.main {
+    margin-top: 10px;
+    background-color: rgb(223, 222, 222);
+    height: 100%;
+    position: static;
 }
 
 .left {
-  float: left;
-  width: 75%;
-  background-color: rgb(223, 222, 222);
-  padding: 20px;
-
+    float: left;
+    width: 75%;
+    background-color: rgb(223, 222, 222);
+    padding: 20px;
 }
 
 .right {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
 }
 
-.filter{
-  width: 70%;
-  float: left;
-  background-color: white;
-}
-.filter >div{
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  text-align: center;
-  background-color: #426d9e;
-  color: white;
+.filter {
+    width: 70%;
+    float: left;
+    background-color: white;
 }
 
-.filter >h6{
-  padding-left: 5px;
-  font: italic bold 15px/20px arial
+.filter>div {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    background-color: #426d9e;
+    color: white;
+}
 
+.filter>h6 {
+    padding-left: 5px;
+    font: italic bold 15px/20px arial
 }
 
 .app_footer {
-  padding: 10px;
-  display: inline-table;
-  background-color: #426d9e;
-  margin-top: 10px;
-  max-height: 100px;
-  width: 100%;
-  padding-left: 30px;
-}
-.footer_left, .footer_right{
-  display: inline-block;
-  padding: 5px;
-  float: left;
-  width: 40%;
-  color: white;
+    padding: 10px;
+    display: inline-table;
+    background-color: #426d9e;
+    margin-top: 10px;
+    max-height: 100px;
+    width: 100%;
+    padding-left: 30px;
 }
 
-.footer_right{
-  float: right;
+.footer_left,
+.footer_right {
+    display: inline-block;
+    padding: 5px;
+    float: left;
+    width: 40%;
+    color: white;
 }
 
-
+.footer_right {
+    float: right;
+}
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
 
-  .left,
-  .right,
-  .footer_left,
-  .footer_right{
-    width: 100%;
-    padding: 0;
-  }
+@media screen and (max-width: 800px) {
+    .left,
+    .right,
+    .footer_left,
+    .footer_right {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 182px) {
+    .topnav>a {
+        width: 100%;
+        padding: 0;
+    }
+}
 
-  .topnav >a
-  {
-    width: 100%;
-    padding: 0;
-  }
+.link-footer {
+    text-decoration: none;
+    color: white;
+}
+
+.link-footer:hover {
+    color: yellow;
+    background-color: #426d9e;
 }

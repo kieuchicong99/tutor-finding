@@ -2,7 +2,8 @@
   <div class="header"></div>
 
   <div class="main">
-    <h5>Đăng ký tài khoản</h5>
+    <h5 style="font-size: 2rem;
+    font-weight: 600;">Đăng ký tài khoản</h5>
     <form>
       <div class="row_form">
         <div>Họ và tên</div>
@@ -52,7 +53,7 @@
       <div class="row_form">
         <div class="form-check">
           <input type="radio"  [(ngModel)]="role"  value="1" name ="choose" class="form-check-input" id="tutor" />
-          <label class="form-check-label" for="tutor">Gia sư</label>
+          <label class="form-check-label" for="tutor" style="padding-right: 2rem;">Gia sư</label>
           <input type="radio" [(ngModel)]="role" value ="2"  name ="choose" class="form-check-input" id="student" />
           <label class="form-check-label" for="student">Phụ huynh</label>
         </div>
