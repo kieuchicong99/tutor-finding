@@ -267,6 +267,12 @@ class UpdateTutor(APIView):
             location="form",
             schema=coreschema.String()
         ),
+         coreapi.Field(
+            "phone",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
         ])
     
     def post(self, request):
@@ -352,7 +358,11 @@ class UpdateTutor(APIView):
 
         if ("khu_vuc_day" in request.data and(request.data['khu_vuc_day']!='')):
             khu_vuc_day = request.data['khu_vuc_day']
-            tutor.khu_vuc_day = khu_vuc_day          
+            tutor.khu_vuc_day = khu_vuc_day 
+
+        if ("phone" in request.data and(request.data['phone']!='')):
+            phone = request.data['phone']
+            tutor.phone = phone          
             
         try:
             try:

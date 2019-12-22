@@ -1,16 +1,16 @@
-import { Tutor, TutorProfile } from "../model/Tutor.model";
+import { StudentProfile } from "../model/Student.model";
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
 @Injectable()
-export class TutorService{
+export class StudentService{
   public headers = new Headers({ 'Content-Type': 'application/json' });
   constructor(public http: Http) {
 
   }
-  getProfile(id_gia_su):Promise<TutorProfile>{
+  getProfile(id_phu_huynh):Promise<StudentProfile>{
     return this.http
-      .get("/api/tutors/"+ id_gia_su, { headers: this.headers })
+      .get("/api/student/"+ id_phu_huynh, { headers: this.headers })
       .toPromise()
       .then(res => {
         console.log("test res:",res.json().data)
@@ -23,7 +23,7 @@ export class TutorService{
   }
   updateProfile(profile):Promise<boolean>{
     return this.http
-      .post("/api/updatetutor/", JSON.stringify(profile), { headers: this.headers })
+      .post("/api/updatestudent/", JSON.stringify(profile), { headers: this.headers })
       .toPromise()
       .then(res => {
     

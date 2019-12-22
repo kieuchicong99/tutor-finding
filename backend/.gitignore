@@ -1,4 +1,4 @@
-volumes
+volumes/
 app/__pycache__
 app/serializers/__pycache__
 app/api/__pycache__
