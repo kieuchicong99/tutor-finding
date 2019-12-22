@@ -348,7 +348,11 @@ class UpdateTutor(APIView):
 
         if ("thong_tin_them" in request.data and(request.data['thong_tin_them']!='')):
             thong_tin_them = request.data['thong_tin_them']
-            tutor.thong_tin_them = thong_tin_them          
+            tutor.thong_tin_them = thong_tin_them    
+
+        if ("khu_vuc_day" in request.data and(request.data['khu_vuc_day']!='')):
+            khu_vuc_day = request.data['khu_vuc_day']
+            tutor.khu_vuc_day = khu_vuc_day          
             
         try:
             try:
