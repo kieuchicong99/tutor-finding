@@ -25,6 +25,7 @@ urlpatterns = [
     path('api/subject/',CreateSubject.as_view(), name="create-subject" ),
     path('api/class/<int:id>/', ClassDetail.as_view(), name="class-detail"),
     path('api/student/', Student.as_view(), name="student"),
+    path('api/student/<int:id>/', StudentDetail.as_view(), name='student-detail'),
     path('api/class/', CreateClass.as_view(), name="class"),
     path('api/signin/', AuthTutor.as_view(), name="signin"),
     path('api/tutor/', Tutor.as_view(), name="tutor"),

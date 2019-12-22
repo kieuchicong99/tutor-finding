@@ -114,40 +114,121 @@ class StudentDetail(APIView):
     get:
      Trả về thông tin chi tiết của 1 student
     """
+    def get(self, request, id):
+        student=Phu_huynh.objects.get(id_phu_huynh=id)
+        studentDetailSerializer=SerStudent(student)
+        return Response(
+            {
+                "success": True,
+                "data": studentDetailSerializer.data
+            }
+        )
 
 class UpdateStudent(APIView):
     # view for TuTor
     schema=ManualSchema(fields=[
         coreapi.Field(
-            "ho_ten",
+            "id_phu_huynh",
             required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
+            "ho_ten",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
             "email",
-            required=True,
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
+            "ngay_sinh",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+        coreapi.Field(
+            "mat_khau",
+            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
-            "mat_khau",
-            required=True,
+            "hinh_dai_dien_url",
+            # required=True,
             location="form",
             schema=coreschema.String()
-        )
+        ),
+        coreapi.Field(
+            "gioi_thieu",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "gioi_tinh",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "dia_chi",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
+         coreapi.Field(
+            "phone",
+            # required=True,
+            location="form",
+            schema=coreschema.String()
+        ),
         ])
     def post(self, request):
-        ho_ten=request.data['ho_ten']
-        email=request.data['email']
-        mat_khau=request.data['mat_khau']
-        
-        student=Phu_huynh.objects.get(id_phu_huynh=1)
-        old_student =  Phu_huynh.objects.get(id_phu_huynh=1)
-        student.ho_ten= ho_ten
-        student.email = email
-        student.mat_khau = mat_khau
+        id_phu_huynh= request.data['id_phu_huynh']
+        student=Phu_huynh.objects.get(id_phu_huynh=id_phu_huynh)
+        old_student =  Phu_huynh.objects.get(id_phu_huynh=id_phu_huynh)
+        print("request data:", request.data)
 
+        if ("ho_ten" in request.data and(request.data['ho_ten']!='')) :
+            ho_ten=request.data['ho_ten']
+            student.ho_ten= ho_ten
+              
+        if ("email" in request.data and(request.data['email']!='')):
+            email=request.data['email']
+            student.email = email
+        
+        if ("ngay_sinh" in request.data and(request.data['ngay_sinh']!='')):
+            ngay_sinh=request.data['ngay_sinh']
+            student.ngay_sinh = ngay_sinh
+
+        if ("mat_khau" in request.data and(request.data['mat_khau']!='')):
+            mat_khau=hashers.SHA1PasswordHasher().encode(request.data['mat_khau'],salt='123')
+            student.mat_khau = mat_khau
+
+        if ("hinh_dai_dien_url" in request.data and(request.data['hinh_dai_dien_url']!='')):
+            hinh_dai_dien_url=request.data['hinh_dai_dien_url']
+            student.hinh_dai_dien_url = hinh_dai_dien_url
+
+        if  ("gioi_thieu" in request.data and(request.data['gioi_thieu']!='')):
+            gioi_thieu = request.data['gioi_thieu']
+            student.gioi_thieu= gioi_thieu
+
+        if  ("gioi_tinh" in request.data and(request.data['gioi_tinh']!='')):
+            gioi_tinh = request.data['gioi_tinh']
+            student.gioi_tinh = gioi_tinh
+
+        if ("dia_chi" in request.data and(request.data['dia_chi']!='')):
+            dia_chi= request.data['dia_chi']
+            student.dia_chi= dia_chi
+
+        if ("phone" in request.data and(request.data['phone']!='')):
+            phone = request.data['phone']
+            student.phone = phone   
         
         try:
             try:

@@ -15,6 +15,7 @@ import { DefaultService } from './service/default.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TutorService } from './service/user.service';
+import { StudentService } from './service/student.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TutorService } from './service/user.service';
     SignUpService,
     ClassService,
     DefaultService,
-    TutorService
+    TutorService,
+    StudentService
   ],
   bootstrap: [AppComponent]
 })
