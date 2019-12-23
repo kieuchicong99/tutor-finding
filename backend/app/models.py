@@ -133,6 +133,7 @@ class Lop_yeu_cau(models.Model):
     hinh_thuc_day = models.CharField(max_length=150,blank=True)
     id_gia_su = models.ForeignKey(Gia_su, on_delete=models.CASCADE,blank=True,null=True)
     id_mon_hoc = models.ForeignKey(Mon_hoc, on_delete=models.CASCADE,blank=True,null=True)
+    mon_hoc = models.TextField(blank=True)
     yeu_cau_gioi_tinh = models.CharField(max_length=50,choices=SEX,null=True)
     so_buoi_hoc_moi_tuan = models.IntegerField(null=True)
     so_gio_moi_buoi = models.IntegerField(null=True)

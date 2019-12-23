@@ -19,6 +19,7 @@ class SerClass(serializers.ModelSerializer):
             so_gio_moi_buoi=self.validated_data['so_gio_moi_buoi'],  
             gia_thue_moi_buoi=self.validated_data['gia_thue_moi_buoi'],
             dia_chi=self.validated_data['dia_chi'],
+            mon_hoc=self.validated_data['mon_hoc'],
            
             )
               

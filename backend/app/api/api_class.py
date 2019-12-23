@@ -66,6 +66,12 @@ class CreateClass(APIView):
         required=True,
         location="form",
         schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "mon_hoc",
+        required=True,
+        location="form",
+        schema=coreschema.String()
     )
     ]) 
 
@@ -80,6 +86,7 @@ class CreateClass(APIView):
         so_gio_moi_buoi = request.data['so_gio_moi_buoi']
         gia_thue_moi_buoi= request.data['gia_thue_moi_buoi']
         dia_chi= request.data['dia_chi']
+        mon_hoc= request.data['mon_hoc']
 
         class_serializer=SerClass(
             data={
@@ -92,6 +99,7 @@ class CreateClass(APIView):
                     "so_gio_moi_buoi":so_gio_moi_buoi,
                     "gia_thue_moi_buoi":gia_thue_moi_buoi,
                     "dia_chi":dia_chi
+                    "mon_hoc":mon_hoc
 
                 })
         try:
