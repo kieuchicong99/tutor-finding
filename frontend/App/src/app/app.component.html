@@ -1,13 +1,15 @@
 <div class="wrap">
   <div class="header" id="baner">
     <div style="position:absolute; z-index:10; text-align: center;width:100%">
-      <a routerLink="/"><img src="/assets/Picture1.png" alt="" /></a>
-      <h2 style="color: white;">Kết nối giữa gia sư và học sinh</h2>
+      <div style="background-color:black; opacity:0.6;padding-top:100px;height: 400px;">
+          <a routerLink="/"><img style="width:150px;height:75px" src="/assets/Picture1.png" alt="" /></a>
+          <h2 style="color: white;font-size:3em ">Kết nối giữa gia sư và học sinh</h2>
+      </div>
+
     </div>
     <slideshow [height]="'400px'" [autoPlay]="true" [showArrows]="true" [imageUrls]="imageSources">
     </slideshow>
   </div>
-
   <div class="topnav">
     <a style=" height: 100%;" routerLink="/tim-gia-su" routerLinkActive="active">Tìm gia sư</a>
     <a style=" height: 100%;" routerLink="/tim-lop-gia-su" routerLinkActive="active">Tìm lớp gia sư</a>
