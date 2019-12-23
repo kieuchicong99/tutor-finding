@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-a:hover {
+.topnav>a:hover {
     cursor: pointer;
     background-color: #66a5ee;
     text-decoration: none;
