@@ -39,8 +39,8 @@
   /* Safari */
   position: sticky;
   top: 0;
-  display: inline-box;
   z-index: 5;
+  box-shadow: 0 5px 3px 0 rgba(17, 17, 17, 0.192);
 }
 
 .topnav>a {
