@@ -1,14 +1,19 @@
 
 
 input{
-  /* height: 30px; */
-  padding:5px 5px;
+  padding:4px 4px;
+  color: #495057;
+
 }
+
+textarea, input{
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
 .teacher-info {
-    /* margin-top: 210px; */
     background: #fff;
     border: 1px solid #f2f2f2;
-    /* background-color: #f2f2f2; */
     padding-bottom: 40px;
 }
 
@@ -28,7 +33,7 @@ input{
 }
 
 .pad {
-    padding: 0 100px;
+    padding: 0 20px;
 }
 
 .row {

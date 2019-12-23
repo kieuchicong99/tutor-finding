@@ -14,6 +14,13 @@ from app.models import Phu_huynh
 from app.models import Gia_su
 from app.serializers.ser_student import SerStudent
 
+import random
+import string
+
+def randomString(stringLength=10):
+    """Generate a random string of fixed length """
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
 
 class Student(APIView):
     # view for Student
@@ -47,6 +54,7 @@ class Student(APIView):
         email=request.data['email']
         mat_khau=request.data['mat_khau']
         phone=request.data['phone']
+        hinh_dai_dien_url='https://api.adorable.io/avatar/200/' + randomString()
         role=2
 
         student_serializer=SerStudent(
@@ -55,7 +63,9 @@ class Student(APIView):
                     "mat_khau": mat_khau,
                     "email": email,
                     "phone": phone,
+                    "hinh_dai_dien_url": hinh_dai_dien_url,
                     "role":role
+                    
 
                 })
         try:
@@ -135,55 +145,46 @@ class UpdateStudent(APIView):
         ),
         coreapi.Field(
             "ho_ten",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "email",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "ngay_sinh",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "mat_khau",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hinh_dai_dien_url",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "gioi_thieu",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "gioi_tinh",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "dia_chi",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "phone",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),

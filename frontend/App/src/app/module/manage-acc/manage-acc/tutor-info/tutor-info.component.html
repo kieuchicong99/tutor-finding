@@ -4,112 +4,121 @@
   </div>
   <form class="pad " enctype="multipart/form-data">
     <div class="row py-3">
-      <div class="col-2">
-        <img id="previewImage" class="img-thumbnail circle" src={{profile.hinh_dai_dien_url}} alt="avatar">
+      <div class="col-3">
+        <img id="previewImage" class="img-thumbnail circle" src="{{ profile.hinh_dai_dien_url }}" alt="avatar" />
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <div class="row py-3">
-          <div class="col-2">
-            <label class="textview">
-              Họ tên: <i style="color:red">*</i>
-            </label>
+          <div class="col-3">
+            <label class="textview"> Họ tên<i style="color:red">*</i> </label>
           </div>
-          <div class="col-10">
+          <div class="" style="width: 70%">
             <input type="text" name="ho_ten" placeholder="Nhập họ và tên của bạn" class="form-info"
-              [(ngModel)]="profile.ho_ten">
+              [(ngModel)]="profile.ho_ten" />
           </div>
         </div>
         <div class="row py-3">
-          <div class="col-2">
-            <label class="textview">
-              Ngày sinh: <i style="color:red">*</i>
-            </label>
+          <div class="col-3">
+            <span class="textview"> Ngày sinh <i style="color:red">*</i> </span>
           </div>
-          <div class="col-10">
+          <div class="" style="width: 70%">
             <input type="text" name="ngay_sinh" placeholder="Nhập ngày sinh" class="form-info"
-              [(ngModel)]="profile.ngay_sinh">
+              [(ngModel)]="profile.ngay_sinh" />
           </div>
         </div>
         <div class="row py-3">
-          <div class="col-2">
-            <label class="textview">
-              Giới tính: <i style="color:red">*</i>
-            </label>
+          <div class="col-3">
+            <span class="textview"> Giới tính <i style="color:red">*</i> </span>
           </div>
-          <div class="col-10 row">
-            <div class="col-3">
+          <div class="col-6 row">
+            <div class="col-6">
               <input value="nam" name="gioi_tinh" type="radio" [(ngModel)]="profile.gioi_tinh" /> Nam
             </div>
-            <div class="col-3">
-              <input value="nu" name="gioi_tinh" type="radio" /> Nữ
+            <div class="col-6">
+              <input value="nu" name="gioi_tinh" type="radio" [(ngModel)]="profile.gioi_tinh" /> Nữ
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">
-          Nơi ở hiện tại:
+          Nơi ở hiện tại
         </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="dia_chi" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại"
-          [(ngModel)]="profile.dia_chi" class="form-info">
+          [(ngModel)]="profile.dia_chi" class="form-info" />
       </div>
     </div>
-    <div class="row py-3" style="padding-left: 15px">
-      <label class="textview">
-        Giới thiệu về bản thân <i style="color:red">*</i>
-      </label>
-      <div class="col-12">
+    <div class="row py-3">
+      <div class="col-3">
+          <span class="textview">
+              Giới thiệu về bạn
+          </span>
+      </div>
+      <div class="" style="width: 75%; padding-left: 15px;padding-right: 15px">
         <textarea name="gioi_thieu" placeholder="Giới thiệu đôi nét về bản thân" rows="3" cols="30"
           [(ngModel)]="profile.gioi_thieu" style="width:100%;"></textarea>
       </div>
     </div>
     <h4>HỌC VẤN</h4>
     <div class="row py-3">
-      <div class="col-2">
-        <label class="textview">
-          Học trường: <i style="color:red">*</i>
-        </label>
+      <div class="col-3">
+        <label class="textview"> Học trường<i style="color:red">*</i> </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="hoc_truong" placeholder="Nhập tên trường của bạn" [(ngModel)]="profile.hoc_truong"
-          class="form-info">
+          class="form-info" />
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
-        <label class="textview">
-          Chuyên ngành: <i style="color:red">*</i>
-        </label>
+      <div class="col-3">
+        <label class="textview"> Chuyên ngành<i style="color:red">*</i> </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="chuyen_nganh" placeholder="Chuyên ngành học" [(ngModel)]="profile.chuyen_nganh"
-          class="form-info">
+          class="form-info" />
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">
-          Năm tốt nghiệp: <i style="color:red">*</i>
+          Năm tốt nghiệp<i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="nam_tot_nghiep" placeholder="Năm tốt nghiệp" [(ngModel)]="profile.nam_tot_nghiep"
-          class="form-info">
+          class="form-info" />
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
-        <label class="textview">
-          Hiện tại là: <i style="color:red">*</i>
-        </label>
+      <div class="col-3">
+        <label class="textview"> Hiện tại là <i style="color:red">*</i> </label>
       </div>
-      <div class="col-10">
-        <input type="text" name="cv_hien_tai" placeholder="Nghề nghiệp hiện tại" class="form-info"
-          [(ngModel)]="profile.cv_hien_tai">
+      <div class="col-9">
+        <!-- <input type="text" name="cv_hien_tai" placeholder="Nghề nghiệp hiện tại" class="form-info"
+          [(ngModel)]="profile.cv_hien_tai"> -->
+        <select class="custom-select" name="cv_hien_tai" [(ngModel)]="profile.cv_hien_tai">
+          <option selected>{{ profile.cv_hien_tai }}</option>
+          <option value="Giáo viên">Giáo viên</option>
+          <option value="Giảng viên">Giảng viên</option>
+          <option value="Sinh Viên">Sinh Viên</option>
+        </select>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-3">
+        <label class="textview"> Khu vực dạy <i style="color:red">*</i> </label>
+      </div>
+      <div class="col-9">
+        <select class="custom-select" name="khu_vuc_day" [(ngModel)]="profile.khu_vuc_day">
+          <option selected>{{ profile.khu_vuc_day }}</option>
+          <option value="Hà Nội">Hà Nội</option>
+          <option value="Đà Nẵng">Đà Nẵng</option>
+          <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+        </select>
       </div>
     </div>
     <div class="row py-3" style="padding-left: 15px">
@@ -135,51 +144,45 @@
     </div>
     <div class="row py-3" style="padding-left: 15px">
       <label class="textview">
-        Môn học sẽ dạy <i style="color:red">*</i></label>
+        Môn học sẽ dạy <i style="color:red">*</i>
       </label>
       <div class="col-12">
         <textarea class="form-info" name="mon_hoc" placeholder="Nhập những môn học bạn sẽ dạy" rows="3" cols="30"
           [(ngModel)]="profile.mon_hoc" style="width:100%;"></textarea>
       </div>
     </div>
-    <div class="row py-3">
-      <div class="col-2">
-        <label class="textview">Khu vực dạy<i style="color:red">*</i></label>
-      </div>
-      <div class="col-10">
-        <input type="text" name="khu_vuc_day" placeholder="Nhập khu vực bạn sẽ dạy" class="form-info"
-          [(ngModel)]="profile.khu_vuc_day">
-      </div>
-    </div>
+
     <div class="row py-3 ">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">
-          Hình thức dạy: <i style="color:red">*</i>
+          Hình thức dạy<i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-10 row">
+      <div class="col-9 row">
         <div class="col-6">
-          <input value="dạy tại nhà" name="hinh_thuc_day" type="radio" [(ngModel)]="hinh_thuc_day" /> Gia sư tại nhà
+          <input value=" Gia sư tại nhà" name="hinh_thuc_day" type="radio" [(ngModel)]="profile.hinh_thuc_day" />
+          Gia sư tại nhà
         </div>
         <div class="col-6">
-          <input value="dạy online" name="hinh_thuc_day" type="radio" /> Online trực tuyến
+          <input value="Trực tuyến" name="hinh_thuc_day" type="radio" [(ngModel)]="profile.hinh_thuc_day"  /> Online
+          Trực tuyến
         </div>
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">
-          Học phí dự kiến: <i style="color:red">*</i>
+          Học phí dự kiến<i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" placeholder="Nhập học phí dự kiến" name="hoc_phi_gs" [(ngModel)]="profile.hoc_phi_gs"
-          class="form-info">
+          class="form-info" />
       </div>
     </div>
     <div class="row py-3" style="padding-left: 15px">
       <label class="textview">
-        Buổi có thể dạy: <i style="color:red">*</i>
+        Buổi có thể dạy<i style="color:red">*</i>
       </label>
       <div class="col-12">
         <textarea class="form-info" name="buoi_day" placeholder="Nhập những buổi bạn có thể dạy" rows="3" cols="30"
@@ -190,34 +193,36 @@
       <label class="textview">
         Thông tin thêm
       </label>
-      <div class="col-12">
+      <div class="col-ms-12">
         <textarea class="form-info" id="thong_tin_them" name="thong_tin_them" rows="3" cols="30"
           [(ngModel)]="profile.thong_tin_them" placeholder="Chi tiết" style="width:100%;"></textarea>
       </div>
     </div>
     <h4>THÔNG TIN LIÊN HỆ</h4>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">Email</label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="email" [(ngModel)]="profile.email"
           class="form-control placeholder_italic form-control_padding"
-          style="text-align:left;background:#363636;color:#fff;">
+          style="text-align:left;background:#363636;color:#fff;" />
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">Số điện thoại</label>
       </div>
-      <div class="col-10">
-        <input type="text" name='phone' [(ngModel)]="profile.phone"
+      <div class="col-9">
+        <input type="button" name="phone" [(ngModel)]="profile.phone"
           class="form-control placeholder_italic form-control_padding"
-          style="text-align:left;background:#363636;color:#fff;">
+          style="text-align:left;background:#363636;color:#fff;" />
       </div>
     </div>
     <div class="col-md-12" style="text-align: center;">
-      <button type="submit" class="btn btn-primary" (click)="submit()">Cập nhật thông tin</button>
+      <button type="submit" class="btn btn-primary" (click)="submit()">
+        Cập nhật thông tin
+      </button>
     </div>
   </form>
 </div>

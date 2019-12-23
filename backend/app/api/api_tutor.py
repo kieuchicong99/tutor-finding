@@ -119,7 +119,7 @@ class Tutor(APIView):
                     "email": email,
                     "phone": phone,
                     "hinh_dai_dien_url": hinh_dai_dien_url,
-                    "role":role
+                    "role":role                  
 
                 })
         try:
@@ -149,127 +149,106 @@ class UpdateTutor(APIView):
         ),
         coreapi.Field(
             "ho_ten",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "email",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "ngay_sinh",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "mat_khau",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hinh_dai_dien_url",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
         coreapi.Field(
             "gioi_thieu",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "gioi_tinh",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "dia_chi",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hoc_phi_gs",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hinh_thuc_day",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "kinh_nghiem",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "buoi_day",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hoc_truong",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "chuyen_nganh",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "nam_tot_nghiep",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "cv_hien_tai",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "thanh_tich",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "mon_hoc",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "hoc_truong",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "thong_tin_them",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
          coreapi.Field(
             "phone",
-            # required=True,
             location="form",
             schema=coreschema.String()
         ),
