@@ -43,9 +43,9 @@ export class NewClassComponent implements OnInit {
       mon_hoc: '',
       hinh_thuc_day: '',
       yeu_cau_gioi_tinh: '',
-      so_buoi_hoc_moi_tuan: 0,
-      so_gio_moi_buoi: 0,
-      gia_thue_moi_buoi: 0,
+      so_buoi_hoc_moi_tuan: '',
+      so_gio_moi_buoi: '',
+      gia_thue_moi_buoi: '',
       dia_chi: '',
     }
   }
@@ -56,15 +56,11 @@ export class NewClassComponent implements OnInit {
     this.service.createClass(this.new_class).then(res => {
       console.log("res222:", res)
       if (res === true) {
-        this.toastr.success('Tạo lớp thành công!', 'ddd  ', {
-          timeOut: 3000
-        });
+        this.toastr.success('Tạo lớp thành công!');
 
       }
       if (res === false) {
-        this.toastr.success('Tạo lớp thất bại!', ' ddd  ', {
-          timeOut: 3000
-        });
+        this.toastr.success('Tạo lớp thất bại!');
 
       }
     })
