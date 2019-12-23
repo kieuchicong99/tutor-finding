@@ -9,4 +9,9 @@ export interface NewClass {
     so_gio_moi_buoi?: number;
     gia_thue_moi_buoi?: number;
     dia_chi?: string;
-  }
+}
+
+// export interface Contact {
+//     email?: number;
+//     phone?: string;
+// }

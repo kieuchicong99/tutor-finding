@@ -9,22 +9,33 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class StudentProfileComponent implements OnInit {
 
-  constructor(public service: StudentService,public toastr: ToastrService) {
-    this.getProfile()
+  constructor(public service: StudentService, public toastr: ToastrService) {
+    this.profile = {
+      id_phu_huynh:0,
+      ho_ten: '',
+      mat_khau: '',
+      phone: '',
+      email: '',
+      ngay_sinh: Date,
+      gioi_tinh: '',
+      gioi_thieu: '',
+      hinh_dai_dien_url: '',
+      dia_chi: '',
+    }
   }
 
   public profile
-  async submit(){
-    await this.service.updateProfile(this.profile).then(res=>{
-      console.log("res222:",res)
-      if(res===true){
-        this.toastr.success('Cập nhật thành công!', 'ddd  ' ,{
+  submit() {
+    this.service.updateProfile(this.profile).then(res => {
+      console.log("res222:", res)
+      if (res === true) {
+        this.toastr.success('Cập nhật thành công!', 'ddd  ', {
           timeOut: 3000
         });
 
       }
-      if(res===false){
-        this.toastr.success('Cập nhật thất bại!', ' ddd  ' ,{
+      if (res === false) {
+        this.toastr.success('Cập nhật thất bại!', ' ddd  ', {
           timeOut: 3000
         });
 
@@ -33,16 +44,18 @@ export class StudentProfileComponent implements OnInit {
 
   }
 
-  async getProfile(){
+  async getProfile() {
     let user = JSON.parse(localStorage.getItem("user"))
-    await this.service.getProfile(user.id_phu_huynh).then(res=>{
+    await this.service.getProfile(user.id_phu_huynh).then(res => {
       this.profile = res
-      console.log("12345:",this.profile)
+      console.log("12345:", this.profile)
     })
 
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getProfile()
+
   }
 
 }

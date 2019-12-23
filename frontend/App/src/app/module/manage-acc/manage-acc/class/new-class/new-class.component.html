@@ -111,22 +111,22 @@
     <h4>THÔNG TIN LIÊN HỆ</h4>
     <div class="row py-3">
       <div class="col-3">
-        <label class="textview">
-          Số điện thoại liên hệ: <i style="color:red">*</i>
-        </label>
+        <label class="textview">Email</label>
       </div>
       <div class="col-9">
-        <input type="text" name="phone"  placeholder="Nhập số điện thoại" class="form-info">
+        <input type="text" name="email" [value]="profile.email"
+          class="form-control placeholder_italic form-control_padding"
+          style="text-align:left;background:#363636;color:#fff;" disabled>
       </div>
     </div>
     <div class="row py-3">
       <div class="col-3">
-        <label class="textview">
-          Email liên hệ: <i style="color:red">*</i>
-        </label>
+        <label class="textview">Số điện thoại</label>
       </div>
       <div class="col-9">
-        <input type="text" name="email"  placeholder="Nhập địa chỉ email" class="form-info">
+        <input type="text" name='phone' [value]="profile.phone"
+          class="form-control placeholder_italic form-control_padding"
+          style="text-align:left;background:#363636;color:#fff;" disabled>
       </div>
     </div>
     <div class="col-12" style="text-align: center;">
