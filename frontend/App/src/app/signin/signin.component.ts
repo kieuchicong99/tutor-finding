@@ -24,7 +24,7 @@ export class SigninComponent implements OnInit {
         this.toastr.success('Đăng nhập thành công!', 'Xin chào '+ res.data.ho_ten ,{
           timeOut: 3000
         });
-        this.router.navigate([''])
+        this.router.navigate(['tim-lop-gia-su'])
 
       }
       if(res.success===false){

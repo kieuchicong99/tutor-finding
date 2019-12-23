@@ -9,14 +9,14 @@ export class SignUpService{
   constructor(public http: Http) {
 
   }
-  signUp(role,user: SignUp):Promise<SignUp>{
+  signUp(role,user: SignUp){
     if (role === 1) {
       return this.http
         .post("/api/tutor/", JSON.stringify(user), { headers: this.headers })
         .toPromise()
         .then(res => {
           localStorage.setItem("user",JSON.stringify(res.json().data))
-          return res.json().data;
+          return res.json();
 
         })
         .catch();
@@ -27,7 +27,7 @@ export class SignUpService{
         .toPromise()
         .then(res => {
           localStorage.setItem("user",JSON.stringify(res.json().data))
-          return res.json().data;
+          return res.json();
         })
         .catch();
     }

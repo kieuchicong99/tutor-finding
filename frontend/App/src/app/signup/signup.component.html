@@ -1,67 +1,71 @@
-<div class="wrap">
-  <div class="header"></div>
 
-  <div class="main">
-    <h5 style="font-size: 2rem;
-    font-weight: 600;">Đăng ký tài khoản</h5>
-    <form>
-      <div class="row_form">
-        <div>Họ và tên</div>
-        <input
-          type="text"
-          [(ngModel)]="user.ho_ten"
-          [ngModelOptions]="{ standalone: true }"
-          placeholder="Họ và tên đầy đủ của bạn "
-        />
-      </div>
-      <div class="row_form">
-        <div>Số điện thoại</div>
-        <input
-          type="text"
-          [(ngModel)]="user.phone"
-          [ngModelOptions]="{ standalone: true }"
-          placeholder="Số điện thoại đăng ký của bạn"
-        />
-      </div>
-      <div class="row_form">
-        <div>Email</div>
-        <input
-          type="text"
-          [(ngModel)]="user.email"
-          [ngModelOptions]="{ standalone: true }"
-          placeholder="Email đăng ký"
-        />
-      </div>
-      <div class="row_form">
-        <div>Mật khẩu</div>
-        <input
-          type="mat_khau"
-          [(ngModel)]="user.mat_khau"
-          [ngModelOptions]="{ standalone: true }"
-          placeholder="Mật khẩu cho tài khoản này"
-        />
-      </div>
-      <div class="row_form">
-        <div>Xác nhận mật khẩu</div>
-        <input
-          type="password"
-          placeholder="Nhập lại mẩu khẩu bạn vừa tạo "
-          [(ngModel)]="repass"
-          [ngModelOptions]="{ standalone: true }"
-        />
-      </div>
-      <div class="row_form">
-        <div class="form-check">
-          <input type="radio"  [(ngModel)]="role"  value="1" name ="choose" class="form-check-input" id="tutor" />
-          <label class="form-check-label" for="tutor" style="padding-right: 2rem;">Gia sư</label>
-          <input type="radio" [(ngModel)]="role" value ="2"  name ="choose" class="form-check-input" id="student" />
-          <label class="form-check-label" for="student">Phụ huynh</label>
+<div class="row">
+<div class="col-6 bg-siginup">
+
+</div>
+<div class="col-6">
+    <div class="wrap">
+        <div class="main">
+          <h5 style="font-size: 2rem;font-weight: 600; text-align: center;width:90%">Đăng ký tài khoản</h5>
+          <div style="text-align: center;width:90%">Nhanh chóng và dễ dàng</div>
+          <div>
+            <div class="row">
+              <div class="col-3 input-group-text">Họ và tên</div>
+              <div class="col-8">
+                <input class="form-control" type="text" [(ngModel)]="user.ho_ten" [ngModelOptions]="{ standalone: true }"
+                  placeholder="Họ và tên đầy đủ của bạn " />
+              </div>
+              <div class="col-8"></div>
+            </div>
+            <div class="row">
+              <div class="col-3 input-group-text">Số điện thoại</div>
+              <div class="col-8">
+                <input class="form-control" type="text" [(ngModel)]="user.phone" [ngModelOptions]="{ standalone: true }"
+                  placeholder="Số điện thoại đăng ký của bạn" />
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-3 input-group-text">Email</div>
+              <div class="col-8">
+                <input class="form-control" type="text" [(ngModel)]="user.email" [ngModelOptions]="{ standalone: true }"
+                  placeholder="Email đăng ký" />
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-3 input-group-text">Mật khẩu</div>
+              <div class="col-8">
+                <input class="form-control" type="mat_khau" [(ngModel)]="user.mat_khau"
+                  [ngModelOptions]="{ standalone: true }" placeholder="Mật khẩu cho tài khoản này" />
+              </div>
+
+            </div>
+            <div class="row" style="margin-top:10px">
+              <div class="col-3 input-group-text">Xác nhận</div>
+              <div class="col-8">
+                <input class="form-control" type="password" placeholder="Nhập lại mẩu khẩu bạn vừa tạo " [(ngModel)]="repass"
+                  [ngModelOptions]="{ standalone: true }" />
+              </div>
+
+            </div>
+            <div class="row" style="padding-left:25%">
+              <div class="col-3">
+                <input type="radio" [(ngModel)]="role" value="1" name="choose" class="form-check-input" id="tutor" />
+                <label class="form-check-label" for="tutor" >Gia sư</label>
+              </div>
+              <div class="col-4">
+                <input type="radio" [(ngModel)]="role" value="2" name="choose" class="form-check-input" id="student" />
+                <label class="form-check-label" for="student">Phụ huynh</label>
+              </div>
+            </div>
+            <div class="row" style="padding:10px">
+              <button style="width: 94%" type="button" class="btn btn-primary" (click)="signUp()">Đăng ký</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row_form">
-        <button type="button" (click)="signUp()">Đăng ký</button>
-      </div>
-    </form>
-  </div>
-  <div class="footer"></div>
+
 </div>
+</div>
+

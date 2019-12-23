@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SignUpService } from '../service/signup.service';
 import { SignUp } from '../model/SignUp.model';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +11,7 @@ import { SignUp } from '../model/SignUp.model';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public service: SignUpService) { }
+  constructor(public service: SignUpService,private router: Router,private toastr: ToastrService) { }
   public user: SignUp = new SignUp();
   public repass : string;
   public role;
@@ -24,13 +26,19 @@ export class SignupComponent implements OnInit {
   }
 
   signUp(){
-    // if(this.checkRepassword() && this.checkNull()){
       this.role = parseInt(this.role)
-      this.service.signUp(this.role,this.user)
-    // }
-    // else{
-    //   console.error("du lieu nhap chua du")
-    // }
+      this.service.signUp(this.role,this.user).then(res=>{
+        console.log("cumcum:", res.success)
+        if(res.success===true){
+          this.toastr.success("Chúc mừng!\nBạn đã trở thành thành viên của TutorFinding")
+          this.router.navigate(['/tim-lop-gia-su'])
+        }
+        if(res.success===false){
+          this.toastr.error(res.message)
+
+        }
+      })
+
   }
   ngOnInit() {
   }

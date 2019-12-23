@@ -129,10 +129,10 @@ class Tutor(APIView):
                     return Response({"success": True, "message": "Đăng kí thành công ", "data":tutor_serializer.data}, status.HTTP_200_OK)
                 except Exception as e:
                     print("Error:", e)
-                    return Response({"success": False, "message": "Số điện thoại đã tồn tại"}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+                    return Response({"success": False, "message": e }, status.HTTP_500_INTERNAL_SERVER_ERROR)
             else:
                print(tutor_serializer.errors)
-               return Response({"success": False, "message":" tutor_serializer.errors"}, 400)
+               return Response({"success": False, "message":tutor_serializer.errors}, 400)
         except Exception as e:
             print("Error:", e)
             return Response({"success": False, "message": "Lỗi hệ thống"}, status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,45 +1,40 @@
 * {
   box-sizing: border-box;
 }
+textarea, input{
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: 5px;
+}
+.input-group-text {
+  background-color: hsl(0, 2%, 87%);
+  border:none;
+}
 .wrap{
-  background-color:white;
   padding: 15px;
-  text-align: center;
 }
 
-
-.header {}
-
+.bg-siginup{
+  background-image: url('/assets/bg-signup.png');
+  background-repeat: no-repeat;
+}
+.col-8{
+  padding-left:0;
+  padding-right:0;
+}
 .main{
-  display: inline-block;
-  text-align: center;
-  width: 80%;
+  /* padding-left: 20%; */
+  /* padding-right: 20%; */
+}
+.row{
+  margin-top:10px;
 }
 
-
-.row_form {
-  display: block;
-  padding: 15px;
-  border: 1px #ebdfdf;
+@media screen and (max-width: 800px) {
+.col-3
+.col-9
+.wrap {
+      width: 100%;
+      padding: 0;
+  }
 }
-
-
-.row_form>button{
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom:5px;
-  background-color: #426d9e;
-  color: white;
-  border-radius: 10px 10px 10px 10px;
-}
-
-.row_form >input{
-  width: 100%;
-}
-
-.row_form >div{
-  text-align: left;
-
-}
-
-.footer {}
