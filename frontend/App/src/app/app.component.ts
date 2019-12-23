@@ -17,9 +17,13 @@ export class AppComponent implements OnInit {
   // @ViewChild('slideshow') slideshow: any;
   etc = "hello world"
   imageSources=[
-    "assets/dog1.jpg",
-    "assets/dog2.jpg",
-    "assets/dog3.jpg",
+    "assets/slider/1.jpg",
+    "assets/slider/2.jpg",
+    "assets/slider/3.jpg",
+    "assets/slider/4.jpg",
+    "assets/slider/5.jpg",
+    "assets/slider/6.jpg",
+    "assets/slider/7.jpg",
     this.etc
 
   ]
