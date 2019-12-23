@@ -9,24 +9,46 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TeacherInfoComponent implements OnInit {
 
-  constructor(public service: TutorService,public toastr: ToastrService) {
-    this.getProfile()
+  constructor(public service: TutorService, private toastr: ToastrService) {
+    //khoi tao cho profile tranh loi khi view hien ra truoc khi api lay duoc du lieu
+    this.profile=  {
+      id_gia_su:0,
+      ho_ten: '',
+      mat_khau:'',
+      phone:'',
+      email:'',
+      ngay_sinh:'',
+      gioi_tinh:'',
+      gioi_thieu:'',
+      hinh_dai_dien_url:'',
+      dia_chi:'',
+      khu_vuc_day:'',
+      hoc_phi_gs:'',
+      hinh_thuc_day:'',
+      kinh_nghiem:'',
+      buoi_day:'',
+      hoc_truong:'',
+      chuyen_nganh:'',
+      nam_tot_nghiep:'',
+      cv_hien_tai:'',
+      thanh_tich:'',
+      mon_hoc:'',
+      thong_tin_them:'',
+    }
+
+
   }
 
   public profile
-  async submit(){
-    await this.service.updateProfile(this.profile).then(res=>{
+  submit(){
+    this.service.updateProfile(this.profile).then(res=>{
       console.log("res222:",res)
       if(res===true){
-        this.toastr.success('Cập nhật thành công!', 'ddd  ' ,{
-          timeOut: 3000
-        });
-
+          let a =this.toastr.success("Cập nhật thành công!")
+          console.log(a)
       }
       if(res===false){
-        this.toastr.success('Cập nhật thất bại!', ' ddd  ' ,{
-          timeOut: 3000
-        });
+        this.toastr.success("Cập nhật thất bại!")
 
       }
     })
@@ -42,7 +64,8 @@ export class TeacherInfoComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getProfile()
 
   }
 

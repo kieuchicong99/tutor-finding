@@ -11,16 +11,13 @@ import { ClassComponent } from './manage-acc/class/class.component';
 import { CardComponent } from './manage-acc/class/card/card.component';
 import { NewClassComponent } from './manage-acc/class/new-class/new-class.component';
 import { FormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ManageAccRoutingModule,
     FormsModule,
-
-
 
   ],
   declarations: [
