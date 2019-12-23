@@ -1,334 +1,136 @@
-<div class="col-md-12 col-sm-12 class-info">
+<div class="col-12 class-info">
   <form class="viewtopnewclass" action="">
     <div>
       <h4>THÔNG TIN LỚP</h4>
     </div>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Tóm tắt yêu cầu tìm gia sư: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="demand_content" [(ngModel)]="new_class.demand_content"
+      <div class="col-9">
+        <input type="text" name="mo_ta" [(ngModel)]="new_class.mo_ta"
           placeholder="Ví dụ: Tìm gia sư toán lớp 1 quận Hoàn Kiếm" class="form-info">
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
-        <label class="textview">
-          Yêu cầu gia sư là: <i style="color:red">*</i>
-        </label>
-      </div>
-      <div class="col-md-9 col-sm-8">
-        <select class="form-info" name="type_tutor" [(ngModel)]="new_class.type_tutor">
-          <option value="" disabled selected>Lựa chọn gia sư</option>
-          <option *ngFor="let item of type_tutors" [ngValue]="item.key">{{item.value}}</option>
-        </select>
-      </div>
-    </div>
-    <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Môn học: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-3 col-sm-8">
-        <select class="form-info" name="subject" [(ngModel)]="new_class.subject">
-          <option value="" disabled selected>Chọn môn học</option>
-          <option *ngFor="let item of subjects" [ngValue]="item.key">{{item.value}}</option>
-        </select>
+      <div class="col-3">
+        <input type="text" name="mon_hoc" [(ngModel)]="new_class.mon_hoc"
+          placeholder="Ví dụ: Toán, Lý, Hóa" class="form-info">
       </div>
-      <div class="col-md-6 col-sm-12 row">
-        <div class="col-md-3 col-sm-3">
+      <div class="col-6 row">
+        <div class="col-3">
           <label class="textview">
             Giới tính: <i style="color:red">*</i>
           </label>
         </div>
-        <div class="form-group lblcheckgt">
-          <input value="male" class="mr-2" name="sex" id="male" type="radio">
-          <label for="male" style="margin-right:20px">
-            Nam
-          </label>
+        <div class="col-2 form-group lblcheckgt">
+          <input value="nam" class="mr-2" name="yeu_cau_gioi_tinh" [(ngModel)]="new_class.yeu_cau_gioi_tinh" type="radio">  Nam
         </div>
-        <div class="form-group lblcheckgt">
-          <input value="female" class="mr-2" name="sex" id="female" type="radio">
-          <label for="female" style="margin-right:20px">
-            Nữ
-          </label>
+        <div class="col-2 form-group lblcheckgt">
+          <input value="nu" class="mr-2" name="yeu_cau_gioi_tinh" [(ngModel)]="new_class.yeu_cau_gioi_tinh" type="radio">  Nữ
         </div>
-        <div class="form-group lblcheckgt">
-          <input value="none" class="mr-2" name="sex" id="nonesex" type="radio">
-          <label for="nonesex" style="margin-right:20px">
-            Không yêu cầu
-          </label>
+        <div class="col-5 form-group lblcheckgt">
+          <input value="other" class="mr-2" name="yeu_cau_gioi_tinh" [(ngModel)]="new_class.yeu_cau_gioi_tinh" type="radio">  Không yêu cầu
         </div>
-      </div>
-    </div>
-    <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
-        <label class="textview">
-          Số lượng học sinh: <i style="color:red">*</i>
-        </label>
-      </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="num_student" [(ngModel)]="new_class.num_student" placeholder="Nhập số lượng học sinh"
-          class="form-info">
       </div>
     </div>
     <div class="row py-3 ">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Hình thức dạy: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8 row">
+      <div class="col-9 row">
         <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-          <input value="home" name="teachtype" id="teachtype_home" type="radio">
-          <label for="teachtype_home" class="viewgt">
-            Gia sư tại nhà
-          </label>
+          <input value="dạy tại nhà" name="hinh_thuc_day" type="radio" [(ngModel)]="new_class.hinh_thuc_day">  Gia sư tại nhà
         </div>
         <div class="form-group lblcheckgt col-md-6 -col-sm-6">
-          <input value="class" name="teachtype" id="teachtype_class" type="radio">
-          <label for="teachtype_class" class="viewgt">
-            Online trực tuyến
-          </label>
+          <input value="dạy online" name="hinh_thuc_day" type="radio" [(ngModel)]="new_class.hinh_thuc_day">  Online trực tuyến
         </div>
       </div>
     </div>
+    <div class="row py-3">
+      <div class="col-3">
+        <label class="textview">
+          Số buổi học: <i style="color:red">*</i>
+        </label>
+      </div>
+      <div class="col-9">
+        <input type="text" name="so_buoi_hoc_moi_tuan" [(ngModel)]="new_class.so_buoi_hoc_moi_tuan"
+          placeholder="Nhập số buổi học trong một tuần" class="form-info">
+      </div>
+    </div>
     <div class="row py-3 ">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Giờ học 1 buổi: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8 row">
-        <div class="form-group lblcheckgt col-md-3 -col-sm-3">
-          <input value="1" name="duration" id="duration1" type="radio">
-          <label for="duration1">
-            1h
-          </label>
+      <div class="col-9 row">
+        <div class="form-group lblcheckgt col-3">
+          <input value="1" name="so_gio_moi_buoi" type="radio" [(ngModel)]="new_class.so_gio_moi_buoi">  1h
         </div>
-        <div class="form-group lblcheckgt col-md-3 -col-sm-3">
-          <input value="1.5" name="duration" id="duration2" type="radio">
-          <label for="duration2">
-            1.5h
-          </label>
+        <div class="form-group lblcheckgt col-3">
+          <input value="1.5" name="so_gio_moi_buoi" type="radio" [(ngModel)]="new_class.so_gio_moi_buoi">  1.5h
         </div>
-        <div class="form-group lblcheckgt col-md-3 -col-sm-3">
-          <input value="2" name="duration" id="duration3" type="radio">
-          <label for="duration3">
-            2h
-          </label>
+        <div class="form-group lblcheckgt col-3">
+          <input value="2" name="so_gio_moi_buoi" type="radio" [(ngModel)]="new_class.so_gio_moi_buoi">  2h
         </div>
-        <div class="form-group lblcheckgt col-md-3 -col-sm-3">
-          <input value="2.5" name="duration" id="duration4" type="radio">
-          <label for="duration4">
-            2.5h
-          </label>
+        <div class="form-group lblcheckgt col-3">
+          <input value="2.5" name="so_gio_moi_buoi" type="radio" [(ngModel)]="new_class.so_gio_moi_buoi">  2.5h
         </div>
       </div>
-    </div>
-    <div class="py-3 row">
-      <label class="textview" style="float: left;">
-        Buổi có thể dạy:
-      </label>
-      <div class="detaijob-body2 lichday row">
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 2
-          </p>
-          <ul>
-            <li>
-              <input id="CMonMorning" type="checkbox" name="CMonMorning" value="1">
-              <label class="" for="CMonMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CMonAfter" type="checkbox" name="CMonAfter" value="1">
-              <label class="" for="CMonAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CMonNight" type="checkbox" name="CMonNight" value="1">
-              <label class="" for="CMonNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 3
-          </p>
-          <ul>
-            <li>
-              <input id="CTueMorning" type="checkbox" name="CTueMorning" value="1">
-              <label class="" for="CTueMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CTueAfter" type="checkbox" name="CTueAfter" value="1">
-              <label class="" for="CTueAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CTueNight" type="checkbox" name="CTueNight" value="1">
-              <label class="" for="CTueNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 4
-          </p>
-          <ul>
-            <li>
-              <input id="CWeMorning" type="checkbox" name="CWeMorning" value="1">
-              <label class="" for="CWeMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CWeAfter" type="checkbox" name="CWeAfter" value="1">
-              <label class="" for="CWeAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CWeNight" type="checkbox" name="CWeNight" value="1">
-              <label class="" for="CWeNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 5
-          </p>
-          <ul>
-            <li>
-              <input id="CThuMorning" type="checkbox" name="CThuMorning" value="1">
-              <label class="" for="CThuMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CThuAfter" type="checkbox" name="CThuAfter" value="1">
-              <label class="" for="CThuAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CThuNight" type="checkbox" name="CThuNight" value="1">
-              <label class="" for="CThuNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 6
-          </p>
-          <ul>
-            <li>
-              <input id="CFriMorning" type="checkbox" name="CFriMorning" value="1">
-              <label class="" for="CFriMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CFriAfter" type="checkbox" name="CFriAfter" value="1">
-              <label class="" for="CFriAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CFriNight" type="checkbox" name="CFriNight" value="1">
-              <label class="" for="CFriNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Thứ 7
-          </p>
-          <ul>
-            <li>
-              <input id="CSatMorning" type="checkbox" name="CSatMorning" value="1">
-              <label class="" for="CSatMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CSatAfter" type="checkbox" name="CSatAfter" value="1">
-              <label class="" for="CSatAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CSatNight" type="checkbox" name="CSatNight" value="1">
-              <label class="" for="CSatNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-        <div class="canle pl-2 pr-2">
-          <p style="color:#003471;font-weight:500">Chủ nhật
-          </p>
-          <ul>
-            <li>
-              <input id="CSunMorning" type="checkbox" name="CSunMorning" value="1">
-              <label class="" for="CSunMorning">Sáng</label>
-            </li>
-            <li>
-              <input id="CSunAfter" type="checkbox" name="CSunAfter" value="1">
-              <label class="" for="CSunAfter">Chiều</label>
-            </li>
-            <li>
-              <input id="CSunNight" type="checkbox" name="CSunNight" value="1">
-              <label class="" for="CSunNight">Tối</label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <p style="float:left;color:#003471;margin-top:10px;font-size:14px;font-style:italic">Chọn những buổi bạn có thể
-        dậy</p>
-      <br>
     </div>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Học phí dự kiến: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="cost" [(ngModel)]="new_class.cost" placeholder="Nhập học phí dự kiến" class="form-info">
+      <div class="col-9">
+        <input type="text" name="gia_thue_moi_buoi" [(ngModel)]="new_class.gia_thue_moi_buoi" placeholder="Nhập học phí dự kiến" class="form-info">
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
-        <label class="textview">Khu vực dạy<i style="color:red">*</i></label>
-      </div>
-      <div class="col-md-9 col-sm-8">
-        <select class="form-info" name="address" [(ngModel)]="new_class.address">
-          <option value="" disabled selected>Khu vực</option>
-          <option *ngFor="let item of addresses" [ngValue]="item.key">{{item.value}}</option>
-        </select>
-      </div>
-    </div>
-    <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Địa điểm chi tiết: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="address_detail" [(ngModel)]="new_class.address_detail" placeholder="Nhập địa chỉ diễn ra lớp học" class="form-info">
-      </div>
-    </div>
-    <div class="row py-3" style="padding-left: 15px">
-      <label class="textview">
-        Thông tin chi tiết
-      </label>
-      <div class="col-md-12">
-        <textarea class="form-info" name="description" [(ngModel)]="new_class.description" placeholder="Chi tiết" rows="3" cols="30"
-          style="width:100%;"></textarea>
+      <div class="col-9">
+        <input type="text" name="dia_chi" [(ngModel)]="new_class.dia_chi" placeholder="Nhập địa chỉ diễn ra lớp học" class="form-info">
       </div>
     </div>
     <h4>THÔNG TIN LIÊN HỆ</h4>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Số điện thoại liên hệ: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="phone" [(ngModel)]="new_class.phone" placeholder="Nhập số điện thoại" class="form-info">
+      <div class="col-9">
+        <input type="text" name="phone"  placeholder="Nhập số điện thoại" class="form-info">
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-md-3 col-sm-4">
+      <div class="col-3">
         <label class="textview">
           Email liên hệ: <i style="color:red">*</i>
         </label>
       </div>
-      <div class="col-md-9 col-sm-8">
-        <input type="text" name="email" [(ngModel)]="new_class.email" placeholder="Nhập địa chỉ email" class="form-info">
+      <div class="col-9">
+        <input type="text" name="email"  placeholder="Nhập địa chỉ email" class="form-info">
       </div>
     </div>
-    <div class="col-md-12" style="text-align: center;">
-      <button type="submit" class="btn btn-primary" (click)=createClass()>Hoàn tất</button>
+    <div class="col-12" style="text-align: center;">
+      <button type="submit" class="btn btn-primary" (click)="submit()">Hoàn tất</button>
     </div>
   </form>
 </div>
