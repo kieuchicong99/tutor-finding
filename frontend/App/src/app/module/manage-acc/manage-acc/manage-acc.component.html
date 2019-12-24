@@ -1,7 +1,15 @@
 <div style="margin-left: -20px">
   <div class="left">
-    <nav>
-      <div style="width:100%" class="route" (click)="manageTutor()">Quản lý gia sư
+    <nav style="min-width:250">
+      <div style="border:2px solid; width:100%; display: inline-block;">
+          <span style="text-align:center;font-size: 1.3em; width:70%;text-transform: uppercase;padding-left:15px">
+            quản lý
+          </span>
+          <mat-icon style="display: inline-block;" svgIcon="apps"></mat-icon>
+
+      </div>
+
+      <!-- <div style="width:100%" class="route" (click)="manageTutor()">Quản lý gia sư
         <span *ngIf="!default"><img src="https://img.icons8.com/ios-filled/20/ffffff/chevron-down.png"></span>
       </div>
       <div *ngIf="default; else show" style="display: none"></div>
@@ -19,9 +27,17 @@
       <div style="width:100%" class="route" routerLink="/manage-acc/quan-ly-lop-hoc" routerLinkActive="active">Quản lý
         lớp học </div>
       <div style="width:100%" class="route" routerLink="/manage-acc/profile" routerLinkActive="active">Quản lý tài khoản
+      </div>-->
+
+      <div  *ngFor="let item of config.routes" >
+        <div>
+          <div style="width:100%; display: inline-block;" class="route" routerLink={{item.route}} routerLinkActive="active">{{item.name}}
+          </div>
+          <!-- <mat-icon style="display: inline-block;" svgIcon={{item.icon}}></mat-icon> -->
+
+        </div>
       </div>
-      <div style="width:100%" class="route" routerLink="/manage-acc/profile1" routerLinkActive="active">Quản lý tài khoản 1
-      </div>
+
     </nav>
 
 

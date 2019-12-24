@@ -4,43 +4,43 @@
   </div>
   <form class="pad " enctype="multipart/form-data">
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <img id="previewImage" class="img-thumbnail circle" src={{profile.hinh_dai_dien_url}} alt="avatar">
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <div class="row py-3">
-          <div class="col-2">
+          <div class="col-3">
             <label class="textview">
-              Họ tên: <i style="color:red">*</i>
+              Họ tên <i style="color:red">*</i>
             </label>
           </div>
-          <div class="col-10">
+          <div class="col-9">
             <input type="text" name="ho_ten" placeholder="Nhập họ và tên của bạn" class="form-info"
               [(ngModel)]="profile.ho_ten">
           </div>
         </div>
         <div class="row py-3">
-          <div class="col-2">
+          <div class="col-3">
             <label class="textview">
-              Ngày sinh: <i style="color:red">*</i>
+              Ngày sinh <i style="color:red">*</i>
             </label>
           </div>
-          <div class="col-10">
+          <div class="col-9">
             <input type="text" name="ngay_sinh" placeholder="Nhập ngày sinh" class="form-info"
               [(ngModel)]="profile.ngay_sinh">
           </div>
         </div>
         <div class="row py-3">
-          <div class="col-2">
+          <div class="col-3">
             <label class="textview">
-              Giới tính: <i style="color:red">*</i>
+              Giới tính <i style="color:red">*</i>
             </label>
           </div>
-          <div class="col-10 row">
-            <div class="col-3">
+          <div class="col-9 row">
+            <div class="col-6">
               <input value="nam" name="gioi_tinh" type="radio" [(ngModel)]="profile.gioi_tinh" /> Nam
             </div>
-            <div class="col-3">
+            <div class="col-6">
               <input value="nu" name="gioi_tinh" type="radio" /> Nữ
             </div>
           </div>
@@ -48,12 +48,12 @@
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">
-          Nơi ở hiện tại:
+          Nơi ở hiện tại
         </label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="dia_chi" placeholder="Vui lòng nhập chi tiết nơi ở hiện tại"
           [(ngModel)]="profile.dia_chi" class="form-info">
       </div>
@@ -64,26 +64,26 @@
       </label>
       <div class="col-12">
         <textarea name="gioi_thieu" placeholder="Giới thiệu đôi nét về bản thân" rows="3" cols="30"
-          [(ngModel)]="profile.gioi_thieu" style="width:100%;"></textarea>
+          [(ngModel)]="profile.gioi_thieu" style="width:90%;"></textarea>
       </div>
     </div>
     <h4>THÔNG TIN LIÊN HỆ</h4>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">Email</label>
       </div>
-      <div class="col-10">
+      <div class="col-9">
         <input type="text" name="email" [(ngModel)]="profile.email"
           class="form-control placeholder_italic form-control_padding"
           style="text-align:left;background:#363636;color:#fff;">
       </div>
     </div>
     <div class="row py-3">
-      <div class="col-2">
+      <div class="col-3">
         <label class="textview">Số điện thoại</label>
       </div>
-      <div class="col-10">
-        <input type="text" name='phone' [(ngModel)]="profile.phone"
+      <div class="col-9">
+        <input type="button" name='phone' [(ngModel)]="profile.phone"
           class="form-control placeholder_italic form-control_padding"
           style="text-align:left;background:#363636;color:#fff;">
       </div>

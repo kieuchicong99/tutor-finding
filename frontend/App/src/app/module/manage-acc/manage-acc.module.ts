@@ -11,6 +11,7 @@ import { ClassComponent } from './manage-acc/class/class.component';
 import { CardComponent } from './manage-acc/class/card/card.component';
 import { NewClassComponent } from './manage-acc/class/new-class/new-class.component';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ManageAccRoutingModule,
     FormsModule,
+    MatIconModule
 
   ],
   declarations: [

@@ -2,6 +2,12 @@
 .route:hover{
   background-color: rgba(90, 99, 100, 0.849);
 }
+nav{
+  min-height: 600px;
+  padding:0
+
+
+}
 nav > div{
   padding:10px;
   display: inline-block;
@@ -12,10 +18,6 @@ nav > div{
   float: left;
   margin-right:3px;
   width:19%;
-  padding-right:20px;
-  padding-bottom:20px;
-  padding-top:20px;
-  padding-left:0;
   background-color:#2A3F54;
   color: white;
 }
