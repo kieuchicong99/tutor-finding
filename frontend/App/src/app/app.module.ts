@@ -16,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TutorService } from './service/user.service';
 import { StudentService } from './service/student.service';
-
+import { MatIconRegistry, MatIconModule } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { StudentService } from './service/student.service';
     FormsModule,
     HttpModule,
     RouteModule,
+    MatIconModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
@@ -43,4 +45,8 @@ import { StudentService } from './service/student.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')); // Or whatever path you placed mdi.svg at
+  }
+ }

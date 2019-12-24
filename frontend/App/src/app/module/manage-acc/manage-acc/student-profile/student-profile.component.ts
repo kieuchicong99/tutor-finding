@@ -9,19 +9,20 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class StudentProfileComponent implements OnInit {
 
-  constructor(public service: StudentService, public toastr: ToastrService) {
-    this.profile = {
-      id_phu_huynh:0,
+  constructor(public service: StudentService,public toastr: ToastrService) {
+    this.profile={
+      id_phu_huynh: 0,
       ho_ten: '',
       mat_khau: '',
       phone: '',
       email: '',
-      ngay_sinh: Date,
+      ngay_sinh:'',
       gioi_tinh: '',
       gioi_thieu: '',
       hinh_dai_dien_url: '',
       dia_chi: '',
     }
+    this.getProfile()
   }
 
   public profile

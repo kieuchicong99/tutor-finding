@@ -5,7 +5,7 @@
     /* background-color: #f2f2f2; */
     padding-bottom: 40px;
   }
-  
+
   .teacher-info h4 {
     text-decoration: underline;
     text-decoration-color: #fd8d58;
@@ -13,25 +13,25 @@
     font-size: 1.5rem;
     text-align: center;
   }
-  
+
   .teacher-info h4 {
     background-color: #fff;
     color: #264a7d;
     padding-top: 20px;
     margin: auto;
   }
-  
+
   .pad {
-    padding: 0 100px;
+    padding: 0 20px;
   }
-  
+
   .row {
     display: flex;
     flex-wrap: wrap;
     /* margin-right: -15px;
     margin-left: -15px; */
   }
-  
+
   .textview {
     /* font-size: 14px; */
     font-weight: 600;
@@ -51,16 +51,16 @@
     border-radius: .25rem;
     /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
   }
-  
+
   .form-info {
     width: 100%;
     padding: 5px 20px;
   }
-  
+
   .form-inline {
     margin-left: 50px;
   }
-  
+
   .lblcheckgt {
     width: auto!important;
   }
