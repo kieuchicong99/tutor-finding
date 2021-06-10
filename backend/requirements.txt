@@ -1,5 +1,5 @@
 djangorestframework==3.10.3
 coreapi==2.3.3
-Django==2.2.5
+Django==2.2.24
 mysqlclient==1.4.4
 djangorestframework-jwt==1.11.0
